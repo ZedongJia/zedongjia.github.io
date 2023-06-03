@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+XXX的博客网站
+</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<script src="../../script.js">
+</script>
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+<body>
+<div class="nav">
+<div class="nav-menu">
+<span class="nav-menu-item">
+<a href="../../index.html">
+主页
+<span class="tip">
+</span>
+
+</a>
+
+</span>
+
+<span class="nav-menu-item">
+<a href="../../pages/blog.html">
+归档
+<span class="tip">
+</span>
+
+</a>
+
+</span>
+
+</div>
+
+</div>
+
+<div class="blog-main">
+  <div class="list-button"><ul class="list">
+<span class="list-topic" onclick="handleSubitems(this)">
+<span class="list-title">
+机器学习
+</span>
+
+<li class="list-item">
+<a href="../../post/机器学习/1.绪论.html">
+1.绪论
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/2.1.线性回归.html">
+2.1.线性回归
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/2.2.Logistic回归.html">
+2.2.Logistic回归
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/2.3.线性判别分析.html">
+2.3.线性判别分析
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/3.1.神经网络与脑科学.html">
+3.1.神经网络与脑科学
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/3.2.神经网络的反向传递算法.html">
+3.2.神经网络的反向传递算法
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/3.3.深度学习与mindspore.html">
+3.3.深度学习与mindspore
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/6.贝叶斯分类器.html">
+6.贝叶斯分类器
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/8.网络机器学习.html">
+8.网络机器学习
+</a>
+
+</li>
+
+</span>
+
+<span class="list-topic" onclick="handleSubitems(this)">
+<span class="list-title">
+毛概
+</span>
+
+<li class="list-item">
+<a href="../../post/毛概/毛概大纲.html">
+毛概大纲
+</a>
+
+</li>
+
+</span>
+
+</ul>
+</div>
+  <div><div class="markdown-body">
+<h1 id="33mindspore">3.3.深度学习与mindspore</h1>
+<p>利用一些算法对数据的高层次抽象概念进行建模</p>
+<p><strong>优势</strong>：是可以自动提取特征</p>
+<h2 id="_1">神经网络发展史</h2>
+<ul>
+<li>多层解决异或问题</li>
+<li>梯度消失问题-&gt;BP反向传播</li>
+<li>2010崛起，更多的标注数据、更强的算力、应用环境的改善</li>
+</ul>
+<h2 id="_2">深度学习的两大领域</h2>
+<h3 id="_3">计算机视觉</h3>
+<h3 id="_4">模型</h3>
+<h4 id="cnn">CNN</h4>
+<p>Convolutional Neural Network
+简单结构、少量参数、更强的适应性</p>
+<p>不需要对数据预处理、直接用图像即可</p>
+<p>组成
++ 卷积层（Convolution Layers）-&gt; 减少参数数量
+卷积核，与图像的每一块按位置对应相乘，将结果加和，形成新的图像
++ 池化层（Pooling Layers）-&gt; 减少参数数量
+max-pooling
+mean-pooling
++ 全连接层（Fully connected Layers）-&gt; 融合前面提取到的特征</p>
+<h4 id="cnn_1">CNN演变</h4>
+<ul>
+<li>LeNet（LeCun）-&gt;手写数字识别 ， 最具代表性的CNN之一
+3卷积2池化1全连接1输出</li>
+<li>AlexNet
+5卷积3全连接
+激活函数：ReLU
+预防过拟合：Dropout、Data Augmentation</li>
+<li>VGG-Net
+5池化3全连接</li>
+<li>GoogLeNet
+取消了全连接层</li>
+<li>ResNet
+减少连接</li>
+<li>GANs
+Generate Adversarial
+灵感来源于零和博弈
+一个生成网络和一个鉴别网络
+同时训练，直至生成的伪造的与真实的几乎难以区别</li>
+</ul>
+<h3 id="_5">自然语言处理</h3>
+<ul>
+<li>基础任务：文本向量化、语言模型</li>
+<li>应用：文本分类、机器翻译、情感分析</li>
+</ul>
+<h3 id="_6">模型</h3>
+<h4 id="rnn">RNN</h4>
+<p>Recurrent Neural Network，循环神经网络
+处理序列数据、可以记忆之前的信息并利用其计算当前的输出</p>
+<p>应用于机器翻译、生成图像描述、语音辨识</p>
+<p>BPTT训练</p>
+<h4 id="lstm">LSTM</h4>
+<p>Long Short-Term Memory</p>
+<h4 id="transformer">Transformer</h4>
+<h4 id="bert">BERT</h4>
+<h3 id="_7">训练技巧</h3>
+<h4 id="data-augmentation">Data Augmentation</h4>
+<p>数据扩充
+旋转、切割等待</p>
+<h4 id="dropout">Dropout</h4>
+<p>根据输出层每个输出的概率将对应置零，其在之后的前向传播和不会参与前向和后向传播</p>
+<h4 id="relunon-saturating-nonlinearly">ReLU(Non-Saturating nonlinearly)</h4>
+<p>
+<script type="math/tex">f(x)=max(0, x)</script>
+</p>
+<h4 id="saturating-nonlinearly">Saturating nonlinearly</h4>
+<ul>
+<li>Sigmoid</li>
+<li>Hyperbolic tangent
+<script type="math/tex">f(x)=tanh(x)=\frac{e^{x}-e^{-x}}{e^{x}+e^{-x}}</script>
+</li>
+</ul>
+<h4 id="batchnormalization">BatchNormalization</h4>
+<p>对这一层数据进行标准化</p>
+<h3 id="gcngnn">GCN\GNN</h3>
+<p>图卷积神经网络</p>
+<h4 id="_8">深度神经网络本质</h4>
+<ul>
+<li>特征构建（节点间关联变成节点特征）</li>
+<li>分类</li>
+</ul>
+<h3 id="adagrad">AdaGrad</h3>
+<p>学习率随更新次数增加而下降</p>
+<p>通过累加历史梯度的平方，得到r（历史梯度平方的和），利用r位于分母控制梯度更新的幅度</p>
+<h3 id="rmsprop">RMSProp</h3>
+<p>首先为各权重变化赋一个初始值，设定权重变化<strong>加速因子</strong>与<strong>减速因子</strong>，在网络前馈迭代中当<strong>连续误差梯度符号不变时</strong>，采用加速策略，加快训练速度；当<strong>连续误差梯度符号变化时</strong>，采用减速策略，以期稳定收敛。网络结合当前误差梯度符号与变化步长实现BP，同时，为了<strong>避免网络学习发生振荡或下溢</strong>，算法要求<strong>设定权重变化的上下限</strong></p>
+<h3 id="adam">ADAM（自适应矩估计）</h3>
+<p>替代传统梯度下降的一阶优化算法，使用一阶矩（均值）和二阶矩（方差）估计。计算更合适的步长</p>
+<p>适用于非稳目标，可解决高噪和稀疏梯度问题</p>
+</div>
+</div>
+</div>
+<div class="foot">
+</div>
+
+</body>
+</html>

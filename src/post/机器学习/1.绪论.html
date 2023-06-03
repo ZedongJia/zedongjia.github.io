@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+XXX的博客网站
+</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<script src="../../script.js">
+</script>
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+<body>
+<div class="nav">
+<div class="nav-menu">
+<span class="nav-menu-item">
+<a href="../../index.html">
+主页
+<span class="tip">
+</span>
+
+</a>
+
+</span>
+
+<span class="nav-menu-item">
+<a href="../../pages/blog.html">
+归档
+<span class="tip">
+</span>
+
+</a>
+
+</span>
+
+</div>
+
+</div>
+
+<div class="blog-main">
+  <div class="list-button"><ul class="list">
+<span class="list-topic" onclick="handleSubitems(this)">
+<span class="list-title">
+机器学习
+</span>
+
+<li class="list-item">
+<a href="../../post/机器学习/1.绪论.html">
+1.绪论
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/2.1.线性回归.html">
+2.1.线性回归
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/2.2.Logistic回归.html">
+2.2.Logistic回归
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/2.3.线性判别分析.html">
+2.3.线性判别分析
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/3.1.神经网络与脑科学.html">
+3.1.神经网络与脑科学
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/3.2.神经网络的反向传递算法.html">
+3.2.神经网络的反向传递算法
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/3.3.深度学习与mindspore.html">
+3.3.深度学习与mindspore
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/6.贝叶斯分类器.html">
+6.贝叶斯分类器
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/8.网络机器学习.html">
+8.网络机器学习
+</a>
+
+</li>
+
+</span>
+
+<span class="list-topic" onclick="handleSubitems(this)">
+<span class="list-title">
+毛概
+</span>
+
+<li class="list-item">
+<a href="../../post/毛概/毛概大纲.html">
+毛概大纲
+</a>
+
+</li>
+
+</span>
+
+</ul>
+</div>
+  <div><div class="markdown-body">
+<p>time=2023-5-29-15-40</p>
+<h1 id="_1">绪论</h1>
+<blockquote>
+<p>重点掌握：基本概念、背景、典型应用</p>
+</blockquote>
+<h2 id="_2">一.基本概念</h2>
+<p><strong>（一）、课程背景</strong>
+1. 人工智能是软件发展的新方向之一
+2. 机器学习是人工智能的最核心技术
+2. 机器学习体系庞大
+    - 前沿、历史
+    - 理论基础
+    - 技术实现
+    - 应用实现</p>
+<p><strong>（二）、关键概念的内涵与外延</strong>
+1. 人工智能（科学、技术）
+研究使<strong>计算机</strong>来<strong>模拟人的某些思维过程和智能行为</strong>（如学习（记忆和复现）、推理、思考、规划等
+2. 中国新一代人工智能（产业、技术）
+    - 基础：移动互联网、大数据、超级计算、传感网、脑科学等新理论新技术
+    - 影响经济、社会、国际竞争、人类社会的不确定性
+    - 芯片、硬件、云、算法、计算加速、软件平台、API
+3. 机器学习（科学、技术）
+    - 面向<strong>特定任务</strong>的能够<strong>自我学习的程序</strong>，从<strong>经验数据</strong>中<strong>学习潜在规律</strong>，进而成为<strong>解决经验型问题</strong>的一种<strong>方法</strong>
+    - 新的<strong>编程范式</strong></p>
+<p><strong>（三）实例</strong>
+1. Handwriting Recognition
++ <strong>用途</strong>：邮件自动分拣、手写支票自动识别
++ <strong>常识</strong>：如果积累了足够多的手写字符，那么新来的手写字符的识别是可以靠积累的历史字符推断出来的
++ <strong>总结</strong>：从过去到现在手写的字符是有统计规律的，可以在历史中总结出来这个经验用于推断即将到来的手写字符
++ <strong>存在的问题</strong>：
+    - 用何种形式<strong>表示经验</strong>
+    - 如何从历史数据中<strong>提炼经验</strong>
++ <strong>解决手段</strong>
+    - 使用贝叶斯分类器
+    - 使用概率表示数据中呈现的统计规律
+    - 使用极大后验假设判别（MAP）
+2. 汽车自动驾驶
++ <strong>输入</strong>：利用激光传感器数据，摄像机视频数据，车辆定位仪，避碰雷达的距离数据等。
++ <strong>输出</strong>：油门/刹车，方向盘转动角度
+3. 国际象棋（AlphaGo）
++ <strong>Policy NetWork</strong>：outputs a probability distribution <script type="math/tex">p_{sigma}(a|s)</script> or <script type="math/tex">p_{rho}(a|s)</script> over legal moves
++ <strong>Value NetWork</strong>：outputs a scalar value <script type="math/tex">v_θ(s^{'})</script> that predicts the expected outcome in position <script type="math/tex">s^{'}</script>
++ SLPN：使用人类棋局训练
++ RLPN：和自己对弈大量棋局，使用强化学习进一步改善它
+4. 自动问答（基于自然语言处理和知识工程）
++ ChatGPT</p>
+<p><strong>总结</strong>
++ 找出模型<script type="math/tex">y=f(x)</script>，可以是概率、神经网络、线性函数等等
++ 预测：利用规律预测新样本的结果
+    - f 是样本潜在规律
+    - 利用x学习得到f，计算得到预测值y
++ 训练：从历史经验中学习规律
+    - 给定一组样本（历史经验）<script type="math/tex">(x, y)</script>，学习得到<script type="math/tex">f:x \to y</script>
+    - f 可以是<script type="math/tex">y=w^{T}、y=\exp(-x^{2})、P(y=c|x)</script>等等</p>
+<h2 id="_3">二、机器学习</h2>
+<p><strong>（一）、什么是机器学习</strong>
+A computer program is said to learn from <strong>experience E</strong> with respect to some <strong>class of tasks T</strong> and <strong>performance measure P</strong>, if its performance at tasks in T, as measured by P, improves with experience E</p>
+<p><strong>（二）、按输入输出分</strong>
+1. <strong>分类</strong>
+将事物按一定标准<strong>分成一些类别</strong>，输出是有限集合，例如（yes、no）
+2. <strong>回归</strong>
+由过去、现在的数据<strong>计算出未来状态</strong>，输出是连续值
+3. <strong>聚类</strong>
+<strong>没有类别的标准</strong>，按事物间的相似性<strong>划分成一些类别</strong>
++ 聚类是通过样本集合划分来获取对数据分布的认识
++ <strong>划分依据</strong>：相近（人以类聚、物以群分）
++ 也被称为无监督学习
+    - 对于无监督学习，只有{xi}，没有可供训练的样本标签y。
+    - 相对于有监督学习（如分类和回归），需要训练样本{(xi,yi)}</p>
+</div>
+</div>
+</div>
+<div class="foot">
+</div>
+
+</body>
+</html>

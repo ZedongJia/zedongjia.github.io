@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+XXX的博客网站
+</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<script src="../../script.js">
+</script>
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+<body>
+<div class="nav">
+<div class="nav-menu">
+<span class="nav-menu-item">
+<a href="../../index.html">
+主页
+<span class="tip">
+</span>
+
+</a>
+
+</span>
+
+<span class="nav-menu-item">
+<a href="../../pages/blog.html">
+归档
+<span class="tip">
+</span>
+
+</a>
+
+</span>
+
+</div>
+
+</div>
+
+<div class="blog-main">
+  <div class="list-button"><ul class="list">
+<span class="list-topic" onclick="handleSubitems(this)">
+<span class="list-title">
+机器学习
+</span>
+
+<li class="list-item">
+<a href="../../post/机器学习/1.绪论.html">
+1.绪论
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/2.1.线性回归.html">
+2.1.线性回归
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/2.2.Logistic回归.html">
+2.2.Logistic回归
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/2.3.线性判别分析.html">
+2.3.线性判别分析
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/3.1.神经网络与脑科学.html">
+3.1.神经网络与脑科学
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/3.2.神经网络的反向传递算法.html">
+3.2.神经网络的反向传递算法
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/3.3.深度学习与mindspore.html">
+3.3.深度学习与mindspore
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/6.贝叶斯分类器.html">
+6.贝叶斯分类器
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/8.网络机器学习.html">
+8.网络机器学习
+</a>
+
+</li>
+
+</span>
+
+<span class="list-topic" onclick="handleSubitems(this)">
+<span class="list-title">
+毛概
+</span>
+
+<li class="list-item">
+<a href="../../post/毛概/毛概大纲.html">
+毛概大纲
+</a>
+
+</li>
+
+</span>
+
+</ul>
+</div>
+  <div><div class="markdown-body">
+<h1 id="_1">网络机器学习</h1>
+<h2 id="intro">intro</h2>
+<ul>
+<li>描述对象的特征 v.s 对象间的关
+系</li>
+<li>SCI Impact Factors</li>
+<li>PageRank for web retrieval</li>
+<li>Information hub of social network</li>
+<li>Disease causal gene or proteins</li>
+</ul>
+<h2 id="pagerank">一、PageRank</h2>
+<p>利用网络拓扑结构对网页排序
++ <strong>核心思想</strong>
+  + 被连接多的页面权威度高
+  + 被权威度高的页面连接也会导致页面权威度高
++ <strong>难点</strong>
+如何将相对权威度变成全局权威度
+  + 随机游走模拟互联网用户群打开页面点击跳转
+  + 通过随机游走，使页面跳转在全局达到稳定
+  + 认为游走者按照链接权重（概率）进行随机游走
+  + 带重启的网络随机游走(RWR: Random Walk with Restart)
+<script type="math/tex; mode=display">
+PR(p_{i})=d\sum_{p_{j}\in{M(p_{i})}}\frac{PR(p_{j})}{L(p_{j})} + (1-d)\frac{1}{N}
+</script>
+N：页面总数
+<script type="math/tex">M(p_{i})</script>：i被链接的页面集合
+<script type="math/tex">L(p_{j})</script>：j链出的页面
+d：继续访问下一个页面的概率
+1-d：停止点击，随机浏览其他网页</p>
+<h2 id="rwr">二、关于带重启的网络随机游走(RWR)的损失函数及其优化的研究</h2>
+<p>Learning with Local and Global Consistency
+周登勇
++ 提出可解释性很强的损失函数，兼顾经验风险(Global)和相邻元素类别(Local)
++ 代价函数最优解与RWR算法迭代极限的收敛相同（<strong>为RWR给出了明确的代价函数</strong>，提升了其理论价值）
++ 也可认为是RWR损失函数的优化算法</p>
+<h3 id="_2">所提算法</h3>
+<ul>
+<li>生成喜好矩阵W</li>
+<li>构建<script type="math/tex">S=D^{(-\frac{1}{2})}WD^{(-\frac{1}{2})}</script>，D是对角矩阵，对角矩阵是W对应行的sum</li>
+<li>
+<script type="math/tex">F^{*}</script>是<script type="math/tex">F(t)</script>的收敛值，<script type="math/tex">y_{i}=\argmax_{j\le{c}}F_{ij}^{*}</script>
+<script type="math/tex; mode=display">
+F(t+1)=\alpha{SF(t)+(1-\alpha)Y}\\
+</script>
+RWR与之类似，
+<script type="math/tex; mode=display">
+R = dLR+(1-d)\begin{bmatrix}
+  1/N\\
+  1/N\\
+  \vdots\\
+  1/N
+\end{bmatrix}\\
+L=\begin{bmatrix}
+  l(p_{1},p_{1})&l(p_{1},p_{2})&\ldots&l(p_{1},p_{N})\\
+  l(p_{2},p_{1})&\ddots\\
+  \vdots\\
+  l(p_{N},p_{1})&&&l(p_{N},p_{N})
+\end{bmatrix}
+</script>
+<script type="math/tex">l(p_{i},p_{j})=\frac{页面j指向页面i的链接数}{页面j外部链接总数}</script>
+</li>
+</ul>
+<h3 id="_3">代价函数</h3>
+<p>
+<script type="math/tex; mode=display">
+Q(F)=\frac{1}{2}(\sum_{i, j=1}^{n}W_{ij}||\frac{1}{\sqrt{D_{ii}}}F_{i}-\frac{1}{\sqrt{D_{jj}}}F_{j}||^{2} + \mu\sum_{i=1}^{n}||F_{i}-Y_{i}||^{2})
+</script>
+<script type="math/tex">\mu</script>正则化参数</p>
+<h3 id="_4">最优解</h3>
+<ul>
+<li>对F求导并取<script type="math/tex">F^{*}</script>
+<script type="math/tex; mode=display">
+F^{*}-SF^{*}+\mu(F^{*}-Y)=0\\
+it can be: F^{*}-\frac{1}{1+\mu}SF^{*}-\frac{\mu}{1+\mu}Y=0\\
+let: \alpha=\frac{1}{1+\mu}, \beta=\frac{\mu}{1+\mu}\\
+it can be: (1-\alpha{S})F^{*}=\beta{Y}\\
+finally: F^{*}=\beta(1-\alpha{S})^{-1}Y
+</script>
+<blockquote>
+<p>RWR可扩展至分类, F(t)从排序变分类</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="prince">三、PRINCE</h2>
+<ul>
+<li>使用Random Walk with Restart进行排序受初始值很大影响 （见DY Zhou的论文）</li>
+<li>使用初始值作为Query，排序结果与Query相关</li>
+</ul>
+<h2 id="_5">四、网络表示学习、网络嵌入</h2>
+<ol>
+<li>深度神经网络</li>
+<li>特征构建（节点间关联变为节点特征）</li>
+<li>图像、文本</li>
+<li>互联网推荐、生物信息网络</li>
+<li>分类</li>
+<li>使用K阶邻居表征当前节点</li>
+<li>输入：特征矩阵X，（源于对邻接矩阵A的预处理）</li>
+<li>
+<script type="math/tex">X = H^{(0)}</script>
+</li>
+<li>
+<script type="math/tex">\sigma(x)=ReLU</script>(<script type="math/tex">ReLU=\max{(x, 0)}</script>)</li>
+<li>
+<script type="math/tex">H^{(l+1)}=\sigma(D^{(-\frac{1}{2})}AD^{(-\frac{1}{2})}H^{(l)}W^{(l)})</script>
+</li>
+<li>其他网络表示学习算法
+GCN, GAT, GraphSAGE</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="foot">
+</div>
+
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+XXX的博客网站
+</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<script src="../../script.js">
+</script>
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+<body>
+<div class="nav">
+<div class="nav-menu">
+<span class="nav-menu-item">
+<a href="../../index.html">
+主页
+<span class="tip">
+</span>
+
+</a>
+
+</span>
+
+<span class="nav-menu-item">
+<a href="../../pages/blog.html">
+归档
+<span class="tip">
+</span>
+
+</a>
+
+</span>
+
+</div>
+
+</div>
+
+<div class="blog-main">
+  <div class="list-button"><ul class="list">
+<span class="list-topic" onclick="handleSubitems(this)">
+<span class="list-title">
+机器学习
+</span>
+
+<li class="list-item">
+<a href="../../post/机器学习/1.绪论.html">
+1.绪论
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/2.1.线性回归.html">
+2.1.线性回归
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/2.2.Logistic回归.html">
+2.2.Logistic回归
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/2.3.线性判别分析.html">
+2.3.线性判别分析
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/3.1.神经网络与脑科学.html">
+3.1.神经网络与脑科学
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/3.2.神经网络的反向传递算法.html">
+3.2.神经网络的反向传递算法
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/3.3.深度学习与mindspore.html">
+3.3.深度学习与mindspore
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/6.贝叶斯分类器.html">
+6.贝叶斯分类器
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/8.网络机器学习.html">
+8.网络机器学习
+</a>
+
+</li>
+
+</span>
+
+<span class="list-topic" onclick="handleSubitems(this)">
+<span class="list-title">
+毛概
+</span>
+
+<li class="list-item">
+<a href="../../post/毛概/毛概大纲.html">
+毛概大纲
+</a>
+
+</li>
+
+</span>
+
+</ul>
+</div>
+  <div><div class="markdown-body">
+<h1 id="logistic">Logistic回归</h1>
+<h2 id="_1">回归和分类任务的不同</h2>
+<ol>
+<li>输出类型不同</li>
+<li>回归得到的结果是连续的</li>
+<li>分类得到的结果是类别(0 或 1)</li>
+<li>分类更为广泛
+Logistic, Regression, LDA, SVM, ANN, 决策树</li>
+<li>对输入处理的方式不同(对结果的使用)<blockquote>
+<p>虽然判决函数都为<script type="math/tex">h_{\theta}(x)=\theta^{T}x</script>
+</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="_2">线性分类器</h2>
+<ol>
+<li>判决函数主体形式
+<script type="math/tex; mode=display">h_{\theta}(x)=\theta^{T}x</script>
+</li>
+<li>阈值</li>
+<li>大于阈值为正例</li>
+<li>小于阈值为负例</li>
+</ol>
+<h2 id="logistic_1">Logistic</h2>
+<ol>
+<li>提出者
+统计学家 David Cox 1958年</li>
+<li>回归模型</li>
+<li>利用sigmoid函数，将线性输出变换到(0, 1)
+<script type="math/tex; mode=display">
+h_{\theta}(x)=g(\theta^{T}x)=\frac{1}{1+e^{-\theta^{T}x}}, 
+g(z)=\frac{1}{1+e^{-z}}
+</script>
+</li>
+<li>判决函数
+当<script type="math/tex">h_{\theta}(x) > 0.5</script>即<script type="math/tex">\theta^{T}x >= 0</script>时为1, 反之为0
+注意是<strong>大于等于</strong></li>
+<li>判决边界
+<script type="math/tex; mode=display">
+\theta^{T}x = 0
+</script>
+</li>
+<li>代价函数
+<script type="math/tex; mode=display">
+J(\theta)=-\frac{1}{m}\varSigma_{i=1}^{m}[y^{(i)}\log{h_{\theta}(x^{(i)})} + (1-y^{(i)})\log{(1-h_{\theta}(x^{(i)}))}]
+</script>
+<blockquote>
+<p>梯度求导, 记得提供公因式</p>
+</blockquote>
+</li>
+<li>交叉熵（信息熵）</li>
+<li>提出者
+香农</li>
+<li>信息熵
+度量样本集合纯度的一种指标</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="foot">
+</div>
+
+</body>
+</html>

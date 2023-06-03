@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+XXX的博客网站
+</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<script src="../../script.js">
+</script>
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+<body>
+<div class="nav">
+<div class="nav-menu">
+<span class="nav-menu-item">
+<a href="../../index.html">
+主页
+<span class="tip">
+</span>
+
+</a>
+
+</span>
+
+<span class="nav-menu-item">
+<a href="../../pages/blog.html">
+归档
+<span class="tip">
+</span>
+
+</a>
+
+</span>
+
+</div>
+
+</div>
+
+<div class="blog-main">
+  <div class="list-button"><ul class="list">
+<span class="list-topic" onclick="handleSubitems(this)">
+<span class="list-title">
+机器学习
+</span>
+
+<li class="list-item">
+<a href="../../post/机器学习/1.绪论.html">
+1.绪论
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/2.1.线性回归.html">
+2.1.线性回归
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/2.2.Logistic回归.html">
+2.2.Logistic回归
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/2.3.线性判别分析.html">
+2.3.线性判别分析
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/3.1.神经网络与脑科学.html">
+3.1.神经网络与脑科学
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/3.2.神经网络的反向传递算法.html">
+3.2.神经网络的反向传递算法
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/3.3.深度学习与mindspore.html">
+3.3.深度学习与mindspore
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/6.贝叶斯分类器.html">
+6.贝叶斯分类器
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/8.网络机器学习.html">
+8.网络机器学习
+</a>
+
+</li>
+
+</span>
+
+<span class="list-topic" onclick="handleSubitems(this)">
+<span class="list-title">
+毛概
+</span>
+
+<li class="list-item">
+<a href="../../post/毛概/毛概大纲.html">
+毛概大纲
+</a>
+
+</li>
+
+</span>
+
+</ul>
+</div>
+  <div><div class="markdown-body">
+<h1 id="lda">线性判别分析（LDA）</h1>
+<ul>
+<li>提出者
+Fisher 1936</li>
+<li>核心思想
+使用超平面切分两类样本，使得两类样本类内间距最小，类间距最大</li>
+</ul>
+<h2 id="linear-discriminate-analysis">线性判别分析(Linear Discriminate Analysis)</h2>
+<ul>
+<li>给定训练样本集合，设法投影到分割面的法线上，并尽可能分开两类样本</li>
+<li>分类时，将分类样本同样投到法线上，根据其所在位置决定样本类别</li>
+</ul>
+<h2 id="_1">优化目标</h2>
+<ol>
+<li>涉及变量
+<script type="math/tex">\mu_{0},\mu_{1}</script>：两类样本的均值方差
+<script type="math/tex">\varSigma_{0}, \varSigma_{1}</script>：两类样本的协方差矩阵
+<script type="math/tex">\omega^{T}\mu_{0}, \omega^{T}\mu_{1}</script>：两样本中心在<script type="math/tex">\omega</script>上的投影
+<script type="math/tex">\omega^{T}\varSigma_{0}\omega, \omega^{T}\varSigma_{1}\omega</script>：两样本中心在<script type="math/tex">\omega</script>上的投影长度的协方差</li>
+<li>优化目标</li>
+<li>类间距最大化（两个类别对应的样本构成的向量之间的距离）
+<script type="math/tex; mode=display">
+\max{||\omega^{T}\mu_{0} - \omega^{T}\mu_{1}||_{2}^{2}}
+</script>
+</li>
+<li>类内距最小化
+<script type="math/tex; mode=display">
+\min{{\omega^{T}\varSigma_{0}\omega + \omega^{T}\varSigma_{1}\omega}}
+</script>
+</li>
+<li>优化目标
+<script type="math/tex; mode=display">
+J = \frac{||\omega^{T}\mu_{0} - \omega^{T}\mu_{1}||_{2}^{2}}{{\omega^{T}\varSigma_{0}\omega + \omega^{T}\varSigma_{1}\omega}} \\ = \frac{\omega^{T}(\mu_{0} - \mu{1})(\mu_{0} - \mu{1})^{T}\omega}{\omega^{T}(\varSigma_{0} + \varSigma_{1})\omega}
+</script>
+其中</li>
+<li>
+<script type="math/tex">(\mu_{0} - \mu{1})(\mu_{0} - \mu{1})^{T}</script>为类间散度矩阵<script type="math/tex">S_{b}</script>
+</li>
+<li>
+<script type="math/tex">\varSigma_{0} + \varSigma_{1}</script>为类内散度矩阵<script type="math/tex">S_{\omega}</script>
+<blockquote>
+<p>其中协方差可通过<script type="math/tex">\varSigma_{i} = \varSigma_{x \in X_{i}}(x - \mu_{0})(x - \mu_{0})^{T}</script>
+</p>
+</blockquote>
+</li>
+<li>最大化J
+若<script type="math/tex">\omega</script>是一个解，则<script type="math/tex">c\omega</script>也是一个解，所有解与<script type="math/tex">\omega</script>长度无关，与其方向有关。则我们可以让<script type="math/tex">\omega^{T}S_{\omega}\omega=1</script>
+等价有：
+<script type="math/tex; mode=display">
+\min_{\omega}\quad{-\omega^{T}S_{b}\omega}\\
+s.t.\quad\omega^{T}S_{\omega}\omega=1
+</script>
+<blockquote>
+<p>可以用拉格朗日函数求解</p>
+</blockquote>
+</li>
+<li>最优方向
+<script type="math/tex">\omega=\frac{R}{\lambda}S_{\omega}^{-1}(\mu_{0}-\mu_{1})</script>
+</li>
+</ol>
+<h2 id="lda_1">LDA算法</h2>
+<ol>
+<li>计算训练数据集中两类样本的均值与方差</li>
+<li>计算类内散度</li>
+<li>计算<script type="math/tex">\omega=S_{\omega}^{-1}(\mu_{0}-\mu_{1})</script>
+</li>
+<li>计算判决模型阈值 <script type="math/tex">y_{0}=\frac{1}{2}\omega^{T}(\mu_{0} + \mu_{1})</script>，大于<script type="math/tex">y_{0}</script>为1，反之为0</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="foot">
+</div>
+
+</body>
+</html>

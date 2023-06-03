@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+XXX的博客网站
+</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<script src="./script.js">
+</script>
+
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<div class="nav">
+<div class="nav-menu">
+<span class="nav-menu-item">
+<a href="./index.html">
+主页
+<span class="tip">
+</span>
+
+</a>
+
+</span>
+
+<span class="nav-menu-item">
+<a href="./pages/blog.html">
+归档
+<span class="tip">
+</span>
+
+</a>
+
+</span>
+
+</div>
+
+</div>
+
+<div class="roll-box">
+  <pre class="intro"></pre>
+</div>
+<div class="part">
+  <h1>文章推送</h1>
+  <div class="card-container">
+<div class="card">
+<a href="./post/机器学习/6.贝叶斯分类器.html">
+6.贝叶斯分类器
+</a>
+
+<span>
+2022-1-1-10-45
+</span>
+
+</div>
+
+<div class="card">
+<a href="./post/机器学习/2.2.Logistic回归.html">
+2.2.Logistic回归
+</a>
+
+<span>
+2022-1-1-10-45
+</span>
+
+</div>
+
+<div class="card">
+<a href="./post/机器学习/3.1.神经网络与脑科学.html">
+3.1.神经网络与脑科学
+</a>
+
+<span>
+2022-1-1-10-45
+</span>
+
+</div>
+
+<div class="card">
+<a href="./post/机器学习/2.3.线性判别分析.html">
+2.3.线性判别分析
+</a>
+
+<span>
+2022-1-1-10-45
+</span>
+
+</div>
+
+</div>
+
+</div>
+<div class="part">
+  <h1>近期新闻</h1>
+  <block class="block">
+<a>
+1111111111111
+</a>
+
+<a>
+https:www.xxx.com
+</a>
+
+</block>
+<block class="block">
+<a>
+2222222222222
+</a>
+
+<a>
+https:www.xxx.com
+</a>
+
+</block>
+<block class="block">
+<a>
+3333333333333
+</a>
+
+<a>
+https:www.xxx.com
+</a>
+
+</block>
+<block class="block">
+<a>
+4444444444444
+</a>
+
+<a>
+https:www.xxx.com
+</a>
+
+</block>
+
+</div>
+<div class="part">
+  <h1>About Me</h1>
+  <block class="block">
+<a>
+1111111111111
+</a>
+
+<a>
+https:www.xxx.com
+</a>
+
+</block>
+<block class="block">
+<a>
+2222222222222
+</a>
+
+<a>
+https:www.xxx.com
+</a>
+
+</block>
+<block class="block">
+<a>
+3333333333333
+</a>
+
+<a>
+https:www.xxx.com
+</a>
+
+</block>
+<block class="block">
+<a>
+4444444444444
+</a>
+
+<a>
+https:www.xxx.com
+</a>
+
+</block>
+
+</div>
+<script>
+  let introStoreText = '欢迎来到XXX的个人博客'
+  let introShowText = ''
+  let index = 0
+  let controlPrint = undefined
+  let intro = document.querySelector('.intro')
+  function printTo() {
+    introShowText = introStoreText.substring(0, index)
+    intro.innerHTML = introShowText
+    index++
+    if (index > introStoreText.length) {
+      clearInterval(controlPrint)
+    }
+  }
+  controlPrint = setInterval(printTo, 100);
+  </script>
+  
+<div class="foot">
+</div>
+
+</body>
+</html>

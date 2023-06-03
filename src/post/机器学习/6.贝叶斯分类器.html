@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+XXX的博客网站
+</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<script src="../../script.js">
+</script>
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+<body>
+<div class="nav">
+<div class="nav-menu">
+<span class="nav-menu-item">
+<a href="../../index.html">
+主页
+<span class="tip">
+</span>
+
+</a>
+
+</span>
+
+<span class="nav-menu-item">
+<a href="../../pages/blog.html">
+归档
+<span class="tip">
+</span>
+
+</a>
+
+</span>
+
+</div>
+
+</div>
+
+<div class="blog-main">
+  <div class="list-button"><ul class="list">
+<span class="list-topic" onclick="handleSubitems(this)">
+<span class="list-title">
+机器学习
+</span>
+
+<li class="list-item">
+<a href="../../post/机器学习/1.绪论.html">
+1.绪论
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/2.1.线性回归.html">
+2.1.线性回归
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/2.2.Logistic回归.html">
+2.2.Logistic回归
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/2.3.线性判别分析.html">
+2.3.线性判别分析
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/3.1.神经网络与脑科学.html">
+3.1.神经网络与脑科学
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/3.2.神经网络的反向传递算法.html">
+3.2.神经网络的反向传递算法
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/3.3.深度学习与mindspore.html">
+3.3.深度学习与mindspore
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/6.贝叶斯分类器.html">
+6.贝叶斯分类器
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/8.网络机器学习.html">
+8.网络机器学习
+</a>
+
+</li>
+
+</span>
+
+<span class="list-topic" onclick="handleSubitems(this)">
+<span class="list-title">
+毛概
+</span>
+
+<li class="list-item">
+<a href="../../post/毛概/毛概大纲.html">
+毛概大纲
+</a>
+
+</li>
+
+</span>
+
+</ul>
+</div>
+  <div><div class="markdown-body">
+<p>2023-5-28</p>
+<h1 id="_1">贝叶斯分类器</h1>
+<h2 id="1">1. 先验概率</h2>
+<p>
+<script type="math/tex; mode=display">
+P(c)=\frac{D_{c}}{D}
+</script>
+c为样本类别。<script type="math/tex">P(c)</script>为该类别数据<script type="math/tex">(D_{c})</script>在数据集所有类别数据<script type="math/tex">(D)</script>中占的比例，也是其出现的概率</p>
+<h2 id="2">2. 后验概率</h2>
+<ul>
+<li>离散式
+<script type="math/tex; mode=display">
+P(x_{i}|c)=\frac{|D_{c,x_{i}}|}{D_{c}}
+</script>
+意思是c类别下，该特征是<script type="math/tex">x_{i}</script>的数据在所有c类别数据中的占比</li>
+<li>连续式
+<script type="math/tex; mode=display">
+P(x_{i}|c)=\frac{1}{\sqrt{2\pi}\sigma_{c,i}}\exp{(-\frac{(x_{i}-\mu_{c,i})^{2}}{2\sigma^{2}_{c,i}})}
+</script>
+</li>
+</ul>
+<h2 id="3">3. 判决函数</h2>
+<p>
+<script type="math/tex; mode=display">
+h_{nb}(x)=\argmax_{c\in{\gamma}}P(c)\prod_{i=1}^{d}{P(x_{i}|c)}
+</script>
+</p>
+<h2 id="4">4. 问题</h2>
+<ul>
+<li>样本不足，有的样本出现零
+拉普拉斯修正
+分子加(1), 分母加(构成分母种类的数量N, 对于数据集来说就是类别，对于特征来说就是可取值数量)</li>
+</ul>
+<h2 id="5">5. 算法</h2>
+<ol>
+<li>数据预处理</li>
+<li>估计先验概率<script type="math/tex">P(c)</script>
+</li>
+<li>估计每个类别条件下各特征下每种取值出现的概率<script type="math/tex">P(x_{i}|c)</script>
+</li>
+<li>为每个类别计算概率<script type="math/tex">P(c|x)</script>, 选择概率最大的c作为输出</li>
+</ol>
+<h2 id="_2">最小化风险的角度看贝叶斯分类</h2>
+<blockquote>
+<p>寻找欧安别模型最小化总体风险，<script type="math/tex">R(h)</script>，即<script type="math/tex">R(c_{i}|x)</script>
+1. 条件风险
+<script type="math/tex; mode=display">
+R(c_{i}|x)=\sum_{j=1}^{N}{\lambda_{ij}P(c_{j}|x)}
+\lambda=\begin{cases}
+    0, \space if\space i = j \\
+    1, \space otherwise
+\end{cases}
+</script>
+2. Bayes Decision Rule
+<script type="math/tex; mode=display">
+h^{*}(x)=\argmin_{c\in{\gamma}}R(c|x)
+</script>
+<script type="math/tex">h^{*}</script>为贝叶斯最优分类器(Bayes Optimal Classifier)即最优判别模型, <script type="math/tex">R(h^{*})</script>为对应的贝叶斯风险(Bayes Risk)
+<script type="math/tex">1-R(h^{*})</script>为通过学习能产生的模型精度的理论上限</p>
+</blockquote>
+</div>
+</div>
+</div>
+<div class="foot">
+</div>
+
+</body>
+</html>

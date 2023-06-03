@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+XXX的博客网站
+</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<script src="../../script.js">
+</script>
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+<body>
+<div class="nav">
+<div class="nav-menu">
+<span class="nav-menu-item">
+<a href="../../index.html">
+主页
+<span class="tip">
+</span>
+
+</a>
+
+</span>
+
+<span class="nav-menu-item">
+<a href="../../pages/blog.html">
+归档
+<span class="tip">
+</span>
+
+</a>
+
+</span>
+
+</div>
+
+</div>
+
+<div class="blog-main">
+  <div class="list-button"><ul class="list">
+<span class="list-topic" onclick="handleSubitems(this)">
+<span class="list-title">
+机器学习
+</span>
+
+<li class="list-item">
+<a href="../../post/机器学习/1.绪论.html">
+1.绪论
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/2.1.线性回归.html">
+2.1.线性回归
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/2.2.Logistic回归.html">
+2.2.Logistic回归
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/2.3.线性判别分析.html">
+2.3.线性判别分析
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/3.1.神经网络与脑科学.html">
+3.1.神经网络与脑科学
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/3.2.神经网络的反向传递算法.html">
+3.2.神经网络的反向传递算法
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/3.3.深度学习与mindspore.html">
+3.3.深度学习与mindspore
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/6.贝叶斯分类器.html">
+6.贝叶斯分类器
+</a>
+
+</li>
+
+<li class="list-item">
+<a href="../../post/机器学习/8.网络机器学习.html">
+8.网络机器学习
+</a>
+
+</li>
+
+</span>
+
+<span class="list-topic" onclick="handleSubitems(this)">
+<span class="list-title">
+毛概
+</span>
+
+<li class="list-item">
+<a href="../../post/毛概/毛概大纲.html">
+毛概大纲
+</a>
+
+</li>
+
+</span>
+
+</ul>
+</div>
+  <div><div class="markdown-body">
+<h1 id="_1">线性回归</h1>
+<h2 id="_2">预测任务、数据和预测模型</h2>
+<p>线性回归: 通过一组属性值的线性组合来预测目标值
++ 判决式:
+<script type="math/tex; mode=display">
+h_{\theta}(x) = \theta_{0} + \theta_{1}x
+</script>
++ 预测任务:
+通过房屋的大小，房屋数量等等去预测房价</p>
+<h2 id="_3">模型表示</h2>
+<ol>
+<li>使用<strong>线性方程</strong>表示预测模型, 参数<script type="math/tex">\theta</script>代表不同的预测模型
+即
+<script type="math/tex; mode=display">
+h_{\theta}(x) = \theta_{0} + \theta_{1}x
+</script>
+</li>
+<li>通过训练数据获取合适的参数<script type="math/tex">\theta</script>
+</li>
+<li>这个<strong>过程</strong>称为机器学习的模型训练</li>
+<li><strong>输入</strong>是训练数据</li>
+<li><strong>输出</strong>是模型参数</li>
+<li>典型的训练策略是使用<strong>代价函数</strong>评估训练数据和模型参数的匹配程度, 并为参数调整提供支持</li>
+<li>代价函数
+<script type="math/tex; mode=display">
+J(\theta_{0}, \theta_{1}) = \frac{1}{2m}\sum_{i=1}^{m}(h_{\theta}(x^{(i)}) - y^{(i)}))^{2}
+</script>
+</li>
+<li>训练过程
+<script type="math/tex; mode=display">
+minimize_{\theta_{0}, \theta_{1}} J(\theta_{0}, \theta_{1})
+</script>
+</li>
+<li>优化代价函数的方法<blockquote>
+<p>目标：使用带标注数据在优化过程中选出最好的参数组合</p>
+</blockquote>
+</li>
+<li>解析求导法
+目标为多项式，存在最低点，求导让导数为零，对应的<script type="math/tex">\theta</script>为最优参数
+针对于<script type="math/tex">\theta_{j}</script>，有
+<script type="math/tex; mode=display">
+X_{\cdot{j}}^{T}X\theta = X_{\cdot{j}}^{T}\cdot{y}
+</script>
+对于所有的<script type="math/tex">\theta</script>, 有
+<script type="math/tex; mode=display">
+\theta = (X^{T}X)^{-1}X^{T}y
+</script>
+X是m<em>n维的矩阵，m是样本数量，n是参数数量
+y是m</em>1维的矩阵
+<script type="math/tex">\cdot</script>j是指所有样本的第j个参数对应的一列</li>
+<li>梯度下降法
+负梯度是函数下降最快的方向
+思路：从一个初始点向着梯度逐渐下降的方向
+<strong>对于某个theta来说</strong>
+<script type="math/tex; mode=display">
+\theta_{j} = \theta_{j} - \alpha\frac{1}{m}\sum_{i=1}^{m}(h_{\theta}(x^{(i)}) - y^{(i)}\cdot{x_{j}^{(i)}})
+</script>
+"Batch" 指<script type="math/tex">\frac{1}{m}\sum_{i=1}^{m}(h_{\theta}(x^{(i)}) - y^{(i)})</script>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="foot">
+</div>
+
+</body>
+</html>
