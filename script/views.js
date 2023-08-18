@@ -102,8 +102,21 @@ function DocRecommend(title, linkList) {
     ])
 }
 
+// searchBar
+function search() {
+    const prompt = document.querySelector('.input').value
+    render([BlockArea(prompt)], document.querySelector('.main'), 1)
+}
+
+function SearchBar() {
+    return h('div', { class: 'searchbar' }, [
+        h('span', { class: 'icon' }, [h('ion-icon', { name: 'search-outline', style: 'transform: scale(2)' })]),
+        h('input', { type: 'text', class: 'input', placeholder: '想要找什么呢?', oninput: 'search()' })
+    ])
+}
+
 // ---blockarea
-function BlockArea() {
+function BlockArea(prompt = '') {
     /**
      * {
      *  title
@@ -119,16 +132,18 @@ function BlockArea() {
             h('div', { class: 'area' }, [
                 h('h2', { class: 'topic' }, [h('span', { class: 'icon' }, [h('ion-icon', { name: 'ribbon-outline' })]), topic]),
                 h('hr'),
-                ...doc[topic].map((item, index) =>
-                    h('div', { class: 'item', onclick: 'switchArticle(this)', 'data-topic': topic, 'data-index': index }, [
-                        h('h4', { class: 'title' }, [
-                            h('span', { class: 'icon' }, [h('ion-icon', { name: 'chevron-forward-outline' })]),
-                            item.title,
-                            h('span', { class: 'time' }, [item.time])
-                        ]),
-                        h('div', { class: 'abstract' }, [item.abstract])
-                    ])
-                )
+                ...doc[topic]
+                    .filter((item) => !(prompt !== '' && !item.title.includes(prompt)))
+                    .map((item, index) =>
+                        h('div', { class: 'item', onclick: 'switchArticle(this)', 'data-topic': topic, 'data-index': index }, [
+                            h('h4', { class: 'title' }, [
+                                h('span', { class: 'icon' }, [h('ion-icon', { name: 'chevron-forward-outline' })]),
+                                item.title,
+                                h('span', { class: 'time' }, [item.time])
+                            ]),
+                            h('div', { class: 'abstract' }, [item.abstract])
+                        ])
+                    )
             ])
         )
     )
@@ -148,13 +163,14 @@ function Sidebar() {
                 return {
                     title: item.title,
                     topic: topic,
-                    index: index
+                    index: index,
+                    time: item.time
                 }
             })
         )
     })
     return h('div', { class: 'sidebar' }, [
-        Card(DocRecommend('近期更新', randomChoices(docList))),
+        Card(DocRecommend('近期更新', selectedByTime(docList))),
         h('br'),
         Card(DocRecommend('推荐阅读', randomChoices(docList)))
     ])
@@ -163,12 +179,12 @@ function Sidebar() {
 // ---------------------------views----------------------------
 // ---Home
 function Home() {
-    return h('div', { class: 'main' }, [Article('Hello World', '至未来的你', '<h3>你好，这里是J的个人博客, 希望你有所获，未来可期！</h3>')])
+    return h('div', { class: 'main' }, [Article('Hello World', '致未来的你', '<h3>你好，这里是J的个人博客, 希望你有所获，未来可期！</h3>')])
 }
 
 // ---Achieve
 function Achieve() {
-    return h('div', { class: 'main' }, [BlockArea()])
+    return h('div', { class: 'main' }, [SearchBar(), BlockArea()])
 }
 
 // ---Main

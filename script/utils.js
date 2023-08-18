@@ -28,6 +28,12 @@ function render(els, root, index = -1) {
     }
 }
 
+/**
+ *
+ * @param {Array} arr
+ * @param {Number} k
+ * @returns
+ */
 function randomChoices(arr, k = 5) {
     if (k >= arr.length) {
         return arr
@@ -43,4 +49,22 @@ function randomChoices(arr, k = 5) {
         visited.push(index)
     }
     return result
+}
+
+/**
+ *
+ * @param {Array} arr
+ * @param {Number} k
+ * @returns
+ */
+function selectedByTime(arr, k = 5) {
+    if (k >= arr.length) {
+        return arr
+    }
+    arr.sort((a, b) => {
+        const aDate = new Date(a.time.replace(/[年月日]/g, '/')).getTime()
+        const bDate = new Date(b.time.replace(/[年月日]/g, '/')).getTime()
+        return bDate - aDate
+    })
+    return arr.slice(0, k)
 }
