@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>J-Space</title>
+        <link
+            rel="stylesheet"
+            href="/style/index.css"
+        />
+        <script src="/utils.js"></script>
+        <script src="/indexes.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/vditor/dist/index.css"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/vditor/dist/index.min.js"></script>
+    </head>
+
+    <body id="body">
+        <script>
+            mount('body', 'afterbegin', '#nav')
+        </script>
+        <div id="container"></div>
+        <script>
+            async function loadFileCollection() {
+                let groupTemplate = await requestFile('/pages/components/group.html')
+                let groupItemTemplate = await requestFile('/pages/components/group-item.html')
+                function createGroup(root, prefix) {
+                    let template = ''
+                    let childrenTemplate = ''
+                    root.children.forEach((child) => {
+                        if (child.type === 'dir') {
+                            childrenTemplate += createGroup(child, prefix + root.name + '/')
+                        } else {
+                            childrenTemplate += replace(groupItemTemplate, {
+                                name: child.name,
+                                time: child.time,
+                                href: prefix + root.name + '/' + child.name + '.md'
+                            })
+                        }
+                    })
+                    template = replace(groupTemplate, {
+                        name: root.name,
+                        'group-item': childrenTemplate
+                    })
+                    return template
+                }
+                const domList = parseAllDom(createGroup(NOTES_TREE, '/'))
+                document.querySelector('#container').append(...domList)
+                executeScript(domList)
+            }
+            loadFileCollection()
+            function onClickGroupItem(href) {
+                window.location.replace('/pages/doc-viewer.html?' + 'doc=' + href)
+            }
+        </script>
+    </body>
+    <script
+        type="module"
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+        nomodule
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+</html>

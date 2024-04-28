@@ -1,0 +1,36 @@
+.group {
+    margin-bottom: 1em;
+    padding: 1em;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: -2px 2px 5px grey;
+}
+
+.group .icon {
+    margin-right: 4px;
+    width: 32px;
+    height: 32px;
+}
+
+.group-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: var(--tag);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.group-item {
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.group-item:hover {
+    cursor: pointer;
+    color: var(--choose);
+    background-color: var(--choose-bg);
+}

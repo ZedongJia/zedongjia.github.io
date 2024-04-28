@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>J-Space</title>
+        <link
+            rel="stylesheet"
+            href="/style/index.css"
+        />
+        <script src="/utils.js"></script>
+        <script src="/indexes.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/vditor/dist/index.css"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/vditor/dist/index.min.js"></script>
+    </head>
+
+    <body id="body">
+        <script>
+            mount('body', 'afterbegin', '#nav')
+        </script>
+        <div id="container">
+            <div id="article">
+                <div
+                    id="preview"
+                    style="padding: 0 1em"
+                >
+                    <h1 class="default">请选择你要阅览的文章</h1>
+                </div>
+            </div>
+            <div id="aside">
+                <div class="fixed">
+                    <h1>Article</h1>
+                    <hr />
+                    <ul class="article-list"></ul>
+                    <br />
+                    <h1>Outline</h1>
+                    <hr />
+                    <div id="outline"></div>
+                </div>
+            </div>
+        </div>
+        <script>
+            // do sth to sidebar
+            template = ''
+            let articleTemplate = `
+            <li onClick="onClickArticle('{{href}}')">
+                <ion-icon class="icon" name="document-outline"></ion-icon>
+                {{name}}
+            </li>`
+            NOTES_LIST.forEach((note) => {
+                template += replace(articleTemplate, {
+                    name: note.name.slice(0, 15) + '...',
+                    href: note.href
+                })
+            })
+            function onClickArticle(href) {
+                window.location.replace('/pages/doc-viewer.html?' + 'doc=' + href)
+            }
+            document.querySelector('.article-list').append(...parseAllDom(template))
+        </script>
+        <script>
+            const initOutline = () => {
+                const headingElements = []
+                Array.from(document.getElementById('preview').children).forEach((item) => {
+                    if (item.tagName.length === 2 && item.tagName !== 'HR' && item.tagName.indexOf('H') === 0) {
+                        headingElements.push(item)
+                    }
+                })
+
+                let toc = []
+                window.addEventListener('scroll', () => {
+                    const scrollTop = window.scrollY
+                    toc = []
+                    headingElements.forEach((item) => {
+                        console.log(item.id)
+                        toc.push({
+                            id: item.id,
+                            offsetTop: item.offsetTop
+                        })
+                    })
+
+                    const currentElement = document.querySelector('.vditor-outline__item--current')
+                    for (let i = 0, iMax = toc.length; i < iMax; i++) {
+                        if (scrollTop < toc[i].offsetTop - 30) {
+                            if (currentElement) {
+                                currentElement.classList.remove('vditor-outline__item--current')
+                            }
+                            let index = i > 0 ? i - 1 : 0
+                            document.querySelector('span[data-target-id="' + toc[index].id + '"]').classList.add('vditor-outline__item--current')
+                            break
+                        }
+                    }
+                })
+            }
+            function viewDoc(filepath) {
+                fetch(filepath)
+                    .then((response) => response.text())
+                    .then((markdown) => {
+                        Vditor.preview(document.getElementById('preview'), markdown, {
+                            speech: {
+                                enable: true
+                            },
+                            anchor: 1,
+                            after() {
+                                if (window.innerWidth <= 768) {
+                                    return
+                                }
+                                const outlineElement = document.getElementById('outline')
+                                Vditor.outlineRender(document.getElementById('preview'), outlineElement)
+                                if (outlineElement.innerText.trim() !== '') {
+                                    outlineElement.style.display = 'block'
+                                    initOutline()
+                                }
+                            }
+                        })
+                    })
+            }
+            if (window.location.search !== '') {
+                viewDoc(window.location.search.split('=')[1])
+            }
+        </script>
+    </body>
+    <script
+        type="module"
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+        nomodule
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+</html>

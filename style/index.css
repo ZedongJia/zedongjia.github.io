@@ -1,11 +1,15 @@
 @import url('./nav.css');
+@import url('./article.css');
+@import url('./aside.css');
+@import url('./collection.css');
 
 :root {
-    --cls: rgb(156, 156, 156);
-    --font: rgb(0, 0, 0);
+    --cls: rgb(0, 0, 0);
+    --font: rgb(255, 255, 255);
     --tag: rgb(140, 0, 255);
-    --category: rgb(0, 172, 80);
     --highlight: rgb(3, 239, 176);
+    --choose: rgb(211, 173, 255);
+    --choose-bg: rgb(46, 46, 46);
 }
 * {
     margin: 0;
@@ -21,20 +25,18 @@ ul {
     list-style: none;
 }
 
-html::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-    background-color: var(--cls);
+#container {
+    margin: 1em auto;
+    display: flex;
+    flex-flow: wrap;
+    width: 90%;
 }
 
-html::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    background-color: var(--highlight);
-}
-
-html::-webkit-scrollbar-button {
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
-    background-color: var(--tag);
+@media screen and (max-width: 768px) {
+    #container {
+        display: flex;
+        flex-flow: wrap;
+        margin: 0 auto;
+        width: 100%;
+    }
 }

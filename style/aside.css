@@ -1,0 +1,59 @@
+#aside {
+    position: relative;
+    width: 20%;
+}
+
+#aside .fixed {
+    position: fixed;
+    width: 20%;
+}
+
+@media screen and (max-width: 768px) {
+    #aside {
+        width: 0;
+    }
+}
+
+#aside #outline {
+    width: 100%;
+}
+
+#aside #outline ul {
+    padding-left: 0.5rem;
+}
+
+#aside #outline > ul {
+    padding-left: 0;
+    max-height: 15rem;
+    overflow: auto;
+}
+
+#aside #outline span:hover {
+    color: var(--choose);
+    background-color: var(--choose-bg);
+    border-radius: 10px;
+}
+
+#aside .article-list {
+    max-height: 15rem;
+    overflow: auto;
+}
+#aside .article-list li {
+    display: flex;
+    align-items: center;
+    padding: 0.5em 1em;
+    font-size: 18px;
+    border-radius: 0 10px 0 10px;
+}
+
+#aside .article-list li:hover {
+    cursor: pointer;
+    color: var(--choose);
+    background-color: var(--choose-bg);
+}
+
+#aside .article-list li .icon {
+    margin-right: 4px;
+    width: 16px;
+    height: 16px;
+}

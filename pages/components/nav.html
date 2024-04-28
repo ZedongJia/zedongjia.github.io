@@ -2,30 +2,67 @@
     <div id="logo">J-Space</div>
     <ul class="menu">
         <li class="menu-item">
-            <a class="deactive" href="/pages/home.html">
-                <img class="icon" src="/res/svg/home-outline.svg" alt="">&nbsp;主页
+            <a
+                class="deactive"
+                href="/pages/j-home.html"
+            >
+                <ion-icon
+                    class="icon"
+                    name="home-outline"
+                ></ion-icon
+                >&nbsp;主页
             </a>
         </li>
         <li class="menu-item">
-            <a class="deactive" href="/pages/docView.html">
-                <img class="icon" src="/res/svg/library-outline.svg" alt="">&nbsp;归档
+            <a
+                class="deactive"
+                href="/pages/file-collection.html"
+            >
+                <ion-icon
+                    class="icon"
+                    name="library-outline"
+                ></ion-icon
+                >&nbsp;归档
+            </a>
+        </li>
+        <li class="menu-item">
+            <a
+                class="deactive"
+                href="/pages/doc-viewer.html"
+            >
+                <ion-icon
+                    class="icon"
+                    name="document-outline"
+                ></ion-icon
+                >&nbsp;阅览
             </a>
         </li>
     </ul>
     <div class="space"></div>
     <ul class="menu">
         <li class="menu-item">
-            <a class="deactive" href="https://github.com/zedongjia">
-                <img class="icon" src="/res/svg/logo-github.svg" alt="">&nbsp;Github
+            <a
+                class="deactive"
+                href="https://github.com/zedongjia"
+            >
+                <ion-icon
+                    class="icon"
+                    name="logo-github"
+                ></ion-icon
+                >&nbsp;Github
             </a>
         </li>
     </ul>
-    <script id="onload">
-        document.getElementById("nav").querySelectorAll("a").forEach(el => {
-            if (el.href === window.location.href) {
-                el.classList.remove("deactive")
-                el.classList.add("active")
-            }
-        })
+    <script class="onload">
+        let href = window.location.href.split('?')[0]
+        document
+            .getElementById('nav')
+            .querySelectorAll('a')
+            .forEach((el) => {
+                if (el.href === href) {
+                    el.classList.remove('deactive')
+                    el.classList.add('active')
+                }
+            })
     </script>
 </div>
