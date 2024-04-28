@@ -1,0 +1,35 @@
+.block {
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.block .icon {
+    margin-right: 4px;
+    width: 32px;
+    height: 32px;
+}
+
+.block h1 {
+    padding: 0.5em 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px dotted grey;
+}
+
+.block ul {
+    margin-top: 1em;
+}
+
+.block li a,
+.block li span {
+    display: flex;
+    padding: 1em;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.block li a:hover {
+    color: var(--choose);
+    background-color: var(--choose-bg);
+}

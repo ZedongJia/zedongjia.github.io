@@ -4,6 +4,7 @@ from datetime import datetime
 root = "docs"
 note_list = []
 note_tree = {"name": "docs", "type": "dir", "children": []}
+
 hash = {root: note_tree}
 
 
@@ -40,9 +41,26 @@ for dirpath, dirnames, filenames in os.walk(root):
             }
         )
 
+papers = [
+    {"href": "https://github.com/ZedongJia/TrinityRCL", "title": "TrinityRCL 复现"}
+]
+projects = [
+    {
+        "href": "https://github.com/ZedongJia/College-Helper",
+        "title": "教育垂直领域，志愿填报知识图谱项目",
+    },
+    {
+        "href": "https://github.com/ZedongJia/Subjects-of-the-Sun",
+        "title": "基于vue的三星堆文化博物馆项目",
+    },
+    {"href": "https://github.com/ZedongJia/c-compiler", "title": "C语言代码编译器项目"},
+]
+
 text = "// AUTO-CREATE\n"
 text += f"const NOTES_TREE={str(note_tree)}\n"
 text += f"const NOTES_LIST={str(note_list)}\n"
+text += f"const PAPERS={str(papers)}\n"
+text += f"const PROJECTS={str(projects)}\n"
 
 with open("indexes.js", "w", encoding="utf8") as fw:
     fw.write(text)

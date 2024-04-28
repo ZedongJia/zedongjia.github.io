@@ -19,8 +19,86 @@
         <script>
             mount('body', 'afterbegin', '#nav')
         </script>
-        <div id="container"></div>
+        <div
+            id="container"
+            style="width: 80%"
+        >
+            <div
+                class="block"
+                style="width: 100%"
+            >
+                <h1>
+                    <ion-icon
+                        class="icon"
+                        name="planet-outline"
+                    ></ion-icon
+                    >个人资料
+                </h1>
+                <ul>
+                    <li>
+                        <span><b>@就读学校</b>：南开大学</span>
+                    </li>
+                    <li>
+                        <span><b>@就读专业</b>：软件工程</span>
+                    </li>
+                    <li>
+                        <span><b>@研究方向</b>：机器学习、深度学习、微服务系统的异常检测、故障诊断和根因定位</span>
+                    </li>
+                    <li>
+                        <span><b>@邮箱</b>：zedongjia305@gmail.com, 2698132782@qq.com</span>
+                    </li>
+                </ul>
+            </div>
+            <div
+                class="block"
+                style="width: 100%"
+            >
+                <h1>
+                    <ion-icon
+                        class="icon"
+                        name="paper-plane-outline"
+                    ></ion-icon
+                    >论文相关
+                </h1>
+                <ul id="paper"></ul>
+            </div>
+            <div
+                class="block"
+                style="width: 100%"
+            >
+                <h1>
+                    <ion-icon
+                        class="icon"
+                        name="bug-outline"
+                    ></ion-icon
+                    >项目相关
+                </h1>
+                <ul id="project"></ul>
+            </div>
+        </div>
     </body>
+    <script>
+        // do sth to sidebar
+        function renderBlock(itemList, id) {
+            template = ''
+            let itemTemplate = `
+                <li>
+                    <a href="{{href}}">
+                        <ion-icon name="caret-forward-outline"></ion-icon>
+                        {{title}}
+                    </a>
+                </li>`
+            itemList.forEach((item) => {
+                template += replace(itemTemplate, {
+                    title: item.title,
+                    href: item.href
+                })
+            })
+            document.querySelector(id).append(...parseAllDom(template))
+        }
+        renderBlock(PAPERS, '#paper')
+        renderBlock(PROJECTS, '#project')
+    </script>
     <script
         type="module"
         src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"

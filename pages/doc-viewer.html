@@ -35,11 +35,11 @@
             </div>
             <div id="aside">
                 <div class="fixed">
-                    <h1>Article</h1>
+                    <h1>文章</h1>
                     <hr />
                     <ul class="article-list"></ul>
                     <br />
-                    <h1>Outline</h1>
+                    <h1>大纲</h1>
                     <hr />
                     <div id="outline"></div>
                 </div>
@@ -54,8 +54,12 @@
                 {{name}}
             </li>`
             NOTES_LIST.forEach((note) => {
+                let name = note.name
+                if (name.length > 18) {
+                    name = name.slice(0, 15) + '...'
+                }
                 template += replace(articleTemplate, {
-                    name: note.name.slice(0, 15) + '...',
+                    name: name,
                     href: note.href
                 })
             })
