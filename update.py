@@ -42,7 +42,11 @@ for dirpath, dirnames, filenames in os.walk(root):
         )
 
 papers = [
-    {"href": "https://github.com/ZedongJia/TrinityRCL", "title": "TrinityRCL 复现"}
+    {"href": "https://github.com/ZedongJia/TrinityRCL", "title": "TrinityRCL 复现"},
+    {
+        "href": "https://github.com/ZedongJia/Empirical-Study-on-Multi-source-Failure-Diagnosis",
+        "title": "参与的论文 Empirical-Study-on-Multi-source-Failure-Diagnosis",
+    },
 ]
 projects = [
     {

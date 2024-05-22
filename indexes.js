@@ -1,55 +1,5 @@
 // AUTO-CREATE
-const NOTES_TREE = {
-    name: 'docs',
-    type: 'dir',
-    children: [
-        { name: 'Django学习', type: 'dir', children: [{ name: 'django入门', type: 'file', time: '2023-08-18 18:51:12' }] },
-        {
-            name: 'Python学习',
-            type: 'dir',
-            children: [
-                { name: 'bert', type: 'file', time: '2023-08-20 09:18:25' },
-                { name: 'WordEmbedding', type: 'file', time: '2023-08-20 08:56:00' },
-                { name: '简单的语言模型搭建', type: 'file', time: '2023-08-18 14:06:19' }
-            ]
-        },
-        {
-            name: '机器学习',
-            type: 'dir',
-            children: [
-                { name: 'Logistic回归', type: 'file', time: '2023-08-17 21:34:39' },
-                { name: '深度学习与mindspore', type: 'file', time: '2023-08-17 21:35:08' },
-                { name: '神经网络与脑科学', type: 'file', time: '2023-08-17 21:34:56' },
-                { name: '线性判别分析', type: 'file', time: '2023-08-17 21:34:48' },
-                { name: '线性回归', type: 'file', time: '2023-08-17 21:34:34' },
-                { name: '绪论', type: 'file', time: '2023-08-17 21:34:20' },
-                { name: '网络机器学习', type: 'file', time: '2023-08-17 21:35:28' },
-                { name: '贝叶斯分类器', type: 'file', time: '2023-08-17 21:35:16' },
-                { name: '集成学习', type: 'file', time: '2023-06-05 16:14:09' }
-            ]
-        },
-        { name: '测试文档', type: 'dir', children: [{ name: 'Helloworld', type: 'file', time: '2024-04-28 23:04:00' }] }
-    ]
-}
-const NOTES_LIST = [
-    { name: 'django入门', href: '/docs/Django学习/django入门.md', type: 'file', time: '2023-08-18 18:51:12' },
-    { name: 'bert', href: '/docs/Python学习/bert.md', type: 'file', time: '2023-08-20 09:18:25' },
-    { name: 'WordEmbedding', href: '/docs/Python学习/WordEmbedding.md', type: 'file', time: '2023-08-20 08:56:00' },
-    { name: '简单的语言模型搭建', href: '/docs/Python学习/简单的语言模型搭建.md', type: 'file', time: '2023-08-18 14:06:19' },
-    { name: 'Logistic回归', href: '/docs/机器学习/Logistic回归.md', type: 'file', time: '2023-08-17 21:34:39' },
-    { name: '深度学习与mindspore', href: '/docs/机器学习/深度学习与mindspore.md', type: 'file', time: '2023-08-17 21:35:08' },
-    { name: '神经网络与脑科学', href: '/docs/机器学习/神经网络与脑科学.md', type: 'file', time: '2023-08-17 21:34:56' },
-    { name: '线性判别分析', href: '/docs/机器学习/线性判别分析.md', type: 'file', time: '2023-08-17 21:34:48' },
-    { name: '线性回归', href: '/docs/机器学习/线性回归.md', type: 'file', time: '2023-08-17 21:34:34' },
-    { name: '绪论', href: '/docs/机器学习/绪论.md', type: 'file', time: '2023-08-17 21:34:20' },
-    { name: '网络机器学习', href: '/docs/机器学习/网络机器学习.md', type: 'file', time: '2023-08-17 21:35:28' },
-    { name: '贝叶斯分类器', href: '/docs/机器学习/贝叶斯分类器.md', type: 'file', time: '2023-08-17 21:35:16' },
-    { name: '集成学习', href: '/docs/机器学习/集成学习.md', type: 'file', time: '2023-06-05 16:14:09' },
-    { name: 'Helloworld', href: '/docs/测试文档/Helloworld.md', type: 'file', time: '2024-04-28 23:04:00' }
-]
-const PAPERS = [{ href: 'https://github.com/ZedongJia/TrinityRCL', title: 'TrinityRCL 复现' }]
-const PROJECTS = [
-    { href: 'https://github.com/ZedongJia/College-Helper', title: '教育垂直领域，志愿填报知识图谱项目' },
-    { href: 'https://github.com/ZedongJia/Subjects-of-the-Sun', title: '基于vue的三星堆文化博物馆项目' },
-    { href: 'https://github.com/ZedongJia/c-compiler', title: 'C语言代码编译器项目' }
-]
+const NOTES_TREE={'name': 'docs', 'type': 'dir', 'children': [{'name': 'Network', 'type': 'dir', 'children': [{'name': 'LLM-Large Language Model Adaptation for Networking', 'type': 'file', 'time': '2024-05-23 00:18:54'}]}, {'name': 'Python学习', 'type': 'dir', 'children': [{'name': 'bert', 'type': 'file', 'time': '2024-04-29 14:17:28'}, {'name': 'WordEmbedding', 'type': 'file', 'time': '2024-04-29 14:18:05'}, {'name': '简单的语言模型搭建', 'type': 'file', 'time': '2024-04-29 14:18:21'}]}, {'name': '多模态故障诊断', 'type': 'dir', 'children': [{'name': '基本概念', 'type': 'file', 'time': '2024-05-05 17:10:46'}]}, {'name': '机器学习', 'type': 'dir', 'children': [{'name': 'Logistic回归', 'type': 'file', 'time': '2024-04-29 14:18:37'}, {'name': '深度学习与mindspore', 'type': 'file', 'time': '2024-04-29 14:18:51'}, {'name': '神经网络与脑科学', 'type': 'file', 'time': '2024-04-29 14:19:02'}, {'name': '线性判别分析', 'type': 'file', 'time': '2024-04-29 14:19:12'}, {'name': '线性回归', 'type': 'file', 'time': '2024-04-29 14:19:24'}, {'name': '绪论', 'type': 'file', 'time': '2024-04-29 14:19:34'}, {'name': '网络机器学习', 'type': 'file', 'time': '2024-04-29 14:19:47'}, {'name': '贝叶斯分类器', 'type': 'file', 'time': '2024-04-29 14:20:02'}, {'name': '集成学习', 'type': 'file', 'time': '2024-04-29 14:20:11'}]}, {'name': '测试文档', 'type': 'dir', 'children': [{'name': 'Helloworld', 'type': 'file', 'time': '2024-04-28 23:04:00'}]}]}
+const NOTES_LIST=[{'name': 'LLM-Large Language Model Adaptation for Networking', 'href': '/docs/Network/LLM-Large Language Model Adaptation for Networking.md', 'type': 'file', 'time': '2024-05-23 00:18:54'}, {'name': 'bert', 'href': '/docs/Python学习/bert.md', 'type': 'file', 'time': '2024-04-29 14:17:28'}, {'name': 'WordEmbedding', 'href': '/docs/Python学习/WordEmbedding.md', 'type': 'file', 'time': '2024-04-29 14:18:05'}, {'name': '简单的语言模型搭建', 'href': '/docs/Python学习/简单的语言模型搭建.md', 'type': 'file', 'time': '2024-04-29 14:18:21'}, {'name': '基本概念', 'href': '/docs/多模态故障诊断/基本概念.md', 'type': 'file', 'time': '2024-05-05 17:10:46'}, {'name': 'Logistic回归', 'href': '/docs/机器学习/Logistic回归.md', 'type': 'file', 'time': '2024-04-29 14:18:37'}, {'name': '深度学习与mindspore', 'href': '/docs/机器学习/深度学习与mindspore.md', 'type': 'file', 'time': '2024-04-29 14:18:51'}, {'name': '神经网络与脑科学', 'href': '/docs/机器学习/神经网络与脑科学.md', 'type': 'file', 'time': '2024-04-29 14:19:02'}, {'name': '线性判别分析', 'href': '/docs/机器学习/线性判别分析.md', 'type': 'file', 'time': '2024-04-29 14:19:12'}, {'name': '线性回归', 'href': '/docs/机器学习/线性回归.md', 'type': 'file', 'time': '2024-04-29 14:19:24'}, {'name': '绪论', 'href': '/docs/机器学习/绪论.md', 'type': 'file', 'time': '2024-04-29 14:19:34'}, {'name': '网络机器学习', 'href': '/docs/机器学习/网络机器学习.md', 'type': 'file', 'time': '2024-04-29 14:19:47'}, {'name': '贝叶斯分类器', 'href': '/docs/机器学习/贝叶斯分类器.md', 'type': 'file', 'time': '2024-04-29 14:20:02'}, {'name': '集成学习', 'href': '/docs/机器学习/集成学习.md', 'type': 'file', 'time': '2024-04-29 14:20:11'}, {'name': 'Helloworld', 'href': '/docs/测试文档/Helloworld.md', 'type': 'file', 'time': '2024-04-28 23:04:00'}]
+const PAPERS=[{'href': 'https://github.com/ZedongJia/TrinityRCL', 'title': 'TrinityRCL 复现'}, {'href': 'https://github.com/ZedongJia/Empirical-Study-on-Multi-source-Failure-Diagnosis', 'title': '参与的论文 Empirical-Study-on-Multi-source-Failure-Diagnosis'}]
+const PROJECTS=[{'href': 'https://github.com/ZedongJia/College-Helper', 'title': '教育垂直领域，志愿填报知识图谱项目'}, {'href': 'https://github.com/ZedongJia/Subjects-of-the-Sun', 'title': '基于vue的三星堆文化博物馆项目'}, {'href': 'https://github.com/ZedongJia/c-compiler', 'title': 'C语言代码编译器项目'}]
