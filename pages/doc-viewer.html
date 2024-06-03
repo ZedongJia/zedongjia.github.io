@@ -42,7 +42,7 @@
                     id="preview"
                     style="padding: 0 1em"
                 >
-                    <h1 class="default">请选择你要阅览的文章</h1>
+                    <h1 id="default">请选择你要阅览的文章</h1>
                 </div>
             </div>
             <div id="aside">
@@ -138,6 +138,7 @@
                     })
             }
             if (window.location.search !== '') {
+                document.querySelector("#default").innerHTML = "正在加载···"
                 viewDoc(window.location.search.split('=')[1])
             }
         </script>
