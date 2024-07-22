@@ -1,6 +1,6 @@
 import { computed, ref } from '../../../plugins/vue3.4.33.js'
 import Layout from '../../components/layout.js'
-import MarkdownPreview from './components/MarkdownPreview.js'
+import MarkdownPreview from './components/markdownPreview.js'
 import SideBar from './components/sidebar.js'
 import { TOP_LIST } from '../../constant/docsIndex.js'
 
