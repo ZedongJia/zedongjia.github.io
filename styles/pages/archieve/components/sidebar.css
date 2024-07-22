@@ -1,0 +1,16 @@
+#archieve-sidebar {
+    margin: 1em 0;
+}
+
+#archieve-sidebar .archieve-collection .legend{
+    font-size: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--highlight-color);
+}
+
+#archieve-sidebar .archieve-collection .archieve-item{
+    padding: 0 1em;
+    width: 100%;
+    overflow-x: auto;
+}

@@ -1,0 +1,31 @@
+.archieve-collection {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1em 0;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--background-color);
+}
+.archieve-collection .legend {
+    position: absolute;
+    padding: 0 1em;
+    left: 1em;
+    top: -0.5em;
+    font-weight: bold;
+    color: var(--tag-color);
+    background-color: var(--tag-background-color);
+    border-radius: 5px;
+}
+.archieve-item {
+    margin: 5px;
+    padding: 1em;
+    line-height: 2em;
+    border: 1px dashed grey;
+    border-radius: 5px;
+}
+.archieve-item:hover {
+    cursor: pointer;
+    color: var(--hover-color);
+    background-color: var(--hover-background-color);
+}

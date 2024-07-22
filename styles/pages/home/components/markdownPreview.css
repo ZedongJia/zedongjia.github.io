@@ -1,0 +1,16 @@
+#preview {
+    margin-top: 1em;
+    margin-bottom: 5em;
+}
+
+#preview #preview-title {
+    display: flex;
+    flex-wrap: wrap;
+}
+#preview #preview-title > *{
+    margin: 1px;
+}
+
+#preview #preview-content {
+    padding: 0;
+}

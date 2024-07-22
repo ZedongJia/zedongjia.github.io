@@ -1,0 +1,9 @@
+:root {
+    --background-color: rgb(0, 0, 0);
+    --foreground-color: rgb(255, 255, 255);
+    --tag-color: rgb(255, 255, 255);
+    --tag-background-color: rgb(0, 0, 0);
+    --highlight-color: rgb(3, 239, 176);
+    --hover-color: rgb(211, 173, 255);
+    --hover-background-color: rgb(46, 46, 46);
+}

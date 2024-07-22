@@ -1,0 +1,21 @@
+.addition {
+    display: flex;
+    line-height: 2em;
+    font-weight: bold;
+    background-color: var(--tag-background-color);
+    border-radius: 5px;
+}
+
+.addition .key {
+    display: flex;
+    align-items: center;
+    padding: 0 1em;
+    background-color: var(--hover-background-color);
+    color: var(--hover-color);
+    border-radius: 5px;
+}
+
+.addition .value {
+    padding: 0 1em;
+    color: var(--tag-color);
+}

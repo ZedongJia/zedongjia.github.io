@@ -1,0 +1,37 @@
+#home-sidebar {
+    position: fixed;
+    padding: 1em 0;
+    width: 20%;
+    background-color: var(--background-color);
+    color: var(--foreground-color);
+    border-radius: 25px 0 25px 0;
+}
+
+#home-sidebar #home-sidebar-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 1px dashed grey;
+}
+
+#home-sidebar #outline li {
+    margin-top: 1em;
+}
+
+#home-sidebar #outline li > span:hover {
+    background-color: var(--foreground-color);
+    color: var(--background-color);
+    border-radius: 5px;
+}
+
+#home-sidebar #outline .vditor-outline__item--current {
+    background-color: var(--foreground-color);
+    color: var(--background-color);
+    border-radius: 5px;
+}
+
