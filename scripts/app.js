@@ -16,6 +16,7 @@ const template = `
     @navigateTo="navigateTo"
 >
 </component>
+<div id="bg"></div>
 `
 
 export default {

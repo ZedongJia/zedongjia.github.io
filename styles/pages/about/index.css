@@ -1,0 +1,38 @@
+#introduction {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1em;
+}
+
+#introduction #left {
+    width: 50%;
+}
+
+#introduction #right {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 50%;
+}
+
+#introduction #right #avator {
+    width: 50%;
+    border-radius: 50%;
+}
+
+#introduction #right .addition {
+    margin-top: 5px;
+    width: 80%;
+}
+
+@media screen and (max-width: 768px) {
+    #introduction {
+        flex-direction: column-reverse;
+    }
+    #introduction #left {
+        width: 100%;
+    }
+    #introduction #right {
+        width: 100%;
+    }
+}

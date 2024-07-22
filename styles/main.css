@@ -1,6 +1,9 @@
+@import url('/styles/app.css');
 @import url('/styles/theme.css');
 /* components */
+
 @import url('/styles/components/nav.css');
+@import url('/styles/components/wrapper.css');
 @import url('/styles/components/layout.css');
 @import url('/styles/components/addition.css');
 
@@ -9,6 +12,8 @@
 @import url('/styles/pages/home/components/sidebar.css');
 @import url('/styles/pages/archieve/components/archieveItem.css');
 @import url('/styles/pages/archieve/components/sidebar.css');
+@import url('/styles/pages/about/index.css');
+@import url('/styles/pages/about/components/detail.css');
 * {
     margin: 0;
     padding: 0;

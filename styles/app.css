@@ -1,0 +1,40 @@
+#app {
+    width: 100vw;
+}
+
+#bg {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url('/images/pc.jpg');
+    background-size: cover;
+    opacity: 0.3;
+}
+#bg:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.6;
+    backdrop-filter: blur(10px);
+}
+
+@media screen and (max-width: 768px) {
+    #bg {
+        z-index: -1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        min-height: 100vh;
+        background-image: url('/images/phone.jpg');
+        background-size: cover;
+        opacity: 0.3;
+    }
+}

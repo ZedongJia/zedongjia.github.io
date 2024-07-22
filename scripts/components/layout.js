@@ -1,4 +1,3 @@
-import { ref } from '../../plugins/vue3.4.33.js'
 const template = `
 <div id="layout">
     <div id="main">

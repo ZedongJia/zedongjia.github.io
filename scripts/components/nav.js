@@ -75,8 +75,10 @@ export default {
         // lifehook
         onMounted(() => {
             let storeCurrentPage = window.localStorage.getItem('currentPage')
-            if (storeCurrentPage !== null) {
+            if (storeCurrentPage) {
                 emit('navigateTo', storeCurrentPage)
+            } else {
+                emit('navigateTo', 'Home')
             }
         })
         return {

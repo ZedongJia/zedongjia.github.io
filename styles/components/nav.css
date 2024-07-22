@@ -36,6 +36,7 @@
 /** menu **/
 #nav .menu {
     display: flex;
+    flex-wrap: wrap;
 }
 
 /** menu item **/

@@ -1,4 +1,4 @@
-import { onMounted, computed, watchEffect } from '../../../../plugins/vue3.4.33.js'
+import { computed, watchEffect } from '../../../../plugins/vue3.4.33.js'
 import Addition from '../../../components/addition.js'
 /**
  * Outer script start---
@@ -77,7 +77,6 @@ export default {
     },
     setup(props, { emit }) {
         const file = computed(() => props.file)
-        onMounted(() => {})
         watchEffect(() => {
             markdownRender(file.value.href).catch(() => {
                 emit('onErrorLoadFile')
