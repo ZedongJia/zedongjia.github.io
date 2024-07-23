@@ -39,7 +39,7 @@ export default {
         onMounted(() => {
             let search = window.location.search
             if (search !== '') {
-                context.value['file'] = JSON.parse(decodeURIComponent(search))
+                context.value['file'] = JSON.parse(decodeURIComponent(search.slice(1, search.length)))
                 return
             }
             let storeFile = window.localStorage.getItem('file')
