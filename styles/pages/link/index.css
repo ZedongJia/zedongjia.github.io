@@ -1,0 +1,14 @@
+#link {
+    display: flex;
+    flex-wrap: wrap;
+}
+#link>*{
+    flex: 0 0 50%;
+}
+
+
+@media screen and (max-width: 1080px) {
+    #link>*{
+        flex: 0 0 100%;
+    }
+}

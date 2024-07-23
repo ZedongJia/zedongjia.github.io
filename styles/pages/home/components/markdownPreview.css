@@ -15,3 +15,14 @@
 #preview #preview-content {
     padding: 0;
 }
+
+#preview #footer{
+    display: flex;
+    padding: 1em 0;
+    flex-flow: column;
+    align-items: end;
+}
+
+#preview #footer .button {
+    border: 1px dashed var(--background-color);
+}

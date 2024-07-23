@@ -5,17 +5,17 @@
     width: 80%;
 }
 #layout #main {
-    flex: 0 0 80%;
+    flex: 0 0 70%;
     padding: 1em;
     overflow-x: auto;
 }
 #layout #aside {
     position: relative;
-    flex: 0 0 25%;
+    flex: 0 0 30%;
     padding: 1em;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1080px) {
     #layout {
         display: flex;
         justify-content: space-between;
@@ -32,5 +32,15 @@
         position: relative;
         flex: 0 0 0%;
         padding: 0em;
+    }
+}
+
+
+@media screen and (min-width: 1080px) and (max-width: 1280px) {
+    #layout #main {
+        flex: 0 0 60%;
+    }
+    #layout #aside {
+        flex: 0 0 40%;
     }
 }

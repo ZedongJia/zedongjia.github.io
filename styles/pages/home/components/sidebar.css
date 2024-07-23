@@ -1,10 +1,10 @@
 #home-sidebar {
     position: fixed;
-    padding: 1em 0;
-    width: 20%;
+    right: 5%;
+    padding: 1em;
     background-color: var(--background-color);
     color: var(--foreground-color);
-    border-radius: 25px 0 25px 0;
+    border-radius: 5px;
 }
 
 #home-sidebar #home-sidebar-title {

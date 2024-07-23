@@ -65,9 +65,18 @@ const template = `
 <div id="preview">
     <div id="preview-title">
         <Addition icon="document-outline" name="Title" :description="file.name"></Addition>
+        <Addition icon="pencil-outline" name="Author" description="ZD-J"></Addition>
         <Addition icon="time-outline" name="Time" :description="file.time"></Addition>
     </div>
     <div id="preview-content"></div>
+    <hr>
+    <div id="footer">
+        <span class="button" @click="copyLinkToClipboard()">
+            <ion-icon name="clipboard-outline"></ion-icon>
+            &nbsp;
+            article link
+        </span>
+    </div>
 </div>
 `
 
@@ -82,8 +91,19 @@ export default {
                 emit('onErrorLoadFile')
             })
         }, file)
+        const copyLinkToClipboard = () => {
+            navigator.clipboard
+                .writeText('http://zedongjia.github.io/?' + encodeURIComponent(JSON.stringify(file.value)))
+                .then(() => {
+                    console.log('Successful copied to clipboard')
+                })
+                .catch((error) => {
+                    console.error(error)
+                })
+        }
         return {
-            file
+            file,
+            copyLinkToClipboard
         }
     },
     template: template,

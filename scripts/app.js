@@ -1,4 +1,4 @@
-import { onMounted, ref } from '../plugins/vue3.4.33.js'
+import { onMounted, onUnmounted, ref } from '../plugins/vue3.4.33.js'
 import Home from './pages/home/index.js'
 import Archieve from './pages/archieve/index.js'
 import About from './pages/about/index.js'
@@ -37,6 +37,11 @@ export default {
         }
         // lifehook
         onMounted(() => {
+            let search = window.location.search
+            if (search !== '') {
+                context.value['file'] = JSON.parse(decodeURIComponent(search))
+                return
+            }
             let storeFile = window.localStorage.getItem('file')
             if (storeFile !== null) {
                 context.value['file'] = JSON.parse(storeFile)

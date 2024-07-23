@@ -23,7 +23,7 @@
     backdrop-filter: blur(10px);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1080px) {
     #bg {
         z-index: -1;
         position: fixed;
