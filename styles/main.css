@@ -27,3 +27,20 @@ a {
 ul {
     list-style: none;
 }
+
+.button {
+    display: flex;
+    align-items: center;
+    padding: 0 1em;
+    line-height: 32px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: .1s;
+}
+
+.button:hover {
+    cursor: pointer;
+    color: var(--highlight-color);
+    background-color: var(--background-color);
+}

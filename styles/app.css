@@ -1,6 +1,3 @@
-#app {
-    width: 100vw;
-}
 
 #bg {
     z-index: -1;
@@ -11,7 +8,7 @@
     min-height: 100vh;
     background-image: url('/images/pc.jpg');
     background-size: cover;
-    opacity: 0.3;
+    opacity: 0.4;
 }
 #bg:before {
     content: '';
@@ -22,6 +19,7 @@
     right: 0;
     bottom: 0;
     opacity: 0.6;
+    background-color: var(--background-color);
     backdrop-filter: blur(10px);
 }
 

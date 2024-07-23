@@ -23,6 +23,7 @@
     line-height: 1.5em;
     border: 1px dashed grey;
     border-radius: 5px;
+    transition: .1s;
 }
 .archieve-item:hover {
     cursor: pointer;

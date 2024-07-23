@@ -9,6 +9,7 @@ const template = `
     </ArchieveItem>
 </div>
 <div v-else class="archieve-item" @click="updateContext(item)">
+    <ion-icon name="sparkles-outline"></ion-icon>
     {{item.name}}
 </div>
 `
