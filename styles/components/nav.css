@@ -89,3 +89,16 @@
 #nav .space {
     flex-grow: 1;
 }
+
+@media screen and (max-width: 768px) {
+    #nav #title {
+        width: 100%;
+    }
+    #nav .menu-item span>span{
+        display: none;
+    }
+    #nav .menu-item span:hover >span,
+    #nav .menu-item span.active >span {
+        display:inline;
+    }
+}

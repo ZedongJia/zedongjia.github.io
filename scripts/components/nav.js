@@ -11,8 +11,9 @@ const template = `
             >
                 <ion-icon
                     :name="menuItem.icon"
-                ></ion-icon
-                >&nbsp;{{menuItem.name}}
+                >
+                </ion-icon>
+                <span>&nbsp;{{menuItem.name}}</span>
             </span>
         </li>
     </ul>
@@ -25,8 +26,9 @@ const template = `
                 <ion-icon
                     class="icon"
                     :name="menuItem.icon"
-                ></ion-icon
-                >&nbsp;{{menuItem.name}}
+                >
+                </ion-icon>
+                <span>&nbsp;{{menuItem.name}}</span>
             </span>
         </li>
     </ul>
