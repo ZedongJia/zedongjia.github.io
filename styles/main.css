@@ -39,10 +39,15 @@ ul {
     font-weight: bold;
     text-transform: uppercase;
     transition: .1s;
+    border: 1px dashed var(--background-color);
 }
 
 .button:hover {
     cursor: pointer;
     color: var(--highlight-color);
     background-color: var(--background-color);
+}
+
+.button:active {
+    transform: scale(1.05);
 }

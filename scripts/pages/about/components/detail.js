@@ -46,7 +46,7 @@ export default {
             isFlattern.value[index] = !isFlattern.value[index]
         }
         const navigateToOuterHref = (href) => {
-            window.location.replace(href)
+            window.open(href)
         }
         return {
             topic,

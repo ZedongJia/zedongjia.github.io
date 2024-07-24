@@ -19,7 +19,11 @@ const template = `
         <span class="right">
             <span class="intro">{{link.intro}}</span>
             <span style="flex-grow: 1"></span>
-            <span class="button" @click="navigateTo(link.href)">Visit</span>
+            <span class="button" @click="navigateTo(link.href)">
+                <ion-icon name="navigate-outline"></ion-icon>
+                &nbsp;
+                Visit
+            </span>
         </span>
     </div>
 </div>

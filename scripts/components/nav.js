@@ -22,6 +22,7 @@ const template = `
         <li v-for="menuItem in rightMenuItems" class="menu-item">
             <span
                 class="deactive"
+                @click="handleNavigateTo(menuItem.href)"
             >
                 <ion-icon
                     class="icon"
@@ -63,7 +64,8 @@ export default {
         const rightMenuItems = [
             {
                 icon: 'logo-github',
-                name: 'Github'
+                name: 'Github',
+                href: 'https://github.com/ZedongJia'
             }
         ]
         // method
@@ -72,6 +74,9 @@ export default {
         }
         const handleOnClickItem = (name) => {
             emit('navigateTo', name)
+        }
+        const handleNavigateTo = (href) => {
+            window.open(href)
         }
 
         // lifehook
@@ -90,7 +95,8 @@ export default {
             rightMenuItems,
             // method
             isActive,
-            handleOnClickItem
+            handleOnClickItem,
+            handleNavigateTo
         }
     },
     template: template
