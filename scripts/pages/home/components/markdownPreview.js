@@ -93,7 +93,7 @@ export default {
         }, file)
         const copyLinkToClipboard = () => {
             navigator.clipboard
-                .writeText('http://zedongjia.github.io/?' + encodeURIComponent(JSON.stringify(file.value)))
+                .writeText('https://zedongjia.github.io/?' + encodeURIComponent(JSON.stringify(file.value)))
                 .then(() => {
                     console.log('Successful copied to clipboard')
                 })
