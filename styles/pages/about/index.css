@@ -21,7 +21,7 @@
 }
 
 #introduction #right .addition {
-    margin-top: 5px;
+    margin-top: 10px;
     width: 80%;
 }
 
@@ -34,5 +34,8 @@
     }
     #introduction #right {
         width: 100%;
+    }
+    #introduction #right .addition {
+        width: 95%;
     }
 }

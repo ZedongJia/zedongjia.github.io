@@ -36,12 +36,12 @@ export default {
                 icon: 'earth-outline',
                 links: [
                     {
-                        src: '/images/avator.jpg',
-                        name: 'ZD_J',
-                        intro: 'Link myself(just for testing)',
-                        href: 'http://zedongjia.github.io',
-                        color: 'green',
-                        backgroundColor: 'black'
+                        src: '/images/strawberryshop.jpg',
+                        name: 'StrawberryShop',
+                        intro: 'She is a "noob"',
+                        href: 'http://strawberryshop.github.io',
+                        color: 'pink',
+                        backgroundColor: 'green'
                     }
                 ]
             }
