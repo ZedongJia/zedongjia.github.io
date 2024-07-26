@@ -6,8 +6,10 @@
 }
 #layout #main {
     flex: 0 0 70%;
+    margin: 1em 0;
     padding: 1em;
     overflow-x: auto;
+    border-radius: 5px;
 }
 #layout #aside {
     position: relative;
