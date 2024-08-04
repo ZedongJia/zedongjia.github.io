@@ -42,6 +42,14 @@ export default {
                         href: 'http://strawberryshop.github.io',
                         color: 'pink',
                         backgroundColor: 'green'
+                    },
+                    {
+                        src: 'https://cdn.jsdelivr.net/gh/SakuraLong/images/blog/avatar.png',
+                        name: 'SakuraLong',
+                        intro: 'Ciallo～(∠・ω< )⌒★',
+                        href: 'https://www.sakuralong.com',
+                        color: '#FFD6FB',
+                        backgroundColor: '#000000'
                     }
                 ]
             }
