@@ -1,5 +1,6 @@
 import Wrapper from '../../components/wrapper.js'
 import LinkBlock from './components/linkBlock.js'
+import { ref } from '../../../plugins/vue3.4.33.js'
 const template = `
 <Wrapper>
     <div id="link">
@@ -16,44 +17,12 @@ const template = `
 
 export default {
     setup() {
-        const linkBlocks = [
-            {
-                title: 'Resource',
-                icon: 'rocket-outline',
-                links: [
-                    {
-                        src: '/images/vue.jpg',
-                        name: 'vue',
-                        intro: 'Vue official website. Here you can learn almost everything about vue!',
-                        href: 'https://vuejs.org',
-                        color: 'white',
-                        backgroundColor: 'green'
-                    }
-                ]
-            },
-            {
-                title: 'Friend',
-                icon: 'earth-outline',
-                links: [
-                    {
-                        src: '/images/strawberryshop.jpg',
-                        name: 'StrawberryShop',
-                        intro: 'She is a "noob"',
-                        href: 'http://strawberryshop.github.io',
-                        color: 'pink',
-                        backgroundColor: 'green'
-                    },
-                    {
-                        src: 'https://cdn.jsdelivr.net/gh/SakuraLong/images/blog/avatar.png',
-                        name: 'SakuraLong',
-                        intro: 'Ciallo～(∠・ω< )⌒★',
-                        href: 'https://www.sakuralong.com',
-                        color: '#FFD6FB',
-                        backgroundColor: '#000000'
-                    }
-                ]
-            }
-        ]
+        const linkBlocks = ref([])
+        fetch('/scripts/constant/links.json').then((response) => {
+            response.json().then((links) => {
+                linkBlocks.value = links
+            })
+        })
         return {
             linkBlocks
         }

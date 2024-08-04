@@ -10,11 +10,14 @@ const template = `
         class="link-item"
     >
         <span
+            class="name"
+            :style="'background-color:' + link.backgroundColor + ';color:' + link.color"
+            >{{link.name}}</span>
+        <span
             class="left"
             :style="'background-color:' + link.backgroundColor + ';color:' + link.color"
         >
             <img class="avator" :src="link.src">
-            <span class="name">{{link.name}}</span>
         </span>
         <span class="right">
             <span class="intro">{{link.intro}}</span>

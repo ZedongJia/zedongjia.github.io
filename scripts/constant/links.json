@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Resource",
+        "icon": "rocket-outline",
+        "links": [
+            {
+                "src": "/images/vue.jpg",
+                "name": "vue",
+                "intro": "Vue official website. Here you can learn almost everything about vue!",
+                "href": "https://vuejs.org",
+                "color": "white",
+                "backgroundColor": "green"
+            }
+        ]
+    },
+    {
+        "title": "Friend",
+        "icon": "earth-outline",
+        "links": [
+            {
+                "src": "/images/strawberryshop.jpg",
+                "name": "StrawberryShop",
+                "intro": "She is a \"noob\"",
+                "href": "http://strawberryshop.github.io",
+                "color": "rgb(255, 255, 255)",
+                "backgroundColor": "rgb(19, 185, 137)"
+            },
+            {
+                "src": "https://cdn.jsdelivr.net/gh/SakuraLong/images/blog/avatar.png",
+                "name": "SakuraLong",
+                "intro": "Ciallo～(∠・ω< )⌒★",
+                "href": "https://www.sakuralong.com",
+                "color": "#FFD6FB",
+                "backgroundColor": "#000000"
+            }
+        ]
+    }
+]

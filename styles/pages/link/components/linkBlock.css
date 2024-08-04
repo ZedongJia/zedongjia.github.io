@@ -1,4 +1,4 @@
-.link-block{
+.link-block {
     padding: 1em;
     display: flex;
     flex-flow: column;
@@ -22,35 +22,42 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    padding: 1em;
-    border-radius: 5px;
+    margin-bottom: 3em;
+    border-radius: 5px 0 5px 5px;
     box-shadow: 0 0 5px var(--background-color);
 }
 
 .link-block .link-item .left {
+    position: relative;
     display: flex;
     padding: 1em;
     align-items: center;
     flex-flow: column;
     flex: 0 0 20%;
-    border-radius: 5px;
+    border-radius: 5px 0 0 5px;
 }
 
 .link-block .link-item .left .avator {
-    margin-bottom: 1em;
-    width: 100px;
+    width: 100%;
     border-radius: 50%;
 }
-.link-block .link-item .left .name {
-    font-size: 1.5em;
+
+.link-block .link-item .name {
+    position: absolute;
+    padding: 0.5em 1em;
+    top: 0;
+    right: 0;
+    transform: translate(0, -100%);
     font-weight: bold;
+    border-radius: 25px 25px 0 5px;
 }
 
 .link-block .link-item .right {
     display: flex;
     flex-flow: column;
     align-items: end;
-    width: 80%;
+    flex: 0 0 80%;
+    padding: 1em;
 }
 
 .link-block .link-item .right .intro {
