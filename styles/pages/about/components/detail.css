@@ -18,7 +18,7 @@
     flex-wrap: wrap;
     margin: 5px 0;
     width: 100%;
-    box-shadow: 0 5px 5px grey;
+    box-shadow: 0 0 5px var(--background-color);
     border-radius: 5px;
     transition: .1s;
 }

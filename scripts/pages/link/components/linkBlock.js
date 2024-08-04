@@ -12,7 +12,11 @@ const template = `
         <span
             class="name"
             :style="'background-color:' + link.backgroundColor + ';color:' + link.color"
-            >{{link.name}}</span>
+            >
+                <ion-icon name="person-outline"></ion-icon>
+                &nbsp;
+                {{link.name}}
+            </span>
         <span
             class="left"
             :style="'background-color:' + link.backgroundColor + ';color:' + link.color"
