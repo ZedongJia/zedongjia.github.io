@@ -1,14 +1,31 @@
 #preview {
     margin-top: 1em;
     margin-bottom: 5em;
-    transition: .1s;
+    transition: 0.1s;
 }
 
 #preview #preview-title {
     display: flex;
     flex-wrap: wrap;
 }
-#preview #preview-title > *{
+
+#preview #preview-title > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#preview #preview-title > span h1 {
+    line-height: 2em;
+    text-align: center;
+}
+#preview #preview-title > span ion-icon {
+    width: 2em;
+    height: 2em;
+}
+
+#preview #preview-title > * {
     margin: 1px;
 }
 
@@ -17,7 +34,7 @@
     padding: 0;
 }
 
-#preview #footer{
+#preview #footer {
     display: flex;
     padding: 1em 0;
     flex-flow: column;

@@ -3,9 +3,11 @@ const template = `
 <div id="home-sidebar">
     <span id="home-sidebar-title">
         <ion-icon name="navigate-outline"></ion-icon>
-        Outline
+        &nbsp;Outline
     </span>
-    <div id="outline"></div>
+    <div id="home-sidebar-container">
+        <div id="outline"></div>
+    </div>
 </div>
 `
 

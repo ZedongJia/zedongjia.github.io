@@ -1,16 +1,22 @@
 #archieve-sidebar {
-    margin: 1em 0;
+    margin: 3em 0;
 }
 
-#archieve-sidebar .archieve-collection .legend{
-    font-size: 20px;
+#archieve-sidebar .archieve-collection:hover {
+    border-top: 2px solid var(--tag-background-color);
+    border-left: none;
+}
+
+#archieve-sidebar .archieve-collection .legend {
     left: 50%;
-    transform: translateX(-50%);
-    color: var(--highlight-color);
+    top: 0;
+    transform: translate(-50%, -50%);
 }
 
-#archieve-sidebar .archieve-collection .archieve-item{
-    padding: 0 1em;
+#archieve-sidebar .archieve-collection .archieve-item {
     width: 100%;
-    overflow-x: auto;
+}
+
+#archieve-sidebar .archieve-collection .archieve-item:hover .archieve-item-title ion-icon {
+    color: red;
 }

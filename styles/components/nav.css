@@ -54,35 +54,38 @@
     cursor: pointer;
     position: relative;
     display: flex;
+    height: 64px;
     align-items: center;
     font-weight: bold;
     color: var(--foreground-color);
 }
 
-#nav .menu-item span.active {
+#nav .menu-item span.active * {
     cursor: default;
     color: var(--highlight-color);
 }
 
 #nav .menu-item span.deactive:hover {
     animation: bounse 0.2s;
-    color: var(--highlight-color);
 }
 
 #nav .menu-item span.deactive::after {
     content: '';
     position: absolute;
     left: 50%;
-    bottom: 10px;
+    bottom: 8px;
     transform: translateX(-50%);
     width: 0;
     height: 2px;
     background-color: var(--highlight-color);
-    transition: 0.5s;
+    transition: 0.1s;
 }
 
 #nav .menu-item span.deactive:hover::after {
-    width: 100%;
+    width: 120%;
+    height: 48px;
+    opacity: 0.3;
+    border-radius: 5px;
 }
 
 /** space **/
@@ -94,11 +97,11 @@
     #nav #title {
         width: 100%;
     }
-    #nav .menu-item span>span{
+    #nav .menu-item span > span {
         display: none;
     }
-    #nav .menu-item span:hover >span,
-    #nav .menu-item span.active >span {
-        display:inline;
+    #nav .menu-item span:hover > span,
+    #nav .menu-item span.active > span {
+        display: inline;
     }
 }

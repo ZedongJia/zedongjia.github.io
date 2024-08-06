@@ -8,6 +8,7 @@
     display: flex;
     align-items: center;
     margin: 1em 0;
+    line-height: 2em;
     font-size: 20px;
     font-weight: bold;
     text-decoration: underline;
@@ -18,7 +19,7 @@
     flex-wrap: wrap;
     margin: 5px 0;
     width: 100%;
-    box-shadow: 0 0 5px var(--background-color);
+    background-color: var(--second-background-color);
     border-radius: 5px;
     transition: .1s;
 }

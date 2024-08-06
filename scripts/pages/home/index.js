@@ -24,6 +24,7 @@ export default {
         const file = computed(() => props.context.file)
         // method
         const onErrorLoadFile = () => {
+            console.log(`Load fail! Turn to ${TOP_LIST[0]}`)
             emit('updateContext', 'file', TOP_LIST[0])
         }
         return {

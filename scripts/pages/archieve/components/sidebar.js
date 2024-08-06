@@ -2,7 +2,13 @@ import { TOP_LIST } from '../../../constant/docsIndex.js'
 import ArchieveItem from './archieveItem.js'
 const template = `
 <div id="archieve-sidebar">
-    <ArchieveItem :item="top" @updateContext="updateContext"></ArchieveItem>
+    <ArchieveItem
+        :item="top"
+        @updateContext="updateContext"
+        icon="flame-outline"
+        short
+    >
+    </ArchieveItem>
 </div>
 `
 

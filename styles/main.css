@@ -51,3 +51,8 @@ ul {
 .button:active {
     transform: scale(1.05);
 }
+
+ion-icon {
+    width: 16px;
+    height: 16px;
+}

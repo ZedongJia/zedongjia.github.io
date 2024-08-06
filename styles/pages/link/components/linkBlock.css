@@ -8,6 +8,7 @@
     display: flex;
     align-items: center;
     margin: 1em 0;
+    line-height: 2em;
     font-size: 20px;
     font-weight: bold;
     text-decoration: underline;
@@ -24,7 +25,7 @@
     justify-content: space-between;
     margin-bottom: 3em;
     border-radius: 5px 0 5px 5px;
-    box-shadow: 0 0 5px var(--background-color);
+    background-color: var(--second-background-color);
 }
 
 .link-block .link-item .left {

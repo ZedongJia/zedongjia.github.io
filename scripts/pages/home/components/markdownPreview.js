@@ -39,16 +39,15 @@ async function markdownRender(filepath) {
     let response = await fetch(filepath)
     if (response.status == 404) throw Error('File not found!')
     let text = await response.text()
+
     Vditor.preview(document.getElementById('preview-content'), text, {
         speech: {
             enable: true
         },
         anchor: 1,
         after() {
-            if (window.innerWidth <= 768) {
-                return
-            }
             const outlineElement = document.getElementById('outline')
+
             Vditor.outlineRender(document.getElementById('preview-content'), outlineElement)
             if (outlineElement.innerText.trim() !== '') {
                 outlineElement.style.display = 'block'
@@ -64,8 +63,13 @@ async function markdownRender(filepath) {
 const template = `
 <div id="preview">
     <div id="preview-title">
-        <Addition icon="document-outline" name="Title" :description="file.name"></Addition>
+        <span>
+            <ion-icon name="paw-outline"></ion-icon>
+            &nbsp;
+            <h1>{{file.name}}</h1>
+        </span>
         <Addition icon="pencil-outline" name="Author" description="ZD-J"></Addition>
+        &nbsp;
         <Addition icon="time-outline" name="Time" :description="file.time"></Addition>
     </div>
     <div id="preview-content"></div>

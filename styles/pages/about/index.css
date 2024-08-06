@@ -25,6 +25,10 @@
     width: 80%;
 }
 
+#introduction #right .addition .key {
+    flex: 0 0 35%;
+}
+
 @media screen and (max-width: 1080px) {
     #introduction {
         flex-direction: column-reverse;
