@@ -8,7 +8,6 @@ const template = `
     <ArchieveItem
         v-for="child in item.children"
         :item="child"
-        @updateContext="updateContext"
         :icon="icon"
         :short="short"
     >
@@ -43,11 +42,11 @@ export default {
             default: false
         }
     },
-    setup(props, { emit }) {
+    setup(props) {
         const { item, icon, short } = props
         // updateContext
         const updateContext = (file) => {
-            emit('updateContext', file)
+            window.location.hash = `/home?file=${encodeURIComponent(JSON.stringify(file))}`
         }
         return {
             item,

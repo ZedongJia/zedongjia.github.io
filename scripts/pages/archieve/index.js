@@ -8,28 +8,21 @@ const template = `
         <ArchieveItem
             v-for="child in archieveTree.children"
             :item="child"
-            @updateContext="updateContext"
         >
         </ArchieveItem>
     </template>
     <template #aside>
-        <SideBar @updateContext="updateContext"></SideBar>
+        <SideBar></SideBar>
     </template>
 </Layout>
 `
 
 export default {
-    setup(props, { emit }) {
+    setup() {
         // property
         const archieveTree = ARCHIEVE_TREE
-        const updateContext = (file) => {
-            console.log(file)
-            emit('updateContext', 'file', file)
-            emit('navigateTo', 'Home')
-        }
         return {
-            archieveTree,
-            updateContext
+            archieveTree
         }
     },
     template: template,

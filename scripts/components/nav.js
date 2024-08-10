@@ -1,31 +1,12 @@
-import { onMounted } from '../../plugins/vue3.4.33.js'
-
 const template = `
 <div id="nav">
-    <div id="title">{{title}}</div>
     <ul class="menu">
         <li v-for="menuItem in leftMenuItems" class="menu-item">
             <span
                 :class="isActive(menuItem.name)? 'active':'deactive'"
-                @click="handleOnClickItem(menuItem.name)"
+                @click="handleOnClickItem(menuItem)"
             >
                 <ion-icon
-                    :name="menuItem.icon"
-                >
-                </ion-icon>
-                <span>&nbsp;{{menuItem.name}}</span>
-            </span>
-        </li>
-    </ul>
-    <div class="space"></div>
-    <ul class="menu">
-        <li v-for="menuItem in rightMenuItems" class="menu-item">
-            <span
-                class="deactive"
-                @click="handleNavigateTo(menuItem.href)"
-            >
-                <ion-icon
-                    class="icon"
                     :name="menuItem.icon"
                 >
                 </ion-icon>
@@ -40,28 +21,29 @@ export default {
     props: {
         currentPage: String
     },
-    setup(props, { emit }) {
+    setup(props) {
         // property
-        const title = 'ZD~J'
         const leftMenuItems = [
             {
                 icon: 'home-outline',
-                name: 'Home'
+                name: 'Home',
+                hashpath: '/home'
             },
             {
                 icon: 'library-outline',
-                name: 'Archieve'
+                name: 'Archieve',
+                hashpath: '/archieve'
             },
             {
                 icon: 'document-outline',
-                name: 'About'
+                name: 'About',
+                hashpath: '/about'
             },
             {
                 icon: 'link-outline',
-                name: 'Link'
-            }
-        ]
-        const rightMenuItems = [
+                name: 'Link',
+                hashpath: '/link'
+            },
             {
                 icon: 'logo-github',
                 name: 'Github',
@@ -72,31 +54,20 @@ export default {
         const isActive = (name) => {
             return props.currentPage == name
         }
-        const handleOnClickItem = (name) => {
-            emit('navigateTo', name)
-        }
-        const handleNavigateTo = (href) => {
-            window.open(href)
+        const handleOnClickItem = (item) => {
+            if ('href' in item) {
+                window.open(item.href)
+            } else {
+                window.location.hash = item.hashpath
+            }
         }
 
-        // lifehook
-        onMounted(() => {
-            let storeCurrentPage = window.localStorage.getItem('currentPage')
-            if (storeCurrentPage) {
-                emit('navigateTo', storeCurrentPage)
-            } else {
-                emit('navigateTo', 'Home')
-            }
-        })
         return {
             // property
-            title,
             leftMenuItems,
-            rightMenuItems,
             // method
             isActive,
-            handleOnClickItem,
-            handleNavigateTo
+            handleOnClickItem
         }
     },
     template: template

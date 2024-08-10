@@ -1,5 +1,6 @@
 import { computed, watchEffect } from '../../../../plugins/vue3.4.33.js'
 import Addition from '../../../components/addition.js'
+import { PROTOCAL, IP } from '../../../constant/baseUrl.js'
 /**
  * Outer script start---
  */
@@ -97,7 +98,7 @@ export default {
         }, file)
         const copyLinkToClipboard = () => {
             navigator.clipboard
-                .writeText('https://zedongjia.github.io/?' + encodeURIComponent(JSON.stringify(file.value)))
+                .writeText(`${PROTOCAL}://${IP}/#/home?file=` + encodeURIComponent(JSON.stringify(file.value)))
                 .then(() => {
                     console.log('Successful copied to clipboard')
                 })

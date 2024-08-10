@@ -4,7 +4,6 @@ const template = `
 <div id="archieve-sidebar">
     <ArchieveItem
         :item="top"
-        @updateContext="updateContext"
         icon="flame-outline"
         short
     >
@@ -13,19 +12,14 @@ const template = `
 `
 
 export default {
-    setup(props, { emit }) {
+    setup() {
         const top = {
             name: 'Recently',
             type: 'dir',
             children: TOP_LIST.slice(0, TOP_LIST.length > 5 ? 5 : TOP_LIST.length)
         }
-        // updateContext
-        const updateContext = (file) => {
-            emit('updateContext', file)
-        }
         return {
-            top,
-            updateContext
+            top
         }
     },
     template: template,

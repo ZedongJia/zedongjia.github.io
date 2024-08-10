@@ -1,57 +1,73 @@
-import { onMounted, onUnmounted, ref } from '../plugins/vue3.4.33.js'
+import { onMounted, ref } from '../plugins/vue3.4.33.js'
 import Home from './pages/home/index.js'
 import Archieve from './pages/archieve/index.js'
 import About from './pages/about/index.js'
 import Link from './pages/link/index.js'
 import Nav from './components/nav.js'
-import { TOP_LIST } from './constant/docsIndex.js'
 
 const template = `
-<Nav :currentPage="currentPage" @navigateTo="navigateTo"></Nav>
+<Nav :currentPage="context.page"></Nav>
 <component
-    v-if="currentPage!==''"
-    :is="currentPage"
+    v-if="context.page !==''"
+    :is="context.page"
     :context="context"
-    @updateContext="updateContext"
-    @navigateTo="navigateTo"
 >
 </component>
 <div id="bg"></div>
 `
+const getQuery = () => {
+    let hasharr = window.location.hash.split('?')
+    if (hasharr.length == 2) {
+        let search = hasharr[1]
+        return search.split('&').map((item) => {
+            let kv = item.split('=')
+            return {
+                key: kv[0],
+                value: kv[1]
+            }
+        })
+    } else {
+        return []
+    }
+}
+
+const ROUTE_TABLE = {
+    '/home': 'Home',
+    '/archieve': 'Archieve',
+    '/about': 'About',
+    '/link': 'Link'
+}
 
 export default {
     setup() {
-        // property
+        // navigation
         const context = ref({
-            file: TOP_LIST[0]
+            page: '',
+            query: []
         })
-        const currentPage = ref('')
-        // methods
-        const navigateTo = (name) => {
-            currentPage.value = name
-            window.localStorage.setItem('currentPage', name)
+        function navigateTo() {
+            let hashpath = window.location.hash.split('?')[0]
+            hashpath = hashpath.slice(1, hashpath.length)
+            if (Object.keys(ROUTE_TABLE).includes(hashpath)) {
+                context.value = {
+                    page: ROUTE_TABLE[hashpath],
+                    query: getQuery()
+                }
+            } else {
+                window.location.hash = '/home'
+            }
         }
-        const updateContext = (key, value) => {
-            context.value[key] = value
-            window.localStorage.setItem(key, JSON.stringify(value))
-        }
+        // window event
+        window.addEventListener('hashchange', () => {
+            navigateTo()
+        })
         // lifehook
         onMounted(() => {
-            let search = window.location.search
-            if (search !== '') {
-                context.value['file'] = JSON.parse(decodeURIComponent(search.slice(1, search.length)))
-                return
-            }
-            let storeFile = window.localStorage.getItem('file')
-            if (storeFile !== null) {
-                context.value['file'] = JSON.parse(storeFile)
-            }
+            navigateTo()
         })
         return {
             context,
-            currentPage,
-            navigateTo,
-            updateContext
+            navigateTo
         }
     },
     template: template,
