@@ -1,3 +1,3 @@
-const PROTOCAL = 'http'
-const IP = 'localhost:5500'
+const PROTOCAL = 'https'
+const IP = 'zedongjia.github.io'
 export { PROTOCAL, IP }
