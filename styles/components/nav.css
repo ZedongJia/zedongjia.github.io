@@ -61,6 +61,16 @@
     height: 1em;
     background-color: var(--foreground-color);
 }
+#nav .menu-item:last-child:after {
+    content: '';
+    position: absolute;
+    right: -1.1em;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 1em;
+    background-color: var(--foreground-color);
+}
 
 #nav .menu-item span.active * {
     cursor: default;

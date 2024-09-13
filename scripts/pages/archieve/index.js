@@ -1,18 +1,14 @@
 import Layout from '../../components/layout.js'
 import ArchieveItem from './components/archieveItem.js'
-import SideBar from './components/sidebar.js'
 import { ARCHIEVE_TREE } from '../../constant/docsIndex.js'
 const template = `
-<Layout>
+<Layout disableSidebar>
     <template #main>
         <ArchieveItem
             v-for="child in archieveTree.children"
             :item="child"
         >
         </ArchieveItem>
-    </template>
-    <template #aside>
-        <SideBar></SideBar>
     </template>
 </Layout>
 `
@@ -28,7 +24,6 @@ export default {
     template: template,
     components: {
         Layout,
-        ArchieveItem,
-        SideBar
+        ArchieveItem
     }
 }

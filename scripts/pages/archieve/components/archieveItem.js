@@ -19,13 +19,6 @@ const template = `
         &nbsp;
         <span>{{item.name}}</span>
     </span>
-    <hr v-if="!short" style="width:100%">
-    <span v-if="!short" class="archieve-item-time">
-        <ion-icon name="time-outline"></ion-icon>
-        &nbsp;
-        <span>{{item.time}}</span>
-        &nbsp;
-    </span>
 </div>
 `
 

@@ -7,6 +7,20 @@ const template = `
         {{topic}}
     </span>
     <span
+        v-if="type == 'single'"
+        v-for="(item, index) in items"
+        :class="{'detail-item': true, 'fold': true}"
+    >
+        <span
+            :class="{'detail-item-title': true}"
+            @click="navigateToOuterHref(item.href)"
+        >
+            <ion-icon name="bulb-outline"></ion-icon>
+            {{item.title}}
+        </span>
+    </span>
+    <span
+        v-else
         v-for="(item, index) in items"
         :class="{'detail-item': true, 'fold': !isFlattern[index]}"
         
@@ -37,10 +51,11 @@ const template = `
 export default {
     props: {
         topic: String,
+        type: String,
         items: Array
     },
     setup(props) {
-        const { topic, items } = props
+        const { topic, type, items } = props
         const isFlattern = ref(items.map(() => false))
         const trigger = (index) => {
             isFlattern.value[index] = !isFlattern.value[index]
@@ -50,6 +65,7 @@ export default {
         }
         return {
             topic,
+            type,
             items,
             isFlattern,
             trigger,

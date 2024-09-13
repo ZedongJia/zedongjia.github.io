@@ -9,19 +9,29 @@ const template = `
             <Detail
                 v-for="detail in details"
                 :topic="detail.topic"
+                :type="detail.type"
                 :items="detail.items"
             >
             </Detail>
         </div>
         <div id="right">
             <img id="avator" src="/images/avator.jpg">
-            <Addition
-            v-for="addition in additions"
-            :icon="addition.icon"
-            :name="addition.name"
-            :description="addition.description"
+            <div
+                class="kv-collection"
+                v-for="addition in additions"
             >
-            </Addition>
+                <span class="key">
+                    <ion-icon :name="addition.icon"></ion-icon>
+                    &nbsp;
+                    {{addition.key}}
+                </span>
+                <span
+                    class="value"
+                    v-for="val in addition.value"
+                >
+                {{val}}
+                </span>
+            </div>
         </div>
     </div>
 </Wrapper>
@@ -29,24 +39,13 @@ const template = `
 
 export default {
     setup() {
-        const additions = [
-            {
-                icon: 'school-outline',
-                name: 'Education',
-                description: 'Undergraduate, Software Engineer, Nankai University'
-            },
-            {
-                icon: 'heart-circle-outline',
-                name: 'Interests',
-                description: 'Deep Learning, Machine Learning, Netword etc...'
-            },
-            {
-                icon: 'mail-outline',
-                name: 'Email',
-                description: 'zedongjia305@gmail.com'
-            }
-        ]
+        const additions = ref([])
         const details = ref([])
+        fetch('/scripts/constant/personInfo.json').then((response) => {
+            response.json().then((kvs) => {
+                additions.value = kvs
+            })
+        })
         fetch('/scripts/constant/about.json').then((response) => {
             response.json().then((about) => {
                 details.value = about

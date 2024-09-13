@@ -5,14 +5,14 @@
 }
 
 #introduction #left {
-    width: 50%;
+    width: 70%;
 }
 
 #introduction #right {
     display: flex;
     flex-flow: column;
     align-items: center;
-    width: 50%;
+    width: 30%;
 }
 
 #introduction #right #avator {
@@ -20,13 +20,41 @@
     border-radius: 50%;
 }
 
-#introduction #right .addition {
-    margin-top: 10px;
-    width: 80%;
+#introduction #right .kv-collection {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2em;
+    padding-top: 1.5em;
+    /* border-radius: 10px; */
+    /* background-color: var(--background-color); */
 }
 
-#introduction #right .addition .key {
-    flex: 0 0 35%;
+#introduction #right .kv-collection .key {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding: 0.5em;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    background-color: var(--hover-background-color);
+    color: var(--hover-color);
+    border-radius: 5px;
+}
+
+#introduction #right .kv-collection .value {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin: 5px;
+    padding: 0.5em;
+    border-radius: 5px;
+    color: var(--foreground-color);
+    background-color: var(--background-color);
+    transition: 0.1s;
 }
 
 @media screen and (max-width: 1080px) {
@@ -38,8 +66,5 @@
     }
     #introduction #right {
         width: 100%;
-    }
-    #introduction #right .addition {
-        width: 95%;
     }
 }

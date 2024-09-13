@@ -3,15 +3,24 @@ const template = `
     <div id="main">
         <slot name="main"></slot>
         </div>
-    <div id="aside">
+    <div v-if="!disableSidebar" id="aside">
         <slot name="aside"></slot>
     </div>
 </div>
 `
 
 export default {
-    setup() {
-        return {}
+    props: {
+        disableSidebar: {
+            type: Boolean,
+            default: false
+        }
+    },
+    setup(props) {
+        const { disableSidebar } = props
+        return {
+            disableSidebar
+        }
     },
     template: template
 }

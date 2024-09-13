@@ -2,11 +2,6 @@
     margin: 3em 0;
 }
 
-#archieve-sidebar .archieve-collection:hover {
-    border-top: 2px solid var(--tag-background-color);
-    border-left: none;
-}
-
 #archieve-sidebar .archieve-collection .legend {
     left: 50%;
     top: 0;

@@ -1,0 +1,26 @@
+[
+    {
+        "icon": "school-outline",
+        "key": "Education",
+        "value": [
+            "Software Engineer",
+            "Nankai University"
+        ]
+    },
+    {
+        "icon": "heart-circle-outline",
+        "key": "Interests",
+        "value": [
+            "Deep Learning",
+            "Machine Learning",
+            "Network"
+        ]
+    },
+    {
+        "icon": "mail-outline",
+        "key": "Email",
+        "value": [
+            "zedongjia305@gmail.com"
+        ]
+    }
+]

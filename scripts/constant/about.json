@@ -1,16 +1,17 @@
 [
     {
         "topic": "Public Papers",
+        "type": "single",
         "items": [
             {
                 "href": "https://nkcs.iops.ai/wp-content/uploads/2024/09/ASE_24_Medicine.pdf",
-                "title": "Lei Tao, Shenglin Zhang, Zedong Jia, Jinrui Sun, Minghua Ma, Zhengdan Li*, Yongqian Sun, Canqun Yang, Yuzhi Zhang, Dan Pei. Giving Every Modality a Voice in Microservice Failure Diagnosis via Multimodal Adaptive Optimization. 2024 IEEE/ACM Automated Software Engineering Conference (ASE), Sacramento, California, United States, October 27 – November 1, 2024 (CCF A)",
-                "desc": ""
+                "title": "Lei Tao, Shenglin Zhang, Zedong Jia, Jinrui Sun, Minghua Ma, Zhengdan Li*, Yongqian Sun, Canqun Yang, Yuzhi Zhang, Dan Pei. Giving Every Modality a Voice in Microservice Failure Diagnosis via Multimodal Adaptive Optimization. 2024 IEEE/ACM Automated Software Engineering Conference (ASE), Sacramento, California, United States, October 27 – November 1, 2024 (CCF A)"
             }
         ]
     },
     {
         "topic": "Research About",
+        "type": "more",
         "items": [
             {
                 "href": "https://github.com/ZedongJia/TrinityRCL",
