@@ -1,0 +1,60 @@
+#nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    padding: 0 15%;
+    width: 100%;
+    background-color: var(--nav-color);
+}
+
+#nav #name {
+    color: var(--font-color);
+    height: 64px;
+    line-height: 64px;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#nav a {
+    color: var(--font-color);
+    position: relative;
+    margin: 0 1em;
+    height: 64px;
+    line-height: 64px;
+    font-size: 1.25em;
+    font-weight: bold;
+    transition: 0.1s;
+    text-decoration: none;
+}
+
+#nav a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0%;
+    height: 80%;
+    border-bottom: 2px solid var(--nav-color);
+    transition: 0.25s;
+}
+
+#nav a:hover {
+    cursor: pointer;
+    color: var(--hover-color);
+}
+
+#nav a:hover::after {
+    left: 0%;
+    width: 100%;
+    border-bottom: 2px solid var(--hover-color);
+}
+
+@media screen and (max-width: 1080px) {
+    #nav {
+        width: 100%;
+        padding: 0 5%;
+    }
+}

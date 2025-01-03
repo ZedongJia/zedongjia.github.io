@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="version" content="0.0.1">
+    <title>Zedong-Jia</title>
+    <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/nav.css">
+</head>
+
+<body>
+    <nav id="nav">
+        <span id="name">Zedong-Jia#</span>
+        <span style="flex-grow: 1;"></span>
+        <a data-id="#about" onclick="goto(this)">About</a>
+        <a data-id="#education" onclick="goto(this)">Education</a>
+        <a data-id="#publications" onclick="goto(this)">Publications</a>
+        <a data-id="#contact" onclick="goto(this)">Contact</a>
+    </nav>
+    <div class="wrapper">
+        <section id="about">
+            <h1>About</h1>
+            <ul>
+                <li>Interests: Microservice System Fault Diagnosis, Network Measurement</li>
+            </ul>
+        </section>
+        <section id="education">
+            <h1>Education</h1>
+            <ul>
+                <li>2021-2025: <a target="_blank" href="https://cs.nankai.edu.cn">NanKai University College of
+                        Software</a>
+                </li>
+            </ul>
+        </section>
+        <section id="publications">
+            <h1>Publications</h1>
+            <ul>
+                <li>
+                    <b>[Tag:Microservice System Fault Diagnosis]</b>
+                    Lei Tao, Shenglin Zhang, <b>Zedong Jia</b>, Jinrui
+                    Sun, Minghua Ma, Zhengdan
+                    Li*, Yongqian Sun,
+                    Canqun Yang,
+                    Yuzhi Zhang, Dan Pei. Giving Every Modality a Voice in Microservice Failure Diagnosis via Multimodal
+                    Adaptive
+                    Optimization. 2024 IEEE/ACM Automated Software Engineering Conference (ASE), Sacramento, California,
+                    United
+                    States, October 27 – November 1, 2024 (CCF A), <a target="_blank"
+                        href="https://dl.acm.org/doi/10.1145/3691620.3695489">Paper</a>,
+                    <a target="_blank" href="https://github.com/AIOps-Lab-NKU/Medicine">Code</a>
+                </li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h1>Contact</h1>
+            <ul>
+                <li>E-mail: zedongjia305@gmail.com</li>
+                <li>Github: <a href="https://github.com/ZedongJia">https://github.com/ZedongJia</a></li>
+            </ul>
+        </section>
+    </div>
+</body>
+<script>
+    let navHeight = document.querySelector("#nav").offsetHeight
+    function goto(node) {
+        let dataset = node.dataset
+        let id = dataset["id"]
+        let targetNode = document.querySelector(id)
+        let scrollHeigth = targetNode.offsetTop - navHeight
+        if (scrollHeigth < 0)
+            scrollHeigth = 0
+        window.scrollTo({
+            "top": scrollHeigth,
+            "behavior": "smooth"
+        })
+    }
+</script>
+
+</html>
