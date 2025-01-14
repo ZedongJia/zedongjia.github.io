@@ -63,7 +63,7 @@ section > h1 {
 .key {
     font-weight: bold;
     font-style: italic;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 .tag-list {
     display: flex;
