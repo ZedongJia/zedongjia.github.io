@@ -1,0 +1,15 @@
+@import url(/styles/section/papers.css);
+@import url(/styles/section/friendlink.css);
+@import url(/styles/section/organizations.css);
+
+section {
+    margin: 1em;
+    padding: 1em 1em;
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--sec-shader-color);
+}
+
+section > h1 {
+    margin-bottom: 0.5em;
+    border-bottom: 2px dashed var(--sec-shader-color);
+}

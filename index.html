@@ -4,35 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="version" content="0.0.21">
+    <meta name="version" content="0.0.22">
     <title>Zedong-Jia</title>
+    <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/121717162?v=4" type="image/x-icon">
     <link rel="stylesheet" href="/styles/base.css">
-    <link rel="stylesheet" href="/styles/nav.css">
 </head>
 
 <body>
     <nav id="nav">
         <span id="name">Zedong Jia</span>
         <span style="flex-grow: 1;"></span>
-        <a data-id="#about" onclick="goto(this)">About</a>
+        <a data-id="#about" onclick="goto(this)">
+            About
+        </a>
         <a data-id="#education" onclick="goto(this)">Education</a>
         <a data-id="#papers" onclick="goto(this)">Papers</a>
         <a data-id="#contact" onclick="goto(this)">Contact</a>
         <a data-id="#friendlink" onclick="goto(this)">Friend Link</a>
+        <a data-id="#organizations" onclick="goto(this)">Organizations</a>
     </nav>
     <div class="wrapper">
         <section id="about">
-            <h1>About</h1>
+            <h1>
+                About
+            </h1>
             <ul>
                 <li>
                     <span class="key">Interests: </span>
                     Microservice System Fault Diagnosis, Network Measurement
-                </li>
-                <li>
-                    <span class="key">Lab-website: </span>
-                    <a target="_blank" href="https://thuname.github.io/lab-website">
-                        THUNAME
-                    </a>
                 </li>
             </ul>
         </section>
@@ -92,12 +91,25 @@
             <h1>Friend Link</h1>
             <ul>
                 <li>
-                    <span class="key">StrawberryShop: </span>
-                    <a target="_blank" href="https://strawberryshop.github.io">goto</a>
+                    <span class="nickname">StrawberryShop</span>
+                    <img src="https://strawberryshop.github.io/images/avator.jpg" alt="avatar">
+                    <a target="_blank" href="https://strawberryshop.github.io">Link</a>
                 </li>
                 <li>
-                    <span class="key">SakuraLong: </span>
-                    <a target="_blank" href="https://sakuralong.com">goto</a>
+                    <span class="nickname">SakuraLong</span>
+                    <img src="https://sakuralong.com/img/avatar.327cb3dd.png" alt="avatar">
+                    <a target="_blank" href="https://sakuralong.com">Link</a>
+                </li>
+            </ul>
+        </section>
+        <section id="organizations">
+            <h1>Organizations</h1>
+            <ul>
+                <li>
+                    <span class="orgname">THUNAME</span>
+                    <img src="https://avatars.githubusercontent.com/u/190199566?s=200&v=4" alt="avatar">
+                    <span class="role">Role: member</span>
+                    <a target="_blank" href="https://github.com/THUNAME">Link</a>
                 </li>
             </ul>
         </section>

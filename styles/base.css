@@ -1,3 +1,5 @@
+@import url(/styles/section/base.css);
+@import url(/styles/nav.css);
 :root {
     /* font */
     --d-font-color: #000000;
@@ -10,8 +12,8 @@
     --nav-hover-color: #00fffb;
     /* section */
     --sec-shader-color: #828282;
-    --tag-hover-block-color: #000000;
-    --tag-hover-font-color: #d3adff;
+    --hover-block-color: #000000;
+    --hover-font-color: #d3adff;
     /* tag */
 }
 
@@ -41,41 +43,10 @@ a:hover {
     width: 70%;
 }
 
-section {
-    margin: 1em;
-    padding: 1em 1em;
-    border-radius: 5px;
-    box-shadow: 0 0 5px var(--sec-shader-color);
-}
-
-section > h1 {
-    margin-bottom: 0.5em;
-    border-bottom: 2px dashed var(--sec-shader-color);
-}
 
 @media screen and (max-width: 768px) {
     .wrapper {
         margin: 0 auto;
         width: 90%;
     }
-}
-
-.key {
-    font-weight: bold;
-    font-style: italic;
-    /* text-transform: uppercase; */
-}
-.tag-list {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.tag {
-    background-color: var(--tag-hover-block-color);
-    color: var(--tag-hover-font-color);
-    margin-top: 0.5em;
-    margin-right: 0.5em;
-    padding: 0.5em;
-    border-radius: 5px;
-    font-weight: bold;
 }
