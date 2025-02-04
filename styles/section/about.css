@@ -1,0 +1,26 @@
+#about-list {
+    width: 100%;
+}
+
+#about-list > ul {
+    margin-top: 1em;
+    padding: 0.5em;
+    list-style: none;
+    border: 2px dashed var(--sec-shader-color);
+    border-radius: 5px;
+}
+
+#about-list > ul:first-child {
+    margin: 0;
+}
+
+#about-list > ul > span {
+    font-size: 1.5em;
+    font-style: italic;
+    font-weight: bold;
+    transition: 0.1s;
+}
+
+#about-list > ul > li {
+    padding-left: 0.5em;
+}

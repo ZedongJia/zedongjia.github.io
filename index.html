@@ -4,131 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="version" content="0.0.23">
+    <meta name="version" content="0.1.0">
     <title>Zedong-Jia</title>
     <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/121717162?v=4" type="image/x-icon">
-    <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/index.css">
 </head>
 
 <body>
     <nav id="nav">
-        <span id="name">Zedong Jia</span>
+        <span id="name"></span>
         <span style="flex-grow: 1;"></span>
-        <a data-id="#about" onclick="goto(this)">
-            About
-        </a>
-        <a data-id="#education" onclick="goto(this)">Education</a>
-        <a data-id="#papers" onclick="goto(this)">Papers</a>
-        <a data-id="#contact" onclick="goto(this)">Contact</a>
-        <a data-id="#friendlink" onclick="goto(this)">Friend Link</a>
-        <a data-id="#organizations" onclick="goto(this)">Organizations</a>
+        <a data-id="#about" onclick="goto(this)">About Me ☻</a>
+        <a data-id="#papers" onclick="goto(this)">Papers 🗐</a>
+        <a data-id="#flink" onclick="goto(this)">FLink ☍</a>
     </nav>
     <div class="wrapper">
         <section id="about">
-            <h1>
-                About
-            </h1>
-            <ul>
-                <li>
-                    <span class="key">Interests: </span>
-                    Microservice System Fault Diagnosis, Network Measurement
-                </li>
-            </ul>
-        </section>
-        <section id="education">
-            <h1>Education</h1>
-            <ul>
-                <li>
-                    <span class="key">2021.09 ~ 2025.06: </span>
-                    <a target="_blank" href="https://cs.nankai.edu.cn">
-                        NanKai University College of Software
-                    </a>
-                </li>
-            </ul>
+            <span>About Me</span>
+            <div id="about-list">Loading...</div>
         </section>
         <section id="papers">
-            <h1>Papers</h1>
-            <ul>
-                <li>
-                    <p>
-                        Lei Tao, Shenglin Zhang, <b>Zedong Jia</b>, Jinrui
-                        Sun, Minghua Ma, Zhengdan
-                        Li*, Yongqian Sun,
-                        Canqun Yang,
-                        Yuzhi Zhang, Dan Pei. Giving Every Modality a Voice in Microservice Failure Diagnosis via
-                        Multimodal
-                        Adaptive
-                        Optimization. 2024 IEEE/ACM Automated Software Engineering Conference (ASE), Sacramento,
-                        California,
-                        United
-                        States, October 27 – November 1, 2024 (CCF A),
-                        <a target="_blank" href="https://dl.acm.org/doi/10.1145/3691620.3695489">Paper</a>,
-                        <a target="_blank" href="https://github.com/AIOps-Lab-NKU/Medicine">Code</a>
-                    </p>
-                    <span class="tag-list">
-                        <span class="tag">2024</span>
-                        <span class="tag">ASE</span>
-                        <span class="tag">Microservice System</span>
-                        <span class="tag">Fault Diagnosis</span>
-                    </span>
-                </li>
-            </ul>
+            <span>Papers</span>
+            <ul id="paper-list">Loading...</ul>
         </section>
-        <section id="contact">
-            <h1>Contact</h1>
-            <ul>
-                <li>
-                    <span class="key">E-mail: </span>
-                    zedongjia305@gmail.com
-                </li>
-                <li>
-                    <span class="key">Github: </span>
-                    <a href="https://github.com/ZedongJia">https://github.com/ZedongJia</a>
-                </li>
-            </ul>
-        </section>
-        <section id="friendlink">
-            <h1>Friend Link</h1>
-            <ul>
-                <li>
-                    <span class="nickname">StrawberryShop</span>
-                    <img src="https://strawberryshop.github.io/images/avator.jpg" alt="avatar">
-                    <a target="_blank" href="https://strawberryshop.github.io">Link</a>
-                </li>
-                <li>
-                    <span class="nickname">SakuraLong</span>
-                    <img src="https://sakuralong.com/img/avatar.327cb3dd.png" alt="avatar">
-                    <a target="_blank" href="https://sakuralong.com">Link</a>
-                </li>
-            </ul>
-        </section>
-        <section id="organizations">
-            <h1>Organizations</h1>
-            <ul>
-                <li>
-                    <span class="orgname">THUNAME</span>
-                    <img src="https://avatars.githubusercontent.com/u/190199566?s=200&v=4" alt="avatar">
-                    <span class="role">Role: member</span>
-                    <a target="_blank" href="https://github.com/THUNAME">Link</a>
-                </li>
-            </ul>
+        <section id="flink">
+            <span>FLink</span>
+            <ul id="flink-list">Loading...</ul>
         </section>
     </div>
+    <div id="footer">
+        © Copyright Zedong Jia. Hosted by GitHub Pages.
+    </div>
 </body>
-<script>
-    let navHeight = document.querySelector("#nav").offsetHeight
-    function goto(node) {
-        let dataset = node.dataset
-        let id = dataset["id"]
-        let targetNode = document.querySelector(id)
-        let scrollHeigth = targetNode.offsetTop - navHeight
-        if (scrollHeigth < 0)
-            scrollHeigth = 0
-        window.scrollTo({
-            "top": scrollHeigth,
-            "behavior": "smooth"
-        })
-    }
-</script>
+<script src="/scripts/utils.js"></script>
+<script src="/scripts/fetch.js"></script>
 
 </html>

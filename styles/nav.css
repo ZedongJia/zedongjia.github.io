@@ -7,6 +7,7 @@
     padding: 0 15%;
     width: 100%;
     background-color: var(--nav-bg-color);
+    box-shadow: 0 5px 10px var(--sec-shader-color);
 }
 
 #nav #name {
@@ -32,10 +33,10 @@
 #nav a::after {
     content: '';
     position: absolute;
-    top: 0;
+    top: 20%;
     left: 50%;
     width: 0%;
-    height: 80%;
+    height: 60%;
     border-bottom: 2px solid var(--nav-bg-color);
     transition: 0.25s;
 }
@@ -46,9 +47,10 @@
 }
 
 #nav a:hover::after {
-    left: 0%;
-    width: 100%;
-    border-bottom: 2px solid var(--nav-hover-color);
+    left: -10%;
+    width: 120%;
+    border: 2px solid var(--nav-hover-color);
+    border-radius: 5px;
 }
 
 @media screen and (max-width: 1080px) {

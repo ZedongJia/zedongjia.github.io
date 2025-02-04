@@ -1,6 +1,9 @@
-@import url(/styles/section/base.css);
+@import url(/styles/section/index.css);
 @import url(/styles/nav.css);
+@import url(/styles/footer.css);
 :root {
+    --outer: #000000;
+    --inner: #ffffff;
     /* font */
     --d-font-color: #000000;
     /* a */
@@ -11,10 +14,16 @@
     --nav-font-color: #ffffff;
     --nav-hover-color: #00fffb;
     /* section */
-    --sec-shader-color: #828282;
+    --sec-shader-color: #aaaaaa;
     --hover-block-color: #000000;
     --hover-font-color: #d3adff;
     /* tag */
+    --tag-font-color: #04ff00;
+    --tag-bg-color: #000000;
+    /* button */
+    --btn-bg-color: #000000;
+    --btn-font-color: #ffffff;
+    --btn-hover-color: #00fffb;
 }
 
 * {
@@ -22,31 +31,39 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 2em;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: var(--outer);
 }
 
 ul {
-    padding-left: 1em;
+    padding: 0;
+    list-style: none;
 }
 
 a {
     color: var(--a-color);
-    text-decoration: underline dashed;
+    text-decoration: none;
     transition: 0.25s;
+    line-height: 1em;
 }
+
 a:hover {
+    font-size: 1.5em;
     color: var(--a-hover-color);
 }
 
 .wrapper {
     margin: 0 auto;
+    padding: 2em;
     width: 70%;
+    min-height: 100vh;
 }
-
 
 @media screen and (max-width: 768px) {
     .wrapper {
         margin: 0 auto;
-        width: 90%;
+        padding: 2em;
+        width: 100%;
     }
 }

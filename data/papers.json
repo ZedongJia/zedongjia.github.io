@@ -1,0 +1,13 @@
+[
+    {
+        "name": "Lei Tao, Shenglin Zhang, <b>Zedong Jia</b>, Jinrui Sun, Minghua Ma, Zhengdan Li*, Yongqian Sun, Canqun Yang, Yuzhi Zhang, Dan Pei. Giving Every Modality a Voice in Microservice Failure Diagnosis via Multimodal Adaptive Optimization. 2024 IEEE/ACM Automated Software Engineering Conference (ASE), Sacramento, California, United States, October 27 - November 1, 2024 (CCF A)",
+        "paper_link": "https://dl.acm.org/doi/10.1145/3691620.3695489",
+        "code_link": "https://github.com/AIOps-Lab-NKU/Medicine",
+        "tag_list": [
+            "2024",
+            "ASE",
+            "Microservice System",
+            "Fault Diagnosis"
+        ]
+    }
+]
