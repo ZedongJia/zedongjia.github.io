@@ -1,0 +1,11 @@
+.list-container {
+    margin-top: 1em;
+    padding: 0 0.5em 0.5em 0.5em;
+    list-style: none;
+    border: 2px solid var(--outer);
+    border-radius: 5px;
+}
+
+.list-container:first-child {
+    margin: 0;
+}

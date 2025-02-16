@@ -1,6 +1,7 @@
 @import url(/styles/section/index.css);
 @import url(/styles/nav.css);
 @import url(/styles/footer.css);
+@import url(/styles/common.css);
 :root {
     --outer: #000000;
     --inner: #ffffff;
@@ -18,12 +19,17 @@
     --hover-block-color: #000000;
     --hover-font-color: #d3adff;
     /* tag */
-    --tag-font-color: #04ff00;
+    --tag-font-color: #00ff99;
     --tag-bg-color: #000000;
     /* button */
     --btn-bg-color: #000000;
     --btn-font-color: #ffffff;
     --btn-hover-color: #00fffb;
+}
+
+@font-face {
+    font-family: VictorMono-SemiBold;
+    src: url(/assets/VictorMono-SemiBold.ttf);
 }
 
 * {
@@ -32,7 +38,7 @@
     padding: 0;
     box-sizing: border-box;
     line-height: 2em;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: VictorMono-SemiBold, sans-serif;
     background-color: var(--outer);
 }
 
@@ -55,7 +61,7 @@ a:hover {
 
 .wrapper {
     margin: 0 auto;
-    padding: 2em;
+    padding: 2em 0;
     width: 70%;
     min-height: 100vh;
 }
@@ -63,7 +69,6 @@ a:hover {
 @media screen and (max-width: 768px) {
     .wrapper {
         margin: 0 auto;
-        padding: 2em;
         width: 100%;
     }
 }

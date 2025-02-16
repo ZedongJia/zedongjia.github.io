@@ -52,6 +52,7 @@ function createBlankBtn(
 
 function createAboutBlock(block) {
     const el = document.createElement('ul')
+    el.classList.add("list-container")
     const name = document.createElement("span")
     name.innerHTML = `☰ ${block["name"]}`
     items = block["list"].map(item => {
@@ -95,8 +96,9 @@ function createAboutBlock(block) {
 
 function createPaperDescription(index, paper) {
     const el = document.createElement('li')
+    el.classList.add("list-container")
     const info = document.createElement('span')
-    info.innerHTML = `${index + 1}. ${paper["name"]}`
+    info.innerHTML = `<i style="font-size:1.5em;">${index + 1}.</i> ${paper["name"]}`
     info.append(...[
         document.createTextNode(", "),
         createBlankA(paper["paper_link"], "Paper"),
@@ -113,7 +115,7 @@ function createPaperDescription(index, paper) {
     })
     el.append(...[
         info,
-        tags
+        tags,
     ])
     return el
 }
@@ -158,7 +160,7 @@ function createFLink(flink) {
         el.innerHTML = `${error}`
     })
     // fetch flinks
-    fetchJson('/data/flink.json').then((flinks) => {
+    fetchJson('/data/flinks.json').then((flinks) => {
         const el = document.getElementById('flink-list')
         el.innerHTML = ""
         flinks.forEach((link) => {
