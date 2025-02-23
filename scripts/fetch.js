@@ -53,6 +53,7 @@ function createBlankBtn(
 function createAboutBlock(block) {
     const el = document.createElement('ul')
     el.classList.add("list-container")
+    el.classList.add("shadow")
     const name = document.createElement("span")
     name.innerHTML = `☰ ${block["name"]}`
     items = block["list"].map(item => {
@@ -97,6 +98,7 @@ function createAboutBlock(block) {
 function createPaperDescription(index, paper) {
     const el = document.createElement('li')
     el.classList.add("list-container")
+    el.classList.add("shadow")
     const info = document.createElement('span')
     info.innerHTML = `<i style="font-size:1.5em;">${index + 1}.</i> ${paper["name"]}`
     info.append(...[
@@ -122,6 +124,7 @@ function createPaperDescription(index, paper) {
 
 function createFLink(flink) {
     const el = document.createElement('li')
+    el.classList.add("shadow")
     const nickname = document.createElement("span")
     nickname.classList.add("nickname")
     nickname.innerText = flink["nickname"]

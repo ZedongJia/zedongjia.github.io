@@ -39,7 +39,6 @@
     box-sizing: border-box;
     line-height: 2em;
     font-family: VictorMono-SemiBold, sans-serif;
-    background-color: var(--outer);
 }
 
 ul {
@@ -64,6 +63,20 @@ a:hover {
     padding: 2em 0;
     width: 70%;
     min-height: 100vh;
+}
+body {
+    background-color: var(--outer);
+}
+#hello-world {
+    z-index: -2;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    font-size: 6rem;
+    transform: translate(-50%, -50%) rotate(-30deg);
+    overflow: hidden;
+    color: var(--sec-shader-color);
+    opacity: 0.5;
 }
 
 @media screen and (max-width: 768px) {

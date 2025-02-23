@@ -2,10 +2,14 @@
     margin-top: 1em;
     padding: 0 0.5em 0.5em 0.5em;
     list-style: none;
-    border: 2px solid var(--outer);
-    border-radius: 5px;
+    background-color: var(--inner);
 }
 
 .list-container:first-child {
     margin: 0;
+}
+
+.shadow {
+    border-radius: 10px;
+    box-shadow: 0 0 0.5em var(--sec-shader-color);
 }

@@ -2,20 +2,14 @@
 @import url(/styles/section/papers.css);
 @import url(/styles/section/flinks.css);
 
-section,
-section * {
-    background-color: var(--inner);
-}
-
 section {
     margin: 1em;
     padding: 0 1em 1em 1em;
-    border-radius: 5px;
-    box-shadow: 0 0 1em var(--sec-shader-color);
 }
 
 section > span {
     display: block;
     font-size: 2em;
     font-weight: bold;
+    color: var(--inner);
 }
