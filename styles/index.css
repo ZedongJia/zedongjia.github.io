@@ -28,8 +28,8 @@
 }
 
 @font-face {
-    font-family: VictorMono-SemiBold;
-    src: url(/assets/VictorMono-SemiBold.ttf);
+    font-family: 'Comic Sans MS';
+    src: url(/assets/comic.ttf);
 }
 
 * {
@@ -38,7 +38,7 @@
     padding: 0;
     box-sizing: border-box;
     line-height: 2em;
-    font-family: VictorMono-SemiBold, sans-serif;
+    font-family: 'Comic Sans MS', sans-serif;
 }
 
 ul {
