@@ -100,7 +100,7 @@ function createPaperDescription(index, paper) {
     el.classList.add("list-container")
     el.classList.add("shadow")
     const info = document.createElement('span')
-    info.innerHTML = `<i style="font-size:1.5em;">${index + 1}.</i> ${paper["name"]}`
+    info.innerHTML = `<i style="font-size:1.5em; font-weight:bold;">${index + 1}.</i> ${paper["name"]}`
     info.append(...[
         document.createTextNode(", "),
         createBlankA(paper["paper_link"], "Paper"),
