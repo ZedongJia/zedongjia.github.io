@@ -4,19 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="version" content="0.1.32">
+    <meta name="version" content="0.1.4">
     <title>Zedong-Jia</title>
     <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/121717162?v=4" type="image/x-icon">
     <link rel="stylesheet" href="/styles/index.css">
 </head>
 
-<body>
+<body id="light">
     <nav id="nav">
         <span id="name"></span>
         <span style="flex-grow: 1;"></span>
         <a data-id="#about" onclick="goto(this)">About Me ☻</a>
         <a data-id="#papers" onclick="goto(this)">Papers [...]</a>
         <a data-id="#flinks" onclick="goto(this)">FLinks ☍</a>
+        <button onclick="changeTheme(this)">&#x2600</button>
     </nav>
     <div class="wrapper">
         <section id="about" class="shadow">

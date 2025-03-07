@@ -32,12 +32,11 @@
     cursor: pointer;
     border: none;
     background-color: transparent;
-    border: 1px solid #000000;
+    border: 1px solid var(--outer);
     border-radius: 5px;
-    transition: .25s;
 }
 
 #flinks > ul > li > button:hover {
     color: var(--btn-hover-color);
-    background-color: var(--btn-bg-color);
+    background-color: var(--btn-hover-bg-color);
 }

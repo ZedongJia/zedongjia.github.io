@@ -17,6 +17,21 @@ function golink(href) {
     window.open(href)
 }
 
+/**
+ * 
+ * @param {HTMLButtonElement} node 
+ */
+function changeTheme(node) {
+    let body = document.querySelector("body")
+    if (body.id === "light") {
+        body.id = "dark"
+        node.innerHTML = "&#x263d"
+    } else {
+        body.id = "light"
+        node.innerHTML = "&#x2600"
+    }
+}
+
 function typing() {
     const el = document.getElementById("name")
     const str = "Zedong Jia"

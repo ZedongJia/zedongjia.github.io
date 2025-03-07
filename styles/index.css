@@ -1,31 +1,8 @@
-@import url(/styles/section/index.css);
 @import url(/styles/nav.css);
 @import url(/styles/footer.css);
 @import url(/styles/common.css);
-:root {
-    --outer: #000000;
-    --inner: #ffffff;
-    /* font */
-    --d-font-color: #000000;
-    /* a */
-    --a-color: #ff0000;
-    --a-hover-color: #9000ff;
-    /* nav */
-    --nav-bg-color: #000000;
-    --nav-font-color: #ffffff;
-    --nav-hover-color: #00fffb;
-    /* section */
-    --sec-shader-color: #aaaaaa;
-    --hover-block-color: #000000;
-    --hover-font-color: #d3adff;
-    /* tag */
-    --tag-font-color: #00ff99;
-    --tag-bg-color: #000000;
-    /* button */
-    --btn-bg-color: #000000;
-    --btn-font-color: #ffffff;
-    --btn-hover-color: #00fffb;
-}
+@import url(/styles/themes.css);
+@import url(/styles/section/index.css);
 
 @font-face {
     font-family: 'Comic Sans MS';
@@ -39,6 +16,7 @@
     box-sizing: border-box;
     line-height: 2em;
     font-family: 'Comic Sans MS', sans-serif;
+    transition: 0.25s;
 }
 
 ul {
@@ -49,7 +27,7 @@ ul {
 a {
     color: var(--a-color);
     text-decoration: none;
-    transition: 0.25s;
+    font-weight: bold;
     line-height: 1em;
 }
 
@@ -64,9 +42,11 @@ a:hover {
     width: 70%;
     min-height: 100vh;
 }
+
 body {
     background-color: var(--outer);
 }
+
 #hello-world {
     z-index: -2;
     position: fixed;

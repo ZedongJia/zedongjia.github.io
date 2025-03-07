@@ -27,7 +27,6 @@
     line-height: 64px;
     font-size: 1.25em;
     font-weight: bold;
-    transition: 0.1s;
     text-decoration: none;
 }
 
@@ -52,6 +51,23 @@
     width: 120%;
     border: 2px solid var(--nav-hover-color);
     border-radius: 5px;
+}
+
+#nav button {
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    font-size: 1.25em;
+    font-weight: bold;
+    border: none;
+    border-radius: 50%;
+    color: var(--inner);
+    background-color: transparent;
+}
+
+#nav button:hover {
+    color: var(--outer);
+    background-color: var(--inner);
 }
 
 @media screen and (max-width: 1080px) {
