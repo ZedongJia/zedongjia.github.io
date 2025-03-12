@@ -1,7 +1,7 @@
 [
     {
         "name": "Education",
-        "list": [
+        "infos": [
             {
                 "key": "2021.09~2025.06",
                 "value": {
@@ -13,14 +13,14 @@
     },
     {
         "name": "Research on",
-        "list": [
+        "infos": [
             "Microservice System Fault Diagnosis",
             "Network Measurement"
         ]
     },
     {
         "name": "Member of",
-        "list": [
+        "infos": [
             {
                 "name": "THUNAME",
                 "href": "https://thuname.github.io/lab-website/"
@@ -29,7 +29,7 @@
     },
     {
         "name": "Contact",
-        "list": [
+        "infos": [
             {
                 "key": "Mail",
                 "value": "zedongjia305@gmail.com"

@@ -1,0 +1,20 @@
+.block {
+    margin: 2em auto;
+    padding: 0 1em 1em 1em;
+    width: 70%;
+    backdrop-filter: blur(10px);
+}
+
+.block > .title {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--inner);
+}
+
+@media screen and (max-width: 768px) {
+    .block {
+        margin: 1em;
+        width: auto;
+    }
+}

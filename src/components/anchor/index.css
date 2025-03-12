@@ -1,0 +1,11 @@
+a {
+    color: var(--a-color);
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+a:hover {
+    font-size: 1.5em;
+    color: var(--a-hover-color);
+}

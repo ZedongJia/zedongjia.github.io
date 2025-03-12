@@ -1,9 +1,9 @@
-#papers .tag-list {
+#paper-list .tag-list {
     display: flex;
     flex-wrap: wrap;
 }
 
-#papers .tag {
+#paper-list .tag {
     cursor: default;
     margin-top: 0.5em;
     margin-right: 0.5em;

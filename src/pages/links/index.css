@@ -1,11 +1,11 @@
-#flinks > ul {
+#link-list {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
     list-style: none;
 }
 
-#flinks > ul > li {
+#link-list > li {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,16 +16,16 @@
     background-color: var(--inner);
 }
 
-#flinks > ul > li > img {
+#link-list > li > img {
     width: 64px;
     border-radius: 32px;
 }
 
-#flinks > ul > li > .nickname {
+#link-list > li > .nickname {
     font-weight: bold;
 }
 
-#flinks > ul > li > button {
+#link-list > li > button {
     margin: 0.5em 0;
     padding: 0 1em;
     text-transform: uppercase;
@@ -36,7 +36,7 @@
     border-radius: 5px;
 }
 
-#flinks > ul > li > button:hover {
+#link-list > li > button:hover {
     color: var(--btn-hover-color);
     background-color: var(--btn-hover-bg-color);
 }

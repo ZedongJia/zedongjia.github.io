@@ -1,0 +1,18 @@
+#bg {
+    z-index: -2;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    font-size: 6rem;
+    transform: translate(-50%, -50%) rotate(-30deg);
+    overflow: hidden;
+    color: var(--sec-shader-color);
+    opacity: 0.5;
+}
+
+@media screen and (max-width: 768px) {
+    #bg {
+        font-size: 3rem;
+        transform: translate(-50%, -30%) rotate(-30deg);
+    }
+}
