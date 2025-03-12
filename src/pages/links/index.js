@@ -18,9 +18,12 @@ function createLink(link) {
     /**
      * Avatar
      */
-    const avatar = document.createElement('img');
-    avatar.src = link['avatar'];
-    avatar.alt = 'avatar';
+    const avatar = document.createElement('span');
+    avatar.classList.add('avatar');
+    const img = document.createElement('img');
+    img.src = link['avatar'];
+    img.alt = 'avatar';
+    avatar.append(img);
 
     /**
      * Goto button

@@ -16,9 +16,17 @@
     background-color: var(--inner);
 }
 
-#link-list > li > img {
+#link-list > li > .avatar {
+    display: flex;
     width: 64px;
+    height: 64px;
+    align-items: center;
     border-radius: 32px;
+    overflow: hidden;
+}
+
+#link-list > li > .avatar > img {
+    width: 64px;
 }
 
 #link-list > li > .nickname {

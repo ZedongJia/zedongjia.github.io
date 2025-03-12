@@ -16,7 +16,7 @@ function goto() {
  * change theme
  */
 function changeTheme() {
-    let body = document.querySelector('body');
+    const body = document.querySelector('body');
     if (body.id === 'light') {
         body.id = 'dark';
         this.innerHTML = '&#x2600';

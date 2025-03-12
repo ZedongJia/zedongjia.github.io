@@ -12,6 +12,10 @@
     color: var(--inner);
 }
 
+.block > .title::first-letter {
+    text-transform: uppercase;
+}
+
 @media screen and (max-width: 768px) {
     .block {
         margin: 1em;

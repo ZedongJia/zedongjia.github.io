@@ -1,3 +1,5 @@
+@import url(./progressBar/index.css);
+
 #nav {
     z-index: 1;
     display: flex;
@@ -11,22 +13,23 @@
     box-shadow: 0 5px 10px var(--sec-shader-color);
 }
 
+#nav * {
+    color: var(--nav-font-color);
+    font-weight: bold;
+}
+
 #nav #name {
     color: var(--nav-font-color);
     height: 64px;
     line-height: 64px;
     font-size: 2em;
-    font-weight: bold;
 }
 
 #nav a {
-    color: var(--nav-font-color);
     position: relative;
     margin: 0 1em;
     height: 64px;
     line-height: 64px;
-    font-size: 1.25em;
-    font-weight: bold;
     text-decoration: none;
 }
 
@@ -43,6 +46,7 @@
 
 #nav a:hover {
     cursor: pointer;
+    font-size: 1em;
     color: var(--nav-hover-color);
 }
 
@@ -57,8 +61,6 @@
     cursor: pointer;
     width: 48px;
     height: 48px;
-    font-size: 1.25em;
-    font-weight: bold;
     border: none;
     border-radius: 50%;
     color: var(--inner);

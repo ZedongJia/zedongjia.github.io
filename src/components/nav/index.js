@@ -1,5 +1,6 @@
 import { goto, changeTheme, typing } from './handler.js';
 import createAnchor from '../anchor/index.js';
+import createProgressBar from './progressBar/index.js';
 
 function createLogo() {
     const logo = document.createElement('span');
@@ -56,6 +57,7 @@ function createNav() {
     nav.append(
         createLogo(),
         createSpace(),
+        createProgressBar(),
         createNavigation('about', 'About Me ☻'),
         createNavigation('papers', 'Papers [...]'),
         createNavigation('links', 'Links ☍'),
