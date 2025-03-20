@@ -2,6 +2,7 @@ a {
     color: var(--a-color);
     text-decoration: none;
     line-height: 1em;
+    transition: 0.25s;
 }
 
 a:hover {

@@ -65,6 +65,7 @@
     border-radius: 50%;
     color: var(--inner);
     background-color: transparent;
+    transition: 0.25s;
 }
 
 #nav button:hover {

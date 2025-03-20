@@ -9,6 +9,9 @@
     display: block;
     font-size: 2em;
     font-weight: bold;
+}
+
+.block > * {
     color: var(--inner);
 }
 

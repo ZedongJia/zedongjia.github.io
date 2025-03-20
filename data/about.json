@@ -6,7 +6,7 @@
                 "key": "2021.09~2025.06",
                 "value": {
                     "name": "NanKai University College of Software",
-                    "href": "https://cs.nankai.edu.cn"
+                    "href": "https://cs.nankai.edu.cn/"
                 }
             }
         ]
@@ -36,7 +36,7 @@
             },
             {
                 "name": "Github",
-                "href": "https://github.com/ZedongJia"
+                "href": "https://github.com/ZedongJia/"
             }
         ]
     }
