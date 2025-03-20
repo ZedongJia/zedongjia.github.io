@@ -7,33 +7,24 @@ import { loadJson } from '../../utils/load.js';
  */
 function createAboutTitle(text) {
     const title = document.createElement('span');
-    title.innerHTML = `☰ ${text}`;
+    title.innerHTML = `${text}`;
     return title;
 }
 
 /**
- * @param {object|string} data
+ * @param {Array<string|object>} data
  * @returns
  */
 function createAboutInfo(data) {
     const info = document.createElement('li');
-    info.innerText = '✎ ';
-    if (typeof data == 'string') {
-        info.innerText += data;
-    } else if ('href' in data) {
-        info.appendChild(createAnchor({ href: data['href'] }, data['name'], null, '_blank'));
-    } else {
-        const key = document.createElement('span');
-        key.innerText = data['key'];
-        let value;
-        if (typeof data['value'] == 'string') {
-            value = document.createElement('span');
-            value.innerText = data['value'];
+    info.innerText = '✨ ';
+    data.forEach((meta) => {
+        if (typeof meta == 'string') {
+            info.innerHTML += meta;
         } else {
-            value = createAnchor({ href: data['value']['href'] }, data['value']['name'], null, '_blank');
+            info.append(createAnchor({ href: meta['href'] }, meta['text'], null, '_blank'));
         }
-        info.append(...[key, document.createTextNode(': '), value]);
-    }
+    });
     return info;
 }
 

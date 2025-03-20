@@ -10,7 +10,13 @@
     padding: 0 0.5em;
     text-transform: uppercase;
     font-weight: bold;
-    color: var(--tag-font-color);
-    background-color: var(--tag-bg-color);
+    border: 2px dashed;
     border-radius: 5px;
+}
+
+@media screen and (max-width: 1080px) {
+    #paper-list .tag {
+        width: 100%;
+        text-align: center;
+    }
 }

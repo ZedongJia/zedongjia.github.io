@@ -2,42 +2,49 @@
     {
         "name": "Education",
         "infos": [
-            {
-                "key": "2021.09~2025.06",
-                "value": {
-                    "name": "NanKai University College of Software",
+            [
+                "<b>2021.09~2025.06:</b> ",
+                {
+                    "text": "NanKai University College of Software",
                     "href": "https://cs.nankai.edu.cn/"
                 }
-            }
+            ]
         ]
     },
     {
         "name": "Research on",
         "infos": [
-            "Microservice System Fault Diagnosis",
-            "Network Measurement"
+            [
+                "Microservice System Fault Diagnosis"
+            ],
+            [
+                "Network Measurement"
+            ]
         ]
     },
     {
         "name": "Member of",
         "infos": [
-            {
-                "name": "THUNAME",
-                "href": "https://thuname.github.io/lab-website/"
-            }
+            [
+                {
+                    "text": "THUNAME",
+                    "href": "https://thuname.github.io/lab-website/"
+                }
+            ]
         ]
     },
     {
         "name": "Contact",
         "infos": [
-            {
-                "key": "Mail",
-                "value": "zedongjia305@gmail.com"
-            },
-            {
-                "name": "Github",
-                "href": "https://github.com/ZedongJia/"
-            }
+            [
+                "<b>Mail</b>: zedongjia305@gmail.com"
+            ],
+            [
+                {
+                    "text": "Github",
+                    "href": "https://github.com/ZedongJia/"
+                }
+            ]
         ]
     }
 ]

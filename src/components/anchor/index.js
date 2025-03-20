@@ -12,7 +12,10 @@ function createAnchor(attrs, innerHTML, onclick = null, target = null) {
     }
     if (onclick !== null) anchor.addEventListener('click', onclick);
     anchor.innerHTML = innerHTML;
-    if (target !== null) anchor.target = target;
+    if (target !== null) {
+        anchor.target = target;
+        anchor.innerHTML = '🔗 ' + anchor.innerHTML;
+    }
     return anchor;
 }
 

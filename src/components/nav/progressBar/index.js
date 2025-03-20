@@ -28,14 +28,14 @@ function drawProgress(canvas, percent) {
     const startAngle = -Math.PI / 2;
     const endAngle = startAngle + (percent / 100) * 2 * Math.PI;
     ctx.arc(CENTER_X, CENTER_Y, RADUIS, startAngle, endAngle);
-    ctx.strokeStyle = style.getPropertyValue('--nav-hover-color');
+    ctx.strokeStyle = style.getPropertyValue('--hover');
     ctx.lineWidth = LINE_WIDTH;
     ctx.stroke();
 
     ctx.font = '1em Comic Sans MS';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.fillStyle = style.getPropertyValue('--nav-font-color');
+    ctx.fillStyle = style.getPropertyValue('--inner');
     ctx.fillText(`${Math.round(percent)}%`, CENTER_X, CENTER_Y);
 }
 

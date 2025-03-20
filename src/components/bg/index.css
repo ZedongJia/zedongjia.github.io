@@ -6,7 +6,7 @@
     font-size: 6rem;
     transform: translate(-50%, -50%) rotate(-30deg);
     overflow: hidden;
-    color: var(--sec-shader-color);
+    color: var(--shader);
     opacity: 0.5;
 }
 

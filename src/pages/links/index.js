@@ -1,4 +1,4 @@
-import { createBlock, createAnchor } from '../../components/index.js';
+import { createBlock } from '../../components/index.js';
 import { gotoLink } from './handler.js';
 import { loadJson } from '../../utils/load.js';
 

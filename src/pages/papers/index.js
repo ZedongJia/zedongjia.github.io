@@ -31,7 +31,7 @@ function createPaperTags(tagNames) {
         ...tagNames.map((tagName) => {
             const tag = document.createElement('span');
             tag.classList.add('tag');
-            tag.innerHTML = tagName;
+            tag.innerHTML = "🎯 " + tagName;
             return tag;
         })
     );
