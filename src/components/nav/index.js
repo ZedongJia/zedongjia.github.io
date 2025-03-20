@@ -57,11 +57,12 @@ function createNav() {
     nav.append(
         createLogo(),
         createSpace(),
-        createProgressBar(),
         createNavigation('about', 'About Me ☻'),
         createNavigation('papers', 'Papers [...]'),
         createNavigation('links', 'Links ☍'),
-        createThemeBtn()
+        '|',
+        createThemeBtn(),
+        createProgressBar()
     );
     return nav;
 }

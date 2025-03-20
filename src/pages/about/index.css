@@ -8,6 +8,7 @@
 
 /* about-title */
 #about-list > ul > span {
+    cursor: default;
     opacity: 0.3;
     position: absolute;
     top: 50%;

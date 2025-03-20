@@ -9,11 +9,12 @@
     top: 0;
     padding: 0 15%;
     width: 100%;
+    color: var(--inner);
     background-color: var(--outer);
     box-shadow: 0 5px 10px var(--shader);
 }
 
-#nav * {
+#nav > * {
     color: var(--inner);
     font-weight: bold;
 }
@@ -26,8 +27,8 @@
 }
 
 #nav a {
-    position: relative;
     margin: 0 1em;
+    position: relative;
     height: 64px;
     line-height: 64px;
     text-decoration: none;
@@ -58,6 +59,7 @@
 }
 
 #nav button {
+    margin: 0 1em;
     cursor: pointer;
     width: 48px;
     height: 48px;

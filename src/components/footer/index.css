@@ -1,4 +1,5 @@
 #footer {
+    color: var(--outer);
     background-color: var(--inner);
     text-align: center;
 }
