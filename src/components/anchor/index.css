@@ -1,6 +1,7 @@
 a {
     color: var(--a-color);
     text-decoration: none;
+    font-weight: bold;
     line-height: 1em;
     transition: 0.25s;
 }
