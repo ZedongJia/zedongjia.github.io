@@ -23,6 +23,40 @@
         ]
     },
     {
+        "name": "Equipped with",
+        "infos": [
+            [
+                "Frontend frameworks, e.g.",
+                {
+                    "text": "Vue3",
+                    "href": "https://vuejs.org/"
+                },
+                ", and",
+                {
+                    "text": "React",
+                    "href": "https://react.dev/"
+                }
+            ],
+            [
+                "Backend frameworks, e.g.",
+                {
+                    "text": "Django",
+                    "href": "https://www.djangoproject.com/"
+                }
+            ],
+            [
+                "Application development, e.g.",
+                {
+                    "text": "Android Studio",
+                    "href": "https://developer.android.google.cn/"
+                }
+            ],
+            [
+                "Program languages, e.g. c, c++, python, html, css, javascript, java, and kotlin"
+            ]
+        ]
+    },
+    {
         "name": "Member of",
         "infos": [
             [

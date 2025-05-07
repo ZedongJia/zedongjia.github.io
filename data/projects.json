@@ -1,0 +1,13 @@
+[
+    {
+        "name": "College Helper",
+        "description": "The college entrance examination volunteer filling plays a significant role in the career development of examinees. However, with the current complex and asymmetric information, it is difficult for examinees to obtain effective information. This project aims to create a comprehensive and convenient college entrance examination volunteer filling system to solve the difficulties that examinees encounter during the application process.",
+        "project_link": "https://github.com/ZedongJia/college-helper/",
+        "url-left":  "https://github.com/ZedongJia/college-helper/blob/master/figs/fig2.png?raw=true",
+        "url-right":  "https://github.com/ZedongJia/college-helper/blob/master/figs/fig4.png?raw=true",
+        "tag_list": [
+            "vue",
+            "django"
+        ]
+    }
+]

@@ -1,0 +1,40 @@
+#project-list .ad {
+    padding: 1em 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#project-list .ad img{
+    width: 45%;
+    border-radius: 5px;
+}
+
+#project-list .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#project-list .tag {
+    cursor: default;
+    margin-top: 0.5em;
+    margin-right: 0.5em;
+    padding: 0 0.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 2px dashed;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 1080px) {
+    #project-list .tag {
+        width: 100%;
+        text-align: center;
+    }    
+    #project-list .ad img{
+        margin-bottom: 5px;
+        width: 90%;
+        border-radius: 5px;
+    }
+
+}

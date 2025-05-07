@@ -59,6 +59,7 @@ function createNav() {
         createSpace(),
         createNavigation('about', 'About Me ☻'),
         createNavigation('papers', 'Papers [...]'),
+        createNavigation('projects', 'Projects [...]'),
         createNavigation('links', 'Links ☍'),
         '|',
         createThemeBtn(),
