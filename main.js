@@ -1,6 +1,4 @@
-import mount from './src/index.js';
+import { createApp } from 'vue';
+import App from './App.js';
 
-window.addEventListener('load', () => {
-    console.log('Hello World!');
-    mount(document.querySelector('body'));
-})
+createApp(App).mount('#app');

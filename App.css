@@ -1,0 +1,19 @@
+@import url(./assets/base.css);
+@import url(./components/index.css);
+@import url(./pages/index.css);
+
+@font-face {
+    font-family: 'Comic Sans MS';
+    src: url(../assets/comic.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comic Sans MS', sans-serif;
+}
+
+ul {
+    list-style: none;
+}

@@ -1,0 +1,24 @@
+
+.description .content {
+    position: relative;
+    display: flex;
+    padding-left: 24px;
+}
+
+.description svg {
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 24px;
+}
+
+.description a {
+    font-weight: bold;
+    text-decoration: none;
+    color: red;
+}
+
+.description a:hover {
+    font-weight: bold;
+    color: blue;
+}

@@ -1,0 +1,15 @@
+#home {
+    display: grid;
+    padding: 0 1em;
+    width: 100%;
+    grid-template-columns: 50% 50%;
+    gap: 1em;
+}
+
+@media screen and (max-width: 768px) {
+    #home {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 100%;
+    }
+}
