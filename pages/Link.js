@@ -1,5 +1,6 @@
 import { onMounted, ref } from 'vue';
 import Card from './components/Card.js';
+import NavigateIcon from './components/icons/NavigateIcon.js';
 const template = `
 <div id="link">
     <div class="profile flex-center" v-for="link in links">
@@ -8,7 +9,10 @@ const template = `
         </div>
         <div class="intro flex-col-between">
             <span>{{link.nickname}}</span>
-            <a :href="link.home_page" target="_blank">goto</a>
+            <a :href="link.home_page" target="_blank" class="flex-center">
+                goto
+                <NavigateIcon />
+            </a>
         </div>
     </div>
 </div>
@@ -32,6 +36,7 @@ export default {
     template: template,
     setup,
     components: {
-        Card
+        Card,
+        NavigateIcon
     }
 };
