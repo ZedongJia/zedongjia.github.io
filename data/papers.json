@@ -9,5 +9,17 @@
             "Microservice System",
             "Fault Diagnosis"
         ]
+    },
+    {
+        "name": "Shenglin Zhang, Xiaoyu Feng, Runzhou Wang, Minghua Ma, Wenwei Gu, Yongqian Sun*, <b>Zedong Jia</b>, Jinrui Sun and Dan Pei. Too Many Cooks: Assessing the Need for Multi-Source Data in Microservice Failure Diagnosis. In 2025 IEEE 36th International Symposium on Software Reliability Engineering (ISSRE), 2025. (CCF B)",
+        "paper_link": "https://nkcs.iops.ai/wp-content/uploads/2025/07/Xiaoyu__Empirical_Study_on_Multi_source_Failure_Diagnosis.pdf",
+        "code_link": "https://anonymous.4open.science/r/Empirical-Study-on-Multi-source-Failure-Diagnosis-49F0/",
+        "tag_list": [
+            "2025",
+            "ISSRE",
+            "Microservice System",
+            "Fault Diagnosis",
+            "Multimodal"
+        ]
     }
 ]
