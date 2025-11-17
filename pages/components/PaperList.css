@@ -1,5 +1,7 @@
 .paper {
     margin-top: 1em;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid purple;
 }
 .paper:first-child {
     margin-top: 0;
@@ -10,7 +12,8 @@
     padding: 0 0.5em;
     font-weight: bold;
     border-radius: 5px;
-    background-color: skyblue;
+    color: white;
+    background-color: purple;
 }
 
 .paper > a {

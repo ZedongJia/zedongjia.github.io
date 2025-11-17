@@ -4,6 +4,28 @@ import PaperList from './components/PaperList.js';
 import ProjectList from './components/ProjectList.js';
 import ProjectIcon from './components/icons/ProjectIcon.js';
 import PublicationIcon from './components/icons/PublicationIcon.js';
+// const template = `
+// <div id="archive">
+//     <Card>
+//         <template #title>
+//             <PublicationIcon/>
+//             Publications
+//         </template>
+//         <template #content>
+//             <PaperList :papers="papers"/>
+//         </template>
+//     </Card>
+//     <Card>
+//         <template #title>
+//             <ProjectIcon/>
+//             Projects
+//         </template>
+//         <template #content>
+//             <ProjectList :projects="projects"/>
+//         </template>
+//     </Card>
+// </div>
+// `;
 const template = `
 <div id="archive">
     <Card>
@@ -13,15 +35,6 @@ const template = `
         </template>
         <template #content>
             <PaperList :papers="papers"/>
-        </template>
-    </Card>
-    <Card>
-        <template #title>
-            <ProjectIcon/>
-            Projects
-        </template>
-        <template #content>
-            <ProjectList :projects="projects"/>
         </template>
     </Card>
 </div>
