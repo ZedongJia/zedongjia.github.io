@@ -1,0 +1,15 @@
+@import url(./pub.css);
+@import url(./info.css);
+
+.part {
+    padding: 1em 2em;
+    width: 100%;
+}
+
+.part > h2 {
+    color: var(--title-color);
+    text-align: center;
+    /* text-transform: uppercase; */
+    border-top: 2px dashed var(--title-color);
+    border-bottom: 2px dashed var(--title-color);
+}

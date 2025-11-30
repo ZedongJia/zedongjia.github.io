@@ -1,0 +1,56 @@
+.pub .empty {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+.pub .paper {
+    padding-top: 0.5em;
+    border-bottom: 2px dashed;
+}
+
+.pub .title {
+    font-weight: bold;
+}
+
+.pub .author {
+    font-style: italic;
+}
+
+.pub .row {
+    margin: 0.5em 0;
+    display: flex;
+    flex-flow: row wrap;
+    font-weight: bold;
+}
+
+.pub .action {
+    margin-bottom: 0.5em;
+    display: flex;
+    flex-flow: row wrap;
+    font-weight: bold;
+    justify-content: right;
+}
+
+.pub .label {
+    padding: 0 0.5em;
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+    border-radius: 5px;
+    color: var(--tag-color);
+    background-color: var(--tag-bg-color);
+}
+
+.pub .btn {
+    margin-left: 0.5em;
+    color: var(--btn-color);
+    text-transform: uppercase;
+}
+
+.pub .ccf-a {
+    color: rgb(225, 95, 55);
+}
+
+.pub .ccf-b {
+    color: rgb(245, 189, 66);
+}

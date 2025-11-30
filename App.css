@@ -1,20 +1,44 @@
-@import url(./assets/base.css);
-@import url(./components/index.css);
-@import url(./pages/index.css);
+@import url(/parts/index.css);
 
-/* @font-face {
-    font-family: 'Comic Sans MS';
-    src: url(../assets/comic.ttf);
-} */
+:root {
+    --bg-color: #2e2e2e;
+    --color: #dac6ff;
+    --title-color: #ffffff;
+    --btn-color: #00ffff;
+    --tag-color: #f9fafb;
+    --tag-bg-color: #4b5563;
+    --duration: 0.25s;
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* font-family: 'Comic Sans MS', sans-serif; */
-    font-family: 'monospace';
+    color: var(--color);
+    background-color: var(--bg-color);
+}
+
+a {
+    color: var(--btn-color);
 }
 
 ul {
     list-style: none;
+}
+
+#headline {
+    text-align: center;
+    text-decoration: underline wavy;
+}
+
+#wrapper {
+    margin: 0 auto;
+    padding: 1em 0;
+    width: min(60%, 1080px);
+}
+
+@media screen and (max-width: 768px) {
+    #wrapper {
+        width: 100%;
+    }
 }

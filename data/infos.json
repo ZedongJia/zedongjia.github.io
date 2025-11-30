@@ -1,8 +1,8 @@
 [
     {
-        "name": "Education",
+        "intro": "Here is a summary of my educational background:",
         "icon": "SchoolIcon",
-        "infos": [
+        "items": [
             [
                 "<b>2021.09~2025.08:</b>",
                 "&nbsp;",
@@ -22,9 +22,9 @@
         ]
     },
     {
-        "name": "Research",
+        "intro": "My primary areas of focus include:",
         "icon": "ResearchIcon",
-        "infos": [
+        "items": [
             [
                 "Microservice System Fault Diagnosis"
             ],
@@ -34,9 +34,9 @@
         ]
     },
     {
-        "name": "Skill",
+        "intro": "My core competencies include:",
         "icon": "SkillIcon",
-        "infos": [
+        "items": [
             [
                 "Frontend frameworks (",
                 {
@@ -77,23 +77,30 @@
         ]
     },
     {
-        "name": "Organization",
+        "intro": "My involvement with the following organizations has been particularly meaningful:",
         "icon": "OrganizationIcon",
-        "infos": [
+        "items": [
+            [
+                {
+                    "text": "AIOPS@NKU",
+                    "href": "https://nkcs.iops.ai/"
+                }
+            ],
             [
                 {
                     "text": "THUNAME",
                     "href": "https://thuname.github.io/lab-website/"
-                }
+                },
+                " (current)."
             ]
         ]
     },
     {
-        "name": "Contact",
+        "intro": "Please feel free to reach out to me through any of the following channels:",
         "icon": "MailIcon",
-        "infos": [
+        "items": [
             [
-                "<b>Mail</b>: zedongjia305@gmail.com"
+                "zedongjia305@gmail.com"
             ],
             [
                 {
