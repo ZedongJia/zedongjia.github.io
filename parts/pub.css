@@ -15,6 +15,7 @@
 
 .pub .author {
     font-style: italic;
+    color: var(--tag-color);
 }
 
 .pub .row {

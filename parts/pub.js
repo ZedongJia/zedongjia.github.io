@@ -6,7 +6,7 @@ const template = `
         <li v-for="(paper, index) in papers" class="paper">
             <div class="title">{{index+1}}. {{paper.title}}</div>
             <div v-html="paper.author" class="author"></div>
-            <div v-html="paper.where"></div>
+            <div v-html="paper.where" class="where"></div>
             <div class="row">
                 <span class="label">{{paper.year}}</span>
                 <span :class="{'label': true, 'ccf-a':paper.ccf=='A', 'ccf-b':paper.ccf=='B'}">CCF-{{paper.ccf}}</span>

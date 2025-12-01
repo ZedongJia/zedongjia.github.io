@@ -4,7 +4,7 @@ import Pub from './parts/pub.js';
 
 const template = `
 <div id="wrapper">
-    <h1 id="headline">ZeDong Jia' Profile</h1>
+    <h1 id="headline">ZeDong Jia's Profile</h1>
     <Info/>
     <Pub/>
 </div>
