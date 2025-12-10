@@ -3,7 +3,7 @@
 :root {
     --bg-color: #2e2e2e;
     --color: #dac6ff;
-    --title-color: #ff8c00;
+    --title-color: #ffffff;
     --btn-color: #00ffff;
     --tag-color: #f9fafb;
     --tag-bg-color: #4b5563;
@@ -22,13 +22,22 @@ a {
     color: var(--btn-color);
 }
 
+a::after {
+    content: "🔗";
+}
+
+a:hover {
+    color: red;
+}
+
 ul {
     list-style: none;
 }
 
 #headline {
+    color: var(--title-color);
     text-align: center;
-    text-decoration: underline wavy;
+    /* text-decoration: underline wavy; */
 }
 
 #wrapper {

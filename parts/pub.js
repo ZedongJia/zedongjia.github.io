@@ -1,7 +1,7 @@
 import { ref } from 'vue';
 const template = `
 <div class="part pub">
-    <h2>Publications</h2>
+    <h2>@ Publications</h2>
     <ul v-if="papers.length!=0">
         <li v-for="(paper, index) in papers" class="paper">
             <div class="title">{{index+1}}. {{paper.title}}</div>

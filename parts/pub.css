@@ -13,7 +13,8 @@
     font-weight: bold;
 }
 
-.pub .author {
+.pub .author,
+.pub .author > * {
     font-style: italic;
     color: var(--tag-color);
 }
@@ -46,6 +47,14 @@
     margin-left: 0.5em;
     color: var(--btn-color);
     text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 0 0.5em;
+}
+
+.pub .btn:hover {
+    color: red;
 }
 
 .pub .ccf-a {

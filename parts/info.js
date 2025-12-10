@@ -1,7 +1,7 @@
 import { ref, onMounted } from 'vue';
 const template = `
 <div class="part info">
-    <h2>Hi~👋</h2>
+    <h2>@ Hi~👋</h2>
     <div>I am currently 1st graduate student at the Institute for Network Sciences and Cyberspace at Tsinghua University.</div>
     <br/>
     <div v-for="info in infos">
