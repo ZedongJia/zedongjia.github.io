@@ -7,6 +7,7 @@
         "year": 2024,
         "where": "IEEE/ACM Automated Software Engineering Conference (ASE)",
         "ccf": "A",
+        "thcpl": "A",
         "fields": [
             "Microservice System",
             "Fault Diagnosis"
@@ -20,6 +21,7 @@
         "year": 2025,
         "where": "IEEE 36th International Symposium on Software Reliability Engineering (ISSRE)",
         "ccf": "B",
+        "thcpl": "B",
         "fields": [
             "Microservice System",
             "Fault Diagnosis"

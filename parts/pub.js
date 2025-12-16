@@ -1,20 +1,21 @@
 import { ref } from 'vue';
 const template = `
 <div class="part pub">
-    <h2>@ Publications</h2>
-    <ul v-if="papers.length!=0">
+    <h2>Publications</h2>
+    <ul class="paper-list" v-if="papers.length!=0">
         <li v-for="(paper, index) in papers" class="paper">
             <div class="title">{{index+1}}. {{paper.title}}</div>
             <div v-html="paper.author" class="author"></div>
             <div v-html="paper.where" class="where"></div>
             <div class="row">
                 <span class="label">{{paper.year}}</span>
-                <span :class="{'label': true, 'ccf-a':paper.ccf=='A', 'ccf-b':paper.ccf=='B'}">CCF-{{paper.ccf}}</span>
+                <span :class="{'label': true, 'r-a':paper.ccf=='A', 'r-b':paper.ccf=='B', 'r-c':paper.ccf=='C'}">CCF {{paper.ccf}}</span>
+                <span :class="{'label': true, 'r-a':paper.thcpl=='A', 'r-b':paper.thcpl=='B', 'r-c':paper.thcpl=='C'}">THCPL {{paper.thcpl}}</span>
                 <span v-for="field in paper.fields" class="label">{{field}}</span>
             </div>
             <div class="action">
-                <a target="_blank" :href="paper.paper" class="btn">paper</a>
-                <a target="_blank" :href="paper.code" class="btn">code</a>
+                <a target="_blank" :href="paper.paper" class="btn">Paper</a>
+                <a target="_blank" :href="paper.code" class="btn">Code</a>
             </div>
         </li>
     </ul>

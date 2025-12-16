@@ -1,29 +1,35 @@
 @import url(/parts/index.css);
 
 :root {
-    --bg-color: #2e2e2e;
-    --color: #dac6ff;
-    --title-color: #ffffff;
-    --btn-color: #00ffff;
-    --tag-color: #f9fafb;
-    --tag-bg-color: #4b5563;
-    --duration: 0.25s;
+    --bg-dark: #000000;
+    --bg: #1e1e1e;
+    --bg-light: #2e2e2e;
+    --bg-hl: #3e3e3e;
+    --f-light: #ffffff;
+    --f: #dfdfdf;
+    --f-dark: #bfbfbf;
+    --r: 5px;
+
+    --shadow-s: inset 0 1px 2px #ffffff30, 0 1px 2px #00000030, 0 2px 4px #00000015;
+    --shadow-m: inset 0 1px 2px #ffffff50, 0 2px 4px #00000030, 0 4px 8px #00000015;
+    --shadow-l: inset 0 1px 2px #ffffff70, 0 4px 6px #00000030, 0 6px 10px #00000015;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: var(--color);
-    background-color: var(--bg-color);
+    color: var(--f);
+    background-color: var(--bg-dark);
 }
 
 a {
-    color: var(--btn-color);
+    font-weight: bold;
+    color: var(--f-light);
 }
 
 a::after {
-    content: "🔗";
+    content: '🔗';
 }
 
 a:hover {
@@ -35,7 +41,7 @@ ul {
 }
 
 #headline {
-    color: var(--title-color);
+    color: var(--f-light);
     text-align: center;
     /* text-decoration: underline wavy; */
 }
@@ -48,6 +54,6 @@ ul {
 
 @media screen and (max-width: 768px) {
     #wrapper {
-        width: 100%;
+        width: 95%;
     }
 }
