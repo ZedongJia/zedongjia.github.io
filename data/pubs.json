@@ -3,7 +3,7 @@
         "title": "Giving Every Modality a Voice in Microservice Failure Diagnosis via Multimodal Adaptive Optimization",
         "author": "Lei Tao, Shenglin Zhang, <b>Zedong Jia</b>, Jinrui Sun, Minghua Ma, Zhengdan Li*, Yongqian Sun, Canqun Yang, Yuzhi Zhang, Dan Pei",
         "paper": "https://dl.acm.org/doi/10.1145/3691620.3695489",
-        "code": "https://github.com/AIOps-Lab-NKU/Medicine/",
+        "code": "https://github.com/ZedongJia/Medicine",
         "year": 2024,
         "where": "IEEE/ACM Automated Software Engineering Conference (ASE)",
         "ccf": "A",
@@ -17,7 +17,7 @@
         "title": "Too Many Cooks: Assessing the Need for Multi-Source Data in Microservice Failure Diagnosis",
         "author": "Shenglin Zhang, Xiaoyu Feng, Runzhou Wang, Minghua Ma, Wenwei Gu, Yongqian Sun*, <b>Zedong Jia</b>, Jinrui Sun and Dan Pei",
         "paper": "https://nkcs.iops.ai/wp-content/uploads/2025/07/Xiaoyu__Empirical_Study_on_Multi_source_Failure_Diagnosis.pdf",
-        "code": "https://anonymous.4open.science/r/Empirical-Study-on-Multi-source-Failure-Diagnosis-49F0/",
+        "code": "https://github.com/ZedongJia/Empirical-Study-on-Multi-source-Failure-Diagnosis",
         "year": 2025,
         "where": "IEEE 36th International Symposium on Software Reliability Engineering (ISSRE)",
         "ccf": "B",
@@ -25,6 +25,20 @@
         "fields": [
             "Microservice System",
             "Fault Diagnosis"
+        ]
+    },
+    {
+        "title": "Divide, Predict, Conquer: Adaptive Internet-wide Service Discovery with Limited Seeds",
+        "author": "Daguo Cheng, <b>Zedong Jia</b>, Ying Liu, Lin He, Le Gai, Chao He, Jiuzhou Zhang, Chentian Wei, Jiasheng Zhou, Zhaoan Wang and Jinlong E",
+        "paper": "#",
+        "code": "https://github.com/ZedongJia/SPADE",
+        "year": 2026,
+        "where": "IEEE INFOCOM 2026-IEEE Conference on Computer Communications",
+        "ccf": "A",
+        "thcpl": "A",
+        "fields": [
+            "Network Measurement",
+            "Service Discovery"
         ]
     }
 ]
