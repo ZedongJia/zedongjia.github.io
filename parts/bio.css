@@ -1,0 +1,25 @@
+.bio .contact {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 1rem;
+}
+
+.bio .contact a {
+    display: flex;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: var(--r);
+    box-shadow: var(--shadow-s);
+    text-decoration: none;
+}
+
+.bio .contact a:hover {
+    transition: 0.2s;
+    box-shadow: var(--shadow-l);
+}
+
+.bio .contact a > svg {
+    margin-right: 0.5rem;
+    width: 1.5rem;
+}

@@ -1,7 +1,7 @@
 import { ref } from 'vue';
+import { PaperIcon, ShareIcon } from './icons.js';
 const template = `
-<div class="part pub">
-    <h2>Publications</h2>
+<div class="pub">
     <ul class="paper-list" v-if="papers.length!=0">
         <li v-for="(paper, index) in papers" class="paper">
             <div class="title">{{index+1}}. {{paper.title}}</div>
@@ -14,8 +14,14 @@ const template = `
                 <span v-for="field in paper.fields" class="label">{{field}}</span>
             </div>
             <div class="action">
-                <a target="_blank" :href="paper.paper" class="btn">Paper</a>
-                <a target="_blank" :href="paper.code" class="btn">Code</a>
+                <a target="_blank" :href="paper.paper">
+                    <PaperIcon/>
+                    Paper
+                </a>
+                <a target="_blank" :href="paper.code">
+                    <ShareIcon/>
+                    Code
+                </a>
             </div>
         </li>
     </ul>
@@ -49,5 +55,9 @@ function setup() {
 
 export default {
     template: template,
-    setup
+    setup,
+    components: {
+        PaperIcon,
+        ShareIcon
+    }
 };

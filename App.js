@@ -1,11 +1,14 @@
-import { ref } from 'vue';
+import Bio from './parts/bio.js';
 import Info from './parts/info.js';
 import Pub from './parts/pub.js';
 
 const template = `
 <div id="wrapper">
-    <h1 id="headline">ZeDong Jia's Profile</h1>
+    <div id="headline">ZeDong Jia</div>
+    <Bio/>
+    <div class="sec">Hi~👋</div>
     <Info/>
+    <div class="sec">Publications</div>
     <Pub/>
 </div>
 `;
@@ -18,6 +21,7 @@ export default {
     template: template,
     setup,
     components: {
+        Bio,
         Info,
         Pub
     }

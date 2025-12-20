@@ -1,13 +1,13 @@
 [
     {
-        "intro": "I am currently 1st graduate student at the Institute for Network Sciences and Cyberspace at Tsinghua University. Here is a summary of my educational background:",
+        "intro": "Here is a summary of my educational background:",
         "icon": "SchoolIcon",
         "items": [
             [
                 "<b>2021.09~2025.08:</b>",
                 "&nbsp;",
                 {
-                    "text": "SE, NanKai University",
+                    "text": "Software Engineering (SE), NanKai University",
                     "href": "https://cs.nankai.edu.cn/"
                 }
             ],
@@ -15,7 +15,7 @@
                 "<b>2025.09~2028.08:</b>",
                 "&nbsp;",
                 {
-                    "text": "INSC, Tsinghua University",
+                    "text": "Institute for Network Sciences and Cyberspace (INSC), Tsinghua University",
                     "href": "https://www.insc.tsinghua.edu.cn/"
                 }
             ]
@@ -91,22 +91,7 @@
                     "text": "THUNAME",
                     "href": "https://thuname.github.io/lab-website/"
                 },
-                " (current)."
-            ]
-        ]
-    },
-    {
-        "intro": "Please feel free to reach out to me through any of the following channels:",
-        "icon": "MailIcon",
-        "items": [
-            [
-                "zedongjia305@gmail.com"
-            ],
-            [
-                {
-                    "text": "Github",
-                    "href": "https://github.com/ZedongJia/"
-                }
+                " (current)"
             ]
         ]
     }

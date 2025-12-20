@@ -9,6 +9,7 @@
         "ccf": "A",
         "thcpl": "A",
         "fields": [
+            "ASE",
             "Microservice System",
             "Fault Diagnosis"
         ]
@@ -23,6 +24,7 @@
         "ccf": "B",
         "thcpl": "B",
         "fields": [
+            "ISSRE",
             "Microservice System",
             "Fault Diagnosis"
         ]
@@ -33,10 +35,11 @@
         "paper": "#",
         "code": "https://github.com/ZedongJia/SPADE",
         "year": 2026,
-        "where": "IEEE INFOCOM 2026-IEEE Conference on Computer Communications",
+        "where": "IEEE INFOCOM 2026-IEEE Conference on Computer Communications (INFOCOM)",
         "ccf": "A",
         "thcpl": "A",
         "fields": [
+            "INFOCOM",
             "Network Measurement",
             "Service Discovery"
         ]

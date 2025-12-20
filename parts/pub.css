@@ -4,19 +4,8 @@
     text-align: center;
 }
 
-.pub .paper-list {
-    background-color: var(--bg);
-}
-
-.pub .paper-list * {
-    background-color: var(--bg-light);
-}
-
 .pub .paper {
-    margin-bottom: 0.5em;
-    padding: 0.5em;
-    border-radius: var(--r);
-    box-shadow: var(--shadow-m);
+    margin-bottom: var(--subsec-gap);
 }
 
 .pub .title {
@@ -24,8 +13,14 @@
     font-weight: bold;
 }
 
+.pub .title::first-letter {
+    font-size: 2rem;
+    font-style: italic;
+}
+
 .pub .author,
 .pub .author > * {
+    font-size: 0.9rem;
     font-style: italic;
 }
 .pub .author > b {
@@ -33,7 +28,7 @@
 }
 
 .pub .row {
-    margin: 0.5em 0;
+    margin-top: 0.5em;
     display: flex;
     flex-flow: row wrap;
     font-weight: bold;
@@ -43,23 +38,34 @@
     padding: 0.25em 0.5em;
     margin-right: 0.5em;
     margin-bottom: 0.5em;
-    border-radius: var(--r);
-    box-shadow: var(--shadow-s);
-    background-color: var(--bg-hl);
+    border-radius: var(--r-l);
+    color: var(--bg-dark);
+    background-color: var(--f-light);
 }
 
 .pub .action {
     display: flex;
     flex-flow: row wrap;
-    font-weight: bold;
     justify-content: right;
 }
 
-.pub .btn {
+.pub .action a {
+    display: flex;
     margin-left: 0.5em;
     text-decoration: none;
     border-radius: var(--r);
-    padding: 0 0.5em;
+    padding: 0.5em;
+    box-shadow: var(--shadow-s);
+}
+
+.pub .action a:hover {
+    transition: 0.25s;
+    box-shadow: var(--shadow-l);
+}
+
+.pub .action a svg {
+    margin-right: 0.5rem;
+    width: 1.5rem;
 }
 
 .pub .r-a {

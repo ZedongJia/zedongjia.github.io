@@ -1,15 +1,21 @@
 .info .desc {
-    margin-bottom: .5em;
-    padding: 0.5em;
+    margin-top: 1rem;
     border-radius: var(--r);
-    box-shadow: var(--shadow-m);
 }
 
-.info * {
-    background-color: var(--bg-light);
+.info .desc .title {
+    font-weight: bold;
 }
 
 .info .enum {
-    padding-left: 2em;
-    list-style-type: circle;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-radius: var(--r);
+    box-shadow: var(--shadow-s);
 }
+
+.info .enum li::before {
+    content: "⭐";
+    margin-right: 0.5rem;
+}
+

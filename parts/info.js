@@ -1,7 +1,6 @@
 import { ref, onMounted } from 'vue';
 const template = `
-<div class="part info">
-    <h2>Hi~👋</h2>
+<div class="info">
     <div class="desc" v-for="info in infos">
         <div class="title">{{info.intro}}</div>
         <ul class="enum">

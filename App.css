@@ -1,36 +1,45 @@
 @import url(/parts/index.css);
 
 :root {
-    --bg-dark: #000000;
-    --bg: #1e1e1e;
-    --bg-light: #2e2e2e;
-    --bg-hl: #3e3e3e;
-    --f-light: #ffffff;
-    --f: #dfdfdf;
-    --f-dark: #bfbfbf;
+    --bg-dark: #ffffff;
+    --bg: #dfdfdf;
+    --bg-light: #bfbfbf;
+    --bg-hl: #cfcfcf;
+    --f-dark: #000000;
+    --f: #1e1e1e;
+    --f-light: #2e2e2e;
+    --f-hl: rgb(102, 8, 116);
+
     --r: 5px;
+    --r-m: 10px;
+    --r-l: 20px;
 
     --shadow-s: inset 0 1px 2px #ffffff30, 0 1px 2px #00000030, 0 2px 4px #00000015;
     --shadow-m: inset 0 1px 2px #ffffff50, 0 2px 4px #00000030, 0 4px 8px #00000015;
     --shadow-l: inset 0 1px 2px #ffffff70, 0 4px 6px #00000030, 0 6px 10px #00000015;
+
+    --sec-gap: 3rem;
+    --subsec-gap: 1.5rem;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: var(--f);
+    color: var(--f-dark);
     background-color: var(--bg-dark);
 }
 
 a {
     font-weight: bold;
-    color: var(--f-light);
+    text-decoration: none;
+    color: var(--f-hl);
 }
 
-a::after {
+/* a::after {
     content: '🔗';
-}
+    color: var(--f-light);
+} */
 
 a:hover {
     color: red;
@@ -41,13 +50,22 @@ ul {
 }
 
 #headline {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--f-dark);
+}
+
+.sec {
+    margin-top: var(--sec-gap);
+    padding-left: 1rem;
     color: var(--f-light);
-    text-align: center;
-    /* text-decoration: underline wavy; */
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-left: 5px solid var(--f-dark);
 }
 
 #wrapper {
-    margin: 0 auto;
+    margin: 2rem auto;
     padding: 1em 0;
     width: min(60%, 1080px);
 }
