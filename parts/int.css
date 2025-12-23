@@ -1,0 +1,28 @@
+.interest .item {
+    display: flex;
+    align-items: center;
+}
+
+.interest .icon {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 0.5rem;
+}
+
+.interest .icon > svg {
+    width: 2rem;
+}
+
+.interest .content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.interest .badge {
+    color: var(--bg-dark);
+    text-transform: uppercase;
+    background: var(--f-hl);
+    padding: 2px 8px;
+    border-radius: var(--r);
+}

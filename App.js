@@ -1,13 +1,20 @@
 import Bio from './parts/bio.js';
-import Info from './parts/info.js';
+import Edu from './parts/edu.js';
+import Int from './parts/int.js';
+import Lab from './parts/lab.js';
 import Pub from './parts/pub.js';
 
 const template = `
 <div id="wrapper">
     <div id="headline">ZeDong Jia</div>
+    <br/>
     <Bio/>
-    <div class="sec">Hi~👋</div>
-    <Info/>
+    <div class="sec">Educations</div>
+    <Edu/>
+    <div class="sec">Research Interests</div>
+    <Int/>
+    <div class="sec">Laboratories</div>
+    <Lab/>
     <div class="sec">Publications</div>
     <Pub/>
 </div>
@@ -22,7 +29,9 @@ export default {
     setup,
     components: {
         Bio,
-        Info,
+        Edu,
+        Int,
+        Lab,
         Pub
     }
 };

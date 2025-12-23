@@ -1,0 +1,28 @@
+.lab .item {
+    display: flex;
+    align-items: center;
+}
+
+.lab .icon {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 0.5rem;
+}
+
+.lab .icon > svg {
+    width: 2rem;
+}
+
+.lab .content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lab .badge {
+    color: var(--bg-dark);
+    text-transform: uppercase;
+    background: var(--f-hl);
+    padding: 2px 8px;
+    border-radius: var(--r);
+}

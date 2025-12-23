@@ -57,6 +57,7 @@ ul {
 
 .sec {
     margin-top: var(--sec-gap);
+    margin-bottom: 0.5rem;
     padding-left: 1rem;
     color: var(--f-light);
     font-size: 1.5rem;
