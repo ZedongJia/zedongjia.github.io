@@ -5,14 +5,14 @@ const template = `
         <li class="item">
             <span class="icon"><RocketIcon/></span>
             <div class="content">
-                Microservice System Fault Diagnosis
+                Microservice System Fault Diagnosis (ASE'24, ISSRE'25)
             </div>
         </li>
 
         <li class="item">
             <span class="icon"><RocketIcon/></span>
             <div class="content">
-                Network Measurement and Security
+                Network Measurement (INFOCOM'26)
             </div>
         </li>
     </ul>
