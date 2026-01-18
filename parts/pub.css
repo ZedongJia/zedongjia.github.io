@@ -6,6 +6,7 @@
 
 .pub .paper {
     margin-bottom: var(--subsec-gap);
+    padding: 0 1rem;
 }
 
 .pub .title {
@@ -14,8 +15,9 @@
 }
 
 .pub .title::first-letter {
-    font-size: 2rem;
+    font-weight: bold;
     font-style: italic;
+    color: var(--f-hl);
 }
 
 .pub .author,
@@ -24,7 +26,8 @@
     font-style: italic;
 }
 .pub .author > b {
-    color: var(--f-light);
+    font-weight: bold;
+    color: var(--f-hl);
 }
 
 .pub .row {
@@ -38,9 +41,9 @@
     padding: 0.25em 0.5em;
     margin-right: 0.5em;
     margin-bottom: 0.5em;
-    border-radius: var(--r-l);
+    border-radius: var(--r);
     color: var(--bg-dark);
-    background-color: var(--f-light);
+    background-color: var(--f-dark);
 }
 
 .pub .action {
@@ -51,6 +54,7 @@
 
 .pub .action a {
     display: flex;
+    align-items: center;
     margin-left: 0.5em;
     text-decoration: none;
     border-radius: var(--r);
@@ -59,6 +63,7 @@
 }
 
 .pub .action a:hover {
+    display: flex;
     transition: 0.25s;
     box-shadow: var(--shadow-l);
 }

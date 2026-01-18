@@ -1,12 +1,12 @@
 .edu {
     position: relative;
-    padding: 0 2rem;
+    padding: 0 3rem;
 }
 
 .edu::before {
     content: '';
     position: absolute;
-    left: 1rem;
+    left: 2rem;
     top: 0;
     width: 2px;
     height: 100%;
@@ -25,13 +25,14 @@
     left: -1rem;
     top: 0;
     transform: translate(-45%, 0);
-    width: 1.25rem;
-    height: 1.25rem;
+    width: 1rem;
+    height: 1rem;
     background: var(--f-hl);
     border-radius: 50%;
 }
 
 .edu .time {
+    margin-bottom: 1rem;
     font-size: 0.9rem;
     font-weight: bold;
     color: var(--f-hl);
@@ -39,7 +40,7 @@
 
 .edu .card {
     display: flex;
-    align-items: center;
+    align-items: start;
     flex-flow: row wrap;
     gap: 1rem;
 }
