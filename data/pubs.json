@@ -9,7 +9,6 @@
         "ccf": "A",
         "thcpl": "A",
         "fields": [
-            "ASE",
             "Microservice System",
             "Fault Diagnosis"
         ]
@@ -17,14 +16,13 @@
     {
         "title": "Too Many Cooks: Assessing the Need for Multi-Source Data in Microservice Failure Diagnosis",
         "author": "Shenglin Zhang, Xiaoyu Feng, Runzhou Wang, Minghua Ma, Wenwei Gu, Yongqian Sun*, <b>Zedong Jia</b>, Jinrui Sun and Dan Pei",
-        "paper": "https://nkcs.iops.ai/wp-content/uploads/2025/07/Xiaoyu__Empirical_Study_on_Multi_source_Failure_Diagnosis.pdf",
+        "paper": "https://ieeexplore.ieee.org/document/11229531",
         "code": "https://github.com/ZedongJia/Empirical-Study-on-Multi-source-Failure-Diagnosis",
         "year": 2025,
         "where": "IEEE 36th International Symposium on Software Reliability Engineering (ISSRE)",
         "ccf": "B",
         "thcpl": "B",
         "fields": [
-            "ISSRE",
             "Microservice System",
             "Fault Diagnosis"
         ]
@@ -32,16 +30,28 @@
     {
         "title": "Divide, Predict, Conquer: Adaptive Internet-wide Service Discovery with Limited Seeds",
         "author": "Daguo Cheng, <b>Zedong Jia</b>, Ying Liu, Lin He, Le Gai, Chao He, Jiuzhou Zhang, Chentian Wei, Jiasheng Zhou, Zhaoan Wang and Jinlong E",
-        "paper": "#",
+        "paper": "",
         "code": "https://github.com/ZedongJia/SPADE",
         "year": 2026,
         "where": "IEEE INFOCOM 2026-IEEE Conference on Computer Communications (INFOCOM)",
         "ccf": "A",
         "thcpl": "A",
         "fields": [
-            "INFOCOM",
             "Network Measurement",
             "Service Discovery"
+        ]
+    },
+    {
+        "title": "Heterogeneous federated learning for imbalanced phishing email detection",
+        "author": "Xiaoyang Yi, Linyu Li, Jian Zhang and <b>Zedong Jia</b>",
+        "paper": "https://link.springer.com/article/10.1186/s42400-025-00420-2",
+        "code": "",
+        "year": 2026,
+        "where": "Cybersecurity",
+        "ccf": "C",
+        "fields": [
+            "Federated Learning",
+            "Phishing Email Detection"
         ]
     }
 ]

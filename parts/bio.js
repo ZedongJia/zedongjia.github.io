@@ -7,11 +7,11 @@ const template = `
     <div class="contact">
         <a :href="'mailto:'+bio.email">
             <MailIcon/>
-            {{bio.email}}
+            <span>{{bio.email}}</span>
         </a>
         <a :href="'https://'+bio.github" target="_blank">
             <GithubIcon/>
-            {{bio.github}}
+            <span>{{bio.github}}</span>
         </a>
     </div>
 </div>

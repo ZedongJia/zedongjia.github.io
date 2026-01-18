@@ -48,6 +48,28 @@
 
 .pub .action {
     display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: var(--r-s);
+    color: var(--f-dark);
+    background-color: var(--bg-dark);
+    box-shadow: var(--shadow-s);
+}
+
+.pub .action:hover {
+    display: flex;
+    transition: 0.25s;
+    color: var(--f-hl);
+    box-shadow: var(--shadow-l);
+}
+
+.pub .action svg {
+    margin-right: 0.5rem;
+    width: 1rem;
+}
+
+/* .pub .action {
+    display: flex;
     flex-flow: row wrap;
     justify-content: right;
 }
@@ -56,9 +78,9 @@
     display: flex;
     align-items: center;
     margin-left: 0.5em;
+    padding: 0.25em;
     text-decoration: none;
-    border-radius: var(--r);
-    padding: 0.5em;
+    border-radius: var(--r-s);
     box-shadow: var(--shadow-s);
 }
 
@@ -70,8 +92,8 @@
 
 .pub .action a svg {
     margin-right: 0.5rem;
-    width: 1.5rem;
-}
+    width: 1rem;
+} */
 
 .pub .r-a {
     color: rgb(225, 95, 55);

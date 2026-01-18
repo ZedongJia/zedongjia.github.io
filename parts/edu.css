@@ -15,7 +15,7 @@
 
 .edu .timeline-item {
     position: relative;
-    margin-bottom: 40px;
+    margin-bottom: 0.5rem;
 }
 
 /* 时间节点 */
@@ -32,7 +32,7 @@
 }
 
 .edu .time {
-    margin-bottom: 1rem;
+    margin-bottom: 0.25rem;
     font-size: 0.9rem;
     font-weight: bold;
     color: var(--f-hl);

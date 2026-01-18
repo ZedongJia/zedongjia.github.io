@@ -4,14 +4,15 @@
 .bio .contact {
     display: flex;
     flex-flow: row wrap;
-    margin-top: 1rem;
+    margin-top: 0.25rem;
 }
 
 .bio .contact a {
     display: flex;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-    padding: 0.5rem;
+    align-items: center;
+    margin-right: 0.5rem;
+    margin-bottom: 0.25rem;
+    padding: 0.25rem 0.5em;
     border-radius: var(--r);
     box-shadow: var(--shadow-s);
     text-decoration: none;
@@ -27,9 +28,16 @@
     width: 1.5rem;
 }
 
-
 @media screen and (max-width: 768px) {
-    .bio .contact a {
+    /* .bio .contact a {
         flex: 1;
+    } */
+
+    .bio .contact a svg {
+        margin: 0;
+    }
+
+    .bio .contact a span {
+        display: none;
     }
 }

@@ -10,15 +10,13 @@ const template = `
             <div class="row">
                 <span class="label">{{paper.year}}</span>
                 <span :class="{'label': true, 'r-a':paper.ccf=='A', 'r-b':paper.ccf=='B', 'r-c':paper.ccf=='C'}">CCF {{paper.ccf}}</span>
-                <span :class="{'label': true, 'r-a':paper.thcpl=='A', 'r-b':paper.thcpl=='B', 'r-c':paper.thcpl=='C'}">THCPL {{paper.thcpl}}</span>
+                <span v-if="paper.thcpl" :class="{'label': true, 'r-a':paper.thcpl=='A', 'r-b':paper.thcpl=='B', 'r-c':paper.thcpl=='C'}">THCPL {{paper.thcpl}}</span>
                 <span v-for="field in paper.fields" class="label">{{field}}</span>
-            </div>
-            <div class="action">
-                <a target="_blank" :href="paper.paper">
+                <a v-if="paper.paper" class="label action" target="_blank" :href="paper.paper">
                     <PaperIcon/>
                     Paper
                 </a>
-                <a target="_blank" :href="paper.code">
+                <a v-if="paper.code" class="label action" target="_blank" :href="paper.code">
                     <ShareIcon/>
                     Code
                 </a>
