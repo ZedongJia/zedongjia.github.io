@@ -5,7 +5,7 @@ const template = `
         <li class="item">
             <span class="icon"><RocketIcon/></span>
             <div class="content">
-                Microservice System Fault Diagnosis (ASE'24, ISSRE'25)
+                Microservice System Failure Diagnosis (ASE'24, ISSRE'25)
             </div>
         </li>
 

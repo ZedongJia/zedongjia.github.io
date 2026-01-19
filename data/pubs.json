@@ -10,7 +10,7 @@
         "thcpl": "A",
         "fields": [
             "Microservice System",
-            "Fault Diagnosis"
+            "Failure Diagnosis"
         ]
     },
     {
@@ -24,7 +24,7 @@
         "thcpl": "B",
         "fields": [
             "Microservice System",
-            "Fault Diagnosis"
+            "Failure Diagnosis"
         ]
     },
     {
@@ -49,9 +49,24 @@
         "year": 2026,
         "where": "Cybersecurity",
         "ccf": "C",
+        "thcpl": "",
         "fields": [
             "Federated Learning",
             "Phishing Email Detection"
+        ]
+    },
+    {
+        "title": "Understanding the IPv6 Address Usage Strategies of Top Internet Services",
+        "author": "Lin He, <b>Zedong Jia</b>, Daguo Cheng, Jinlong E, Yuhan Du, Guanglei Song, Ying Liu, Xingang Shi, Shenglin Zhang, Jiahai Yang and Mingwei Xu",
+        "paper": "",
+        "code": "",
+        "year": 2026,
+        "where": "IEEE International Conference on Communications: Next-Generation Networking & Internet (ICC)",
+        "ccf": "C",
+        "thcpl": "B",
+        "fields": [
+            "Network Measurement",
+            "IPv6"
         ]
     }
 ]
