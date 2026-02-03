@@ -2,7 +2,7 @@ import { ref } from 'vue';
 import { MailIcon, GithubIcon } from './icons.js';
 const template = `
 <div class="bio">
-    <div v-html="bio.text">
+    <div class="text" v-html="bio.text">
     </div>
     <div class="contact">
         <a :href="'mailto:'+bio.email">

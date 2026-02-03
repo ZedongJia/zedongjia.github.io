@@ -4,13 +4,12 @@
 }
 
 .lab .icon {
-    font-size: 1.5rem;
     margin-left: 1rem;
     margin-right: 0.5rem;
 }
 
 .lab .icon > svg {
-    width: 2rem;
+    width: 1.5rem;
 }
 
 .lab .content {

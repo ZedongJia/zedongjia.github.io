@@ -1,9 +1,32 @@
 .bio {
     padding: 0 1rem;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 1rem;
 }
+
+.bio .text {
+    padding-right: 1rem;
+    position: relative;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+.bio .text::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    width: 0.3rem;
+    height: 100%;
+    border-radius: var(--r-l);
+    background-color: var(--f-hl);
+}
+
 .bio .contact {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     margin-top: 0.25rem;
 }
 
@@ -13,13 +36,14 @@
     margin-right: 0.5rem;
     margin-bottom: 0.25rem;
     padding: 0.25rem 0.5em;
-    border-radius: var(--r);
-    box-shadow: var(--shadow-s);
+    /* border-radius: var(--r); */
+    /* box-shadow: var(--shadow-s); */
     text-decoration: none;
 }
 
 .bio .contact a:hover {
     transition: 0.2s;
+    border-radius: var(--r-l);
     box-shadow: var(--shadow-l);
 }
 

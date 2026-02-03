@@ -6,7 +6,7 @@ import Pub from './parts/pub.js';
 
 const template = `
 <div id="wrapper">
-    <div id="headline">ZeDong Jia</div>
+    <div id="headline"><b>ZeDong</b> Jia</div>
     <br/>
     <Bio/>
     <div class="sec">Educations</div>
@@ -17,6 +17,9 @@ const template = `
     <Lab/>
     <div class="sec">Publications</div>
     <Pub/>
+    <footer>
+        &copy Copyright 2026 Zedong Jia.
+    </footer>
 </div>
 `;
 

@@ -8,11 +8,16 @@ const template = `
                 Microservice System Failure Diagnosis (ASE'24, ISSRE'25)
             </div>
         </li>
-
         <li class="item">
             <span class="icon"><RocketIcon/></span>
             <div class="content">
-                Network Measurement (INFOCOM'26)
+                Network Measurement (INFOCOM'26, ICC'26)
+            </div>
+        </li>
+        <li class="item">
+            <span class="icon"><RocketIcon/></span>
+            <div class="content">
+                Network Security (Cybersecurity'26)
             </div>
         </li>
     </ul>
