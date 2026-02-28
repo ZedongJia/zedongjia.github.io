@@ -1,4 +1,5 @@
 @import url(/parts/index.css);
+@import url(/shared.css);
 
 :root {
     --bg-dark: #ffffff;
@@ -19,7 +20,7 @@
     --shadow-l: inset 0 1px 2px #ffffff70, 0 4px 6px #00000030, 0 6px 10px #00000015;
 
     --sec-gap: 1.5rem;
-    --subsec-gap: 0.5rem;
+    --subsec-gap: 1rem;
 }
 
 * {

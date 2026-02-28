@@ -12,6 +12,8 @@ const template = `
                 <span :class="{'label': true, 'r-a':paper.ccf=='A', 'r-b':paper.ccf=='B', 'r-c':paper.ccf=='C'}">CCF {{paper.ccf}}</span>
                 <span v-if="paper.thcpl" :class="{'label': true, 'r-a':paper.thcpl=='A', 'r-b':paper.thcpl=='B', 'r-c':paper.thcpl=='C'}">THCPL {{paper.thcpl}}</span>
                 <span v-for="field in paper.fields" class="label">{{field}}</span>
+            </div>
+            <div class="row"> 
                 <a v-if="paper.paper" class="label action" target="_blank" :href="paper.paper">
                     <PaperIcon/>
                     Paper
