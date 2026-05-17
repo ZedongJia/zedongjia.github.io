@@ -13,7 +13,7 @@ const template = `
 
     <div class="shared-card-item">
         <div class="lab-name">
-            <a href="https://thuname.github.io/lab-website/" target="_blank" class="lab-name">
+            <a href="https://thuname.github.io/" target="_blank" class="lab-name">
                 THUNAME
             </a>
             <span class="lab-stat">(current)</span>
