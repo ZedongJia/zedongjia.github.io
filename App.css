@@ -84,10 +84,14 @@ ul {
     background-color: var(--f-hl);
 }
 
+#app {
+    background-image: url("/images/bg.png");
+}
+
 #wrapper {
-    margin: 2rem auto;
+    margin: 0 auto;
     margin-bottom: 0;
-    padding: 1em 0;
+    padding: 2em;
     width: min(60%, 1080px);
 }
 

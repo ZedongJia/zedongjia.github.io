@@ -5,6 +5,9 @@
 }
 
 .pub .paper {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 0.2rem;
     margin-bottom: var(--subsec-gap);
     padding: 0 1rem;
 }
@@ -26,6 +29,11 @@
 .pub .author,
 .pub .author * {
     font-style: italic;
+}
+
+.pub .author, .pub .where {
+    padding-left: 1rem;
+    font-size: 0.9rem;
 }
 
 .pub .author > b {
