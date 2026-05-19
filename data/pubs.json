@@ -1,5 +1,19 @@
 [
     {
+        "title": "TED: Abusing Tunnel Hosts and IPv6 Extension Headers for Pulsing DoS Attacks",
+        "author": "Le Gai, <b>Zedong Jia</b>, Lin He, Daguo Cheng, Chentian Wei and Ying Liu",
+        "paper": "",
+        "code": "https://github.com/THUNAME/TED",
+        "year": 2026,
+        "where": "The 35th USENIX Security Symposium",
+        "ccf": "A",
+        "thcpl": "A",
+        "fields": [
+            "Network Security",
+            "Network Measurement"
+        ]
+    },
+    {
         "title": "Giving Every Modality a Voice in Microservice Failure Diagnosis via Multimodal Adaptive Optimization",
         "author": "Lei Tao, Shenglin Zhang, <b>Zedong Jia</b>, Jinrui Sun, Minghua Ma, Zhengdan Li*, Yongqian Sun, Canqun Yang, Yuzhi Zhang, Dan Pei",
         "paper": "https://dl.acm.org/doi/10.1145/3691620.3695489",

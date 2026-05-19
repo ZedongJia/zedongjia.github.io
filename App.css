@@ -91,7 +91,7 @@ ul {
 #wrapper {
     margin: 0 auto;
     margin-bottom: 0;
-    padding: 2em;
+    padding: 0.5em;
     width: min(60%, 1080px);
 }
 

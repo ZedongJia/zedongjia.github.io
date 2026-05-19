@@ -44,6 +44,7 @@
 
 .pub .row {
     /* margin-top: 0.5em; */
+    margin-left: 1rem;
     display: flex;
     flex-flow: row wrap;
     gap: 0.25rem;
