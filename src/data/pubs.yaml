@@ -1,0 +1,74 @@
+# Publications list - sorted by year descending
+# Authors containing "Zedong Jia" will be auto-highlighted
+
+- title: "TED: Abusing Tunnel Hosts and IPv6 Extension Headers for Pulsing DoS Attacks"
+  authors: [Le Gai, Zedong Jia, Lin He, Daguo Cheng, Chentian Wei, Ying Liu]
+  venue: The 35th USENIX Security Symposium
+  year: 2026
+  label: "USENIX Security'26"
+  ccf: A
+  thcpl: A
+  topic: Network Security
+  tags: [Network Security, Network Measurement]
+  paper: ""
+  code: https://github.com/THUNAME/TED
+
+- title: "Divide, Predict, Conquer: Adaptive Internet-wide Service Discovery with Limited Seeds"
+  authors: [Daguo Cheng, Zedong Jia, Ying Liu, Lin He, Le Gai, Chao He, Jiuzhou Zhang, Chentian Wei, Jiasheng Zhou, Zhaoan Wang, Jinlong E]
+  venue: IEEE INFOCOM 2026 - IEEE Conference on Computer Communications
+  year: 2026
+  label: "INFOCOM'26"
+  ccf: A
+  thcpl: A
+  topic: Network Measurement
+  tags: [Network Measurement, Service Discovery]
+  paper: ""
+  code: https://github.com/ZedongJia/SPADE
+
+- title: "Heterogeneous federated learning for imbalanced phishing email detection"
+  authors: [Xiaoyang Yi, Linyu Li, Jian Zhang, Zedong Jia]
+  venue: Cybersecurity
+  year: 2026
+  label: "Cybersecurity'26"
+  ccf: B
+  thcpl: ""
+  topic: Network Security
+  tags: [Federated Learning, Phishing Email Detection]
+  paper: https://link.springer.com/article/10.1186/s42400-025-00420-2
+  code: ""
+
+- title: "Understanding the IPv6 Address Usage Strategies of Top Internet Services"
+  authors: [Lin He, Zedong Jia, Daguo Cheng, Jinlong E, Yuhan Du, Guanglei Song, Ying Liu, Xingang Shi, Shenglin Zhang, Jiahai Yang, Mingwei Xu]
+  venue: IEEE International Conference on Communications (ICC)
+  year: 2026
+  label: "ICC'26"
+  ccf: C
+  thcpl: B
+  topic: Network Measurement
+  tags: [Network Measurement, IPv6]
+  paper: ""
+  code: ""
+
+- title: "Too Many Cooks: Assessing the Need for Multi-Source Data in Microservice Failure Diagnosis"
+  authors: [Shenglin Zhang, Xiaoyu Feng, Runzhou Wang, Minghua Ma, Wenwei Gu, "Yongqian Sun*", Zedong Jia, Jinrui Sun, Dan Pei]
+  venue: IEEE 36th International Symposium on Software Reliability Engineering (ISSRE)
+  year: 2025
+  label: "ISSRE'25"
+  ccf: B
+  thcpl: B
+  topic: Microservice Failure Diagnosis
+  tags: [Microservice System, Failure Diagnosis]
+  paper: https://ieeexplore.ieee.org/document/11229531
+  code: https://github.com/ZedongJia/Empirical-Study-on-Multi-source-Failure-Diagnosis
+
+- title: "Giving Every Modality a Voice in Microservice Failure Diagnosis via Multimodal Adaptive Optimization"
+  authors: [Lei Tao, Shenglin Zhang, Zedong Jia, Jinrui Sun, Minghua Ma, "Zhengdan Li*", "Yongqian Sun*", Canqun Yang, Yuzhi Zhang, Dan Pei]
+  venue: IEEE/ACM Automated Software Engineering Conference (ASE)
+  year: 2024
+  label: "ASE'24"
+  ccf: A
+  thcpl: A
+  topic: Microservice Failure Diagnosis
+  tags: [Microservice System, Failure Diagnosis]
+  paper: https://dl.acm.org/doi/10.1145/3691620.3695489
+  code: https://github.com/ZedongJia/Medicine

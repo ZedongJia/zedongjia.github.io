@@ -1,0 +1,269 @@
+/* ============================================
+   Design Tokens
+   ============================================ */
+:root {
+  /* Colors - Light */
+  --color-bg-primary: #fafafa;
+  --color-bg-secondary: #ffffff;
+  --color-bg-card: #ffffff;
+  --color-bg-card-hover: #f8f8f8;
+  --color-bg-code: #f5f5f5;
+  --color-bg-overlay: rgba(255, 255, 255, 0.7);
+
+  --color-text-primary: #1a1a2e;
+  --color-text-secondary: #4a4a6a;
+  --color-text-muted: #8888a8;
+  --color-text-inverse: #ffffff;
+
+  --color-accent: #6a0dad;
+  --color-accent-light: #9b59b6;
+  --color-accent-bg: rgba(106, 13, 173, 0.08);
+  --color-accent-border: rgba(106, 13, 173, 0.2);
+
+  --color-border: rgba(0, 0, 0, 0.08);
+  --color-border-hover: rgba(0, 0, 0, 0.15);
+  --color-divider: rgba(0, 0, 0, 0.06);
+
+  --color-link: var(--color-accent);
+  --color-link-hover: #8e44ad;
+
+  --color-tag-a: #e17055;
+  --color-tag-b: #f0b866;
+  --color-tag-c: #8eba3a;
+
+  --color-shadow: rgba(0, 0, 0, 0.06);
+  --color-shadow-hover: rgba(0, 0, 0, 0.12);
+
+  /* Typography */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Noto Serif SC', Georgia, 'Times New Roman', serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+  --text-4xl: 3rem;
+
+  --leading-tight: 1.25;
+  --leading-normal: 1.6;
+  --leading-relaxed: 1.75;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px var(--color-shadow);
+  --shadow-md: 0 4px 12px var(--color-shadow);
+  --shadow-lg: 0 8px 30px var(--color-shadow);
+  --shadow-xl: 0 16px 50px var(--color-shadow);
+  --shadow-card: 0 1px 3px var(--color-shadow), 0 1px 2px var(--color-shadow);
+  --shadow-card-hover: 0 10px 40px var(--color-shadow-hover);
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Layout */
+  --max-width: 720px;
+  --section-gap: var(--space-6);
+}
+
+/* ============================================
+   Dark Theme
+   ============================================ */
+[data-theme="dark"] {
+  --color-bg-primary: #0f0f1a;
+  --color-bg-secondary: #1a1a2e;
+  --color-bg-card: #1e1e35;
+  --color-bg-card-hover: #252545;
+  --color-bg-code: #16162a;
+  --color-bg-overlay: rgba(15, 15, 26, 0.8);
+
+  --color-text-primary: #e8e8f0;
+  --color-text-secondary: #b0b0cc;
+  --color-text-muted: #7878a0;
+  --color-text-inverse: #0f0f1a;
+
+  --color-accent: #b388ff;
+  --color-accent-light: #d1a3ff;
+  --color-accent-bg: rgba(179, 136, 255, 0.1);
+  --color-accent-border: rgba(179, 136, 255, 0.25);
+
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-hover: rgba(255, 255, 255, 0.15);
+  --color-divider: rgba(255, 255, 255, 0.06);
+
+  --color-shadow: rgba(0, 0, 0, 0.3);
+  --color-shadow-hover: rgba(0, 0, 0, 0.5);
+}
+
+/* System preference fallback */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-bg-primary: #0f0f1a;
+    --color-bg-secondary: #1a1a2e;
+    --color-bg-card: #1e1e35;
+    --color-bg-card-hover: #252545;
+    --color-bg-code: #16162a;
+    --color-bg-overlay: rgba(15, 15, 26, 0.8);
+
+    --color-text-primary: #e8e8f0;
+    --color-text-secondary: #b0b0cc;
+    --color-text-muted: #7878a0;
+    --color-text-inverse: #0f0f1a;
+
+    --color-accent: #b388ff;
+    --color-accent-light: #d1a3ff;
+    --color-accent-bg: rgba(179, 136, 255, 0.1);
+    --color-accent-border: rgba(179, 136, 255, 0.25);
+
+    --color-border: rgba(255, 255, 255, 0.08);
+    --color-border-hover: rgba(255, 255, 255, 0.15);
+    --color-divider: rgba(255, 255, 255, 0.06);
+
+    --color-shadow: rgba(0, 0, 0, 0.3);
+    --color-shadow-hover: rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* ============================================
+   Base Reset & Global Styles
+   ============================================ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+  transition: background-color var(--transition-slow), color var(--transition-slow);
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ============================================
+   Layout
+   ============================================ */
+#app {
+  min-height: 100vh;
+  position: relative;
+}
+
+#app::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("/images/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.15;
+  z-index: -1;
+  z-index: -1;
+}
+
+#wrapper {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-4) var(--space-4);
+  margin-top: 60px;
+}
+
+@media (max-width: 768px) {
+  #wrapper {
+    padding: var(--space-3) var(--space-3);
+  }
+}
+
+/* ============================================
+   Animations
+   ============================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-in {
+  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-delay-1 { animation-delay: 0.1s; }
+.animate-delay-2 { animation-delay: 0.2s; }
+.animate-delay-3 { animation-delay: 0.3s; }
+.animate-delay-4 { animation-delay: 0.4s; }
+
+/* ============================================
+   Utility Classes
+   ============================================ */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
