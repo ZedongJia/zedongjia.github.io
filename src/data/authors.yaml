@@ -1,0 +1,140 @@
+# Author profiles - key is the exact name as it appears in pubs.yaml authors list
+# Add orcid / homepage for any author you want to show a tooltip for
+
+Jinrui Sun:
+  title: "Bachelor Student"
+  department: "Software & Microelectronics"
+  lab: ""
+  homepage: "https://mianmaner.github.io/"
+  institution: "Peking University"
+
+Lei Tao:
+  title: "Doctoral Student"
+  department: "Software Engineering"
+  lab: "AIOps@NKU"
+  homepage: ""
+  institution: "Nankai University"
+
+Le Gai:
+  title: "Doctoral Student"
+  department: "Institute for Network Sciences and Cyberspace"
+  lab: "THUNAME"
+  homepage: "https://legai325.github.io/"
+  institution: "Tsinghua University"
+
+Chentian Wei:
+  title: "Doctoral Student"
+  department: "Institute for Network Sciences and Cyberspace"
+  lab: "THUNAME"
+  homepage: "https://thuname.github.io/members/weichentian.html"
+  institution: "Tsinghua University"
+
+Daguo Cheng:
+  title: "Doctoral Student"
+  department: "Institute for Network Sciences and Cyberspace"
+  lab: "THUNAME"
+  homepage: "https://thuname.github.io/members/chengdaguo.html"
+  institution: "Tsinghua University"
+
+Zhaoan Wang:
+  title: "Bachelor Student"
+  department: "Institute for Network Sciences and Cyberspace"
+  lab: "THUNAME"
+  homepage: "https://thuname.github.io/members/wangzhaoan.html"
+  institution: "Tsinghua University"
+
+Jiasheng Zhou:
+  title: "Bachelor Student"
+  department: "Institute for Network Sciences and Cyberspace"
+  lab: "THUNAME"
+  homepage: "https://zhoujiashengzjs.github.io/"
+  institution: "Tsinghua University"
+
+
+Zhengdan Li:
+  title: "Experimentalist"
+  department: "Software Engineering"
+  lab: ""
+  homepage: "https://cs.nankai.edu.cn/info/1160/2599.htm"
+  institution: "Nankai University"
+
+Shenglin Zhang:
+  title: "Associate Professor"
+  department: "Software Engineering"
+  lab: "AIOps@NKU"
+  homepage: "https://nkcs.iops.ai/zhangshenglin/"
+  institution: "Nankai University"
+
+Wenwei Gu:
+  title: "Assistant Professor"
+  department: "Software Engineering"
+  lab: "AIOps@NKU"
+  homepage: "https://nkcs.iops.ai/wenweigu/"
+  institution: "Nankai University"
+
+Yongqian Sun:
+  title: "Associate Professor"
+  department: "Software Engineering"
+  lab: "AIOps@NKU"
+  homepage: "https://nkcs.iops.ai/yongqiansun/"
+  institution: "Nankai University"
+
+Yuzhi Zhang:
+  title: "Professor"
+  department: "Software Engineering"
+  lab: ""
+  homepage: "https://cs.nankai.edu.cn/info/1085/1126.htm"
+  institution: "Nankai University"
+
+Dan Pei:
+  title: Professor
+  department: Computer Science and Technology
+  lab: NetMan Lab
+  homepage: "https://netman.aiops.org/~peidan/"
+  institution: Tsinghua University
+
+
+
+Guanglei Song:
+  title: "Assistant Researcher Professor"
+  department: ""
+  lab: "NOM Lab"
+  homepage: ""
+  institution: "ZGC Laboratory"
+
+Jiahai Yang:
+  title: "Professor"
+  department: "Institute for Network Sciences and Cyberspace"
+  lab: "NOM Lab"
+  homepage: "https://nmgroup.tsinghua.edu.cn/yjh/"
+  institution: "Tsinghua University"
+
+
+
+Lin He:
+  title: "Associate Researcher Professor"
+  department: "Institute for Network Sciences and Cyberspace"
+  lab: "TUHNAME"
+  homepage: "https://helinhl.github.io/"
+  institution: "Tsinghua University & ZGC Laboratory"
+
+Ying Liu:
+  title: "Researcher Professor"
+  department: "Institute for Network Sciences and Cyberspace"
+  lab: "TUHNAME"
+  homepage: "https://www.insc.tsinghua.edu.cn/info/1157/2456.htm"
+  institution: "Tsinghua University & ZGC Laboratory"
+
+Mingwei Xu:
+  title: "Professor"
+  department: "Institute for Network Sciences and Cyberspace"
+  lab: "Routing Group"
+  homepage: "https://routing.netlab.tsinghua.edu.cn/tiki-index.php?page=Mingwei+Xu"
+  institution: "Tsinghua University & ZGC Laboratory"
+
+Jian Zhang:
+  title: "Professor"
+  department: "Computer Science"
+  lab: ""
+  homepage: "https://cc.nankai.edu.cn/2021/0323/c13619a548859/page.htm"
+  institution: "Nankai University"

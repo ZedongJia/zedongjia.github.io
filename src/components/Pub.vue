@@ -8,8 +8,11 @@
           <h3 class="pub-title">{{ paper.title }}</h3>
           <div class="pub-author">
             <template v-for="(author, i) in paper.authors" :key="i">
-              <strong v-if="author.includes('Zedong Jia')" class="author-highlight">{{ author }}</strong>
-              <span v-else>{{ author }}</span>
+              <AuthorTooltip v-if="getAuthorInfo(author)" :info="getAuthorInfo(author)" :is-me="author.includes('Zedong Jia')" :name="author">{{ author }}</AuthorTooltip>
+              <template v-else>
+                <strong v-if="author.includes('Zedong Jia')" class="author-highlight">{{ author }}</strong>
+                <span v-else>{{ author }}</span>
+              </template>
               <span v-if="i < paper.authors.length - 1">, </span>
             </template>
           </div>
@@ -37,7 +40,9 @@
 <script setup>
 import Icon from './Icon.vue'
 import TagBadge from './TagBadge.vue'
+import AuthorTooltip from './AuthorTooltip.vue'
 import pubs from '../data/pubs.yaml'
+import authors from '../data/authors.yaml'
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 
 const groupedPapers = computed(() => {
@@ -56,6 +61,18 @@ const groupedPapers = computed(() => {
   })
   return groups
 })
+
+function cleanName(name) {
+  return name.replace(/\*+$/, '').trim()
+}
+
+function getAuthorInfo(author) {
+  const name = cleanName(author)
+  const info = authors[name]
+  if (!info) return null
+  if (info.orcid || info.homepage || info.institution || info.title || info.lab || info.department) return info
+  return null
+}
 
 const highlightedIndex = ref(-1)
 let highlightTimer = null
@@ -237,5 +254,6 @@ onUnmounted(() => {
     flex-direction: column;
     gap: var(--space-2);
   }
+
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 512 512" :aria-label="name">
+  <svg xmlns="http://www.w3.org/2000/svg" class="icon" :viewBox="smallIcons.includes(name) ? '0 0 24 24' : '0 0 512 512'" :aria-label="name">
     <!-- mail -->
     <template v-if="name === 'mail'">
       <rect x="48" y="96" width="416" height="320" rx="40" ry="40" fill="none" stroke="currentColor"
@@ -52,15 +52,27 @@
       <path d="M160 136c0-30.62 4.51-61.61 16-88C99.57 81.27 48 159.32 48 248c0 119.29 96.71 216 216 216c88.68 0 166.73-51.57 200-128c-26.39 11.49-57.38 16-88 16c-128.13 0-216-87.89-216-216z"
         fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
     </template>
+    <!-- orcid (viewBox 0 0 24 24) -->
+    <template v-else-if="name === 'orcid'">
+      <path class="filled" d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 01-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.563 0h3.904c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.922V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-1.847-1.303-3.722-3.903-3.722h-2.416z" />
+    </template>
+    <!-- globe (viewBox 0 0 24 24) -->
+    <template v-else-if="name === 'globe'">
+      <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" />
+      <line x1="2" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="2" />
+      <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" fill="none" stroke="currentColor" stroke-width="2" />
+    </template>
   </svg>
 </template>
 
 <script setup>
+const smallIcons = ['orcid', 'globe']
+
 defineProps({
   name: {
     type: String,
     required: true,
-    validator: (v) => ['mail', 'github', 'paper', 'share', 'rocket', 'sun', 'moon'].includes(v)
+    validator: (v) => ['mail', 'github', 'paper', 'share', 'rocket', 'sun', 'moon', 'orcid', 'globe'].includes(v)
   }
 })
 </script>
