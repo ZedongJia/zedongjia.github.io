@@ -27,6 +27,7 @@ const navItems = [
   { id: 'edu', label: 'Education' },
   { id: 'int', label: 'Interests' },
   { id: 'lab', label: 'Labs' },
+  { id: 'award', label: 'Awards' },
   { id: 'pub', label: 'Publications' },
 ]
 

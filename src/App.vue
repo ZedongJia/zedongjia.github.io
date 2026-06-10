@@ -14,6 +14,10 @@
       <SectionTitle title="Laboratories" />
       <Lab />
     </section>
+    <section id="award">
+      <SectionTitle title="Awards & Honors" />
+      <Award />
+    </section>
     <section id="pub">
       <SectionTitle title="Publications" />
       <Pub />
@@ -31,6 +35,7 @@ import Bio from './components/Bio.vue'
 import Edu from './components/Edu.vue'
 import Int from './components/Int.vue'
 import Lab from './components/Lab.vue'
+import Award from './components/Award.vue'
 import Pub from './components/Pub.vue'
 
 const year = new Date().getFullYear()
