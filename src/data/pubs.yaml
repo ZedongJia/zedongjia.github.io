@@ -22,7 +22,7 @@
   thcpl: A
   topic: Network Measurement
   tags: [Network Measurement, Service Discovery]
-  paper: ""
+  paper: "https://ieeexplore.ieee.org/document/11571703"
   code: https://github.com/ZedongJia/SPADE
 
 - title: "Heterogeneous federated learning for imbalanced phishing email detection"
