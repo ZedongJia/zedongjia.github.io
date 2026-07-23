@@ -46,7 +46,7 @@
   thcpl: B
   topic: Network Measurement
   tags: [Network Measurement, IPv6]
-  paper: ""
+  paper: "https://ieeexplore.ieee.org/document/11587645"
   code: ""
 
 - title: "Too Many Cooks: Assessing the Need for Multi-Source Data in Microservice Failure Diagnosis"
