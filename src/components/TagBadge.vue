@@ -18,32 +18,32 @@ defineProps({
 .tag-badge {
   display: inline-flex;
   align-items: center;
-  padding: var(--space-1) var(--space-2);
-  font-size: var(--text-xs);
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  border-radius: var(--radius-full);
+  padding: 0;
+  font-size: var(--text-label);
+  font-weight: 500;
+  letter-spacing: 0;
   white-space: nowrap;
-  transition: all var(--transition-fast);
+}
+
+.tag-badge:not(:last-child)::after {
+  content: '·';
+  margin: 0 var(--space-1);
+  color: var(--color-text-muted);
 }
 
 .tag-default {
-  background: var(--color-accent-bg);
-  color: var(--color-accent);
+  color: var(--color-text-muted);
 }
 
 .tag-a {
-  background: rgba(225, 112, 85, 0.1);
   color: var(--color-tag-a);
 }
 
 .tag-b {
-  background: rgba(240, 184, 102, 0.12);
   color: var(--color-tag-b);
 }
 
 .tag-c {
-  background: rgba(142, 186, 58, 0.1);
   color: var(--color-tag-c);
 }
 </style>

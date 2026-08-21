@@ -1,15 +1,23 @@
 <template>
   <nav class="navbar" :class="{ scrolled }">
     <div class="navbar-inner">
-      <a class="navbar-brand" href="#" @click.prevent="scrollToTop">Zedong Jia</a>
+      <a v-if="page === 'publications'" class="navbar-brand" href="/">Zedong Jia</a>
+      <a v-else class="navbar-brand" href="#" @click.prevent="scrollToTop">Zedong Jia</a>
       <div class="navbar-links">
-        <a v-for="item in navItems" :key="item.id"
+        <template v-for="item in navItems" :key="item.id">
+        <a v-if="item.href" :href="item.href"
+           class="navbar-link"
+           :class="{ active: activeSection === item.id }">
+          {{ item.label }}
+        </a>
+        <a v-else
            :href="'#' + item.id"
            class="navbar-link"
            :class="{ active: activeSection === item.id }"
            @click.prevent="scrollTo(item.id)">
           {{ item.label }}
         </a>
+        </template>
         <button class="theme-btn" @click="toggleTheme" :title="isDark ? 'Light mode' : 'Dark mode'">
           <Icon :name="isDark ? 'sun' : 'moon'" />
         </button>
@@ -22,18 +30,25 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 import Icon from './Icon.vue'
 
-const navItems = [
-  { id: 'bio', label: 'Bio' },
-  { id: 'edu', label: 'Education' },
-  { id: 'int', label: 'Interests' },
-  { id: 'lab', label: 'Labs' },
-  { id: 'award', label: 'Awards' },
+const props = defineProps({
+  page: { type: String, default: 'home' }
+})
+
+const homeNavItems = [
+  { id: 'bio', label: 'Home' },
+  { id: 'publications', label: 'Publications', href: '/publications.html' },
+]
+
+const publicationNavItems = [
+  { id: 'home', label: 'Home', href: '/' },
   { id: 'pub', label: 'Publications' },
 ]
 
+const navItems = props.page === 'publications' ? publicationNavItems : homeNavItems
+
 const isDark = ref(false)
 const scrolled = ref(false)
-const activeSection = ref('bio')
+const activeSection = ref(props.page === 'publications' ? 'pub' : 'bio')
 
 function toggleTheme() {
   isDark.value = !isDark.value
@@ -73,7 +88,7 @@ function onScroll() {
       return
     }
   }
-  activeSection.value = sections[0]?.id || ''
+  activeSection.value = sections[0]?.id || activeSection.value
 }
 
 onMounted(() => {
@@ -193,7 +208,7 @@ onUnmounted(() => {
 
 @media (max-width: 768px) {
   .navbar-link {
-    font-size: 0.65rem;
+    font-size: var(--text-label);
     padding: var(--space-1) var(--space-1);
   }
   .navbar-brand {

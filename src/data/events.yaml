@@ -1,0 +1,65 @@
+# A unified timeline for awards, publications, talks, and other milestones.
+# Add an optional `url` to make an event title clickable.
+- date: '2026-08'
+  type: service
+  title: Invited reviewer for IEEE Transactions on Big Data
+
+- date: '2026-05-14'
+  type: publication
+  title: "TED: Abusing Tunnel Hosts and IPv6 Extension Headers for Pulsing DoS Attacks accepted at USENIX Security 2026"
+
+- date: '2026-01-19'
+  type: publication
+  title: "Understanding the IPv6 Address Usage Strategies of Top Internet Services accepted at ICC 2026"
+  url: https://ieeexplore.ieee.org/document/11587645
+
+- date: '2025-12-08'
+  type: publication
+  title: "Divide, Predict, Conquer: Adaptive Internet-wide Service Discovery with Limited Seeds accepted at INFOCOM 2026"
+  url: https://ieeexplore.ieee.org/document/11571703
+
+- date: '2025-12'
+  type: award
+  title: Second Prize in the 8th Next Generation Internet Technology Innovation Competition
+
+- date: '2025-07-19'
+  type: publication
+  title: "Too Many Cooks: Assessing the Need for Multi-Source Data in Microservice Failure Diagnosis accepted at ISSRE 2025"
+  url: https://ieeexplore.ieee.org/document/11229531
+
+- date: '2025-06'
+  type: award
+  title: Outstanding Bachelor's Thesis, College of Software, Nankai University
+
+- date: '2025-06'
+  type: award
+  title: Outstanding Graduate, Nankai University
+
+- date: '2025-06'
+  type: award
+  title: Nominee for Zhou Enlai Scholarship, Nankai University
+
+- date: '2024-12'
+  type: award
+  title: National Scholarship
+
+- date: '2024-09'
+  type: award
+  title: National Excellence Award, AIGC Innovation Competition, VIVO & Nankai University
+
+- date: '2024-08-07'
+  type: publication
+  title: "Giving Every Modality a Voice in Microservice Failure Diagnosis via Multimodal Adaptive Optimization accepted at ASE 2024"
+  url: https://dl.acm.org/doi/10.1145/3691620.3695489
+
+- date: '2023-10'
+  type: award
+  title: Gongneng Scholarship, Nankai University
+
+- date: '2023-03'
+  type: research
+  title: Joined AIOPS@NKU Lab to conduct research
+
+- date: '2022-10'
+  type: award
+  title: Gongneng Scholarship, Nankai University

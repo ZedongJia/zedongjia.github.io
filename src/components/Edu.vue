@@ -1,36 +1,26 @@
 <template>
   <div class="edu-list">
-    <div class="edu-item" v-for="(edu, i) in educations" :key="edu.school">
+    <div class="edu-item" v-for="(item, i) in experience" :key="`${item.organization}-${item.period}`">
       <div class="edu-dot-line">
         <div class="edu-dot"></div>
-        <div v-if="i < educations.length - 1" class="edu-line"></div>
+        <div v-if="i < experience.length - 1" class="edu-line"></div>
       </div>
       <div class="edu-content">
-        <div class="edu-period">{{ edu.period }}</div>
+        <div class="edu-period">{{ item.period }}</div>
         <div class="edu-school">
-          <a :href="edu.url" target="_blank" rel="noopener">{{ edu.school }}</a>
+          <a v-if="item.url" :href="item.url" target="_blank" rel="noopener noreferrer">{{ item.organization }}</a>
+          <span v-else>{{ item.organization }}</span>
+          <span class="edu-type">{{ item.type === 'internship' ? 'Internship' : 'Education' }}</span>
         </div>
-        <div class="edu-degree">{{ edu.degree }}</div>
+        <div class="edu-degree">{{ item.role }}<span v-if="item.team"> · {{ item.team }}</span></div>
+        <div v-if="item.detail" class="edu-detail">{{ item.detail }}</div>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-const educations = [
-  {
-    school: 'Tsinghua University',
-    url: 'https://www.tsinghua.edu.cn/',
-    degree: 'M.S. Candidate · INSC',
-    period: '2025.09 — 2028.08'
-  },
-  {
-    school: 'Nankai University',
-    url: 'https://www.nankai.edu.cn/',
-    degree: 'B.S. · Software Engineering',
-    period: '2021.09 — 2025.08'
-  }
-]
+import experience from '../data/experience.yaml'
 </script>
 
 <style scoped>
@@ -42,7 +32,7 @@ const educations = [
 .edu-item {
   display: flex;
   gap: var(--space-3);
-  min-height: 48px;
+  min-height: 42px;
 }
 
 .edu-dot-line {
@@ -73,8 +63,12 @@ const educations = [
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  padding-bottom: var(--space-4);
+  gap: var(--space-content-tight);
+  padding-bottom: var(--space-content);
+}
+
+.edu-item:last-child .edu-content {
+  padding-bottom: 0;
 }
 
 .edu-period {
@@ -101,5 +95,26 @@ const educations = [
 .edu-degree {
   font-size: var(--text-sm);
   color: var(--color-text-secondary);
+  line-height: var(--leading-content);
+}
+
+.edu-type {
+  display: inline-block;
+  margin-left: var(--space-2);
+  padding: var(--space-px) var(--space-inline);
+  border-radius: var(--radius-full);
+  background: var(--color-accent-bg);
+  color: var(--color-accent);
+  font-size: var(--text-label);
+  font-weight: 700;
+  line-height: 1.4;
+  text-transform: uppercase;
+  vertical-align: 1px;
+}
+
+.edu-detail {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: var(--leading-content);
 }
 </style>

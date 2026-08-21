@@ -2,28 +2,20 @@
   <NavBar />
   <div id="wrapper">
     <section id="bio"><Bio /></section>
-    <section id="edu">
-      <SectionTitle title="Educations" />
+    <section id="experience">
+      <SectionTitle title="Experience" />
       <Edu />
     </section>
-    <section id="int">
-      <SectionTitle title="Research Interests" />
-      <Int />
+    <section id="patents">
+      <SectionTitle title="Patents" />
+      <Patents />
     </section>
-    <section id="lab">
-      <SectionTitle title="Laboratories" />
-      <Lab />
-    </section>
-    <section id="award">
-      <SectionTitle title="Awards & Honors" />
-      <Award />
-    </section>
-    <section id="pub">
-      <SectionTitle title="Publications" />
-      <Pub />
+    <section id="events">
+      <SectionTitle title="Events" />
+      <Events />
     </section>
     <footer class="site-footer">
-      <p>&copy; {{ year }} Zedong Jia. All rights reserved.</p>
+      <p>&copy; {{ year }} Zedong Jia. All rights reserved.<span v-if="lastUpdated"> · Last updated {{ lastUpdated }}</span></p>
     </footer>
   </div>
 </template>
@@ -33,17 +25,20 @@ import NavBar from './components/NavBar.vue'
 import SectionTitle from './components/SectionTitle.vue'
 import Bio from './components/Bio.vue'
 import Edu from './components/Edu.vue'
-import Int from './components/Int.vue'
-import Lab from './components/Lab.vue'
-import Award from './components/Award.vue'
-import Pub from './components/Pub.vue'
+import Patents from './components/Patents.vue'
+import Events from './components/Events.vue'
 
 const year = new Date().getFullYear()
+const lastUpdated = __LAST_UPDATED__
 </script>
 
 <style scoped>
 section {
   scroll-margin-top: 70px;
+}
+
+#wrapper > section:not(#bio) {
+  margin-top: var(--space-section);
 }
 
 .site-footer {

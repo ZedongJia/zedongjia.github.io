@@ -16,10 +16,10 @@ defineProps({
 <style scoped>
 .section-title {
   position: relative;
-  margin-top: var(--section-gap);
-  margin-bottom: var(--space-2);
+  margin-top: 0;
+  margin-bottom: var(--space-1);
   padding-left: var(--space-3);
-  font-size: var(--text-xl);
+  font-size: var(--text-heading-2);
   font-weight: 700;
   color: var(--color-text-primary);
   letter-spacing: -0.01em;

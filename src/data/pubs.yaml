@@ -1,5 +1,7 @@
 # Publications list - sorted by year descending
-# Authors containing "Zedong Jia" will be auto-highlighted
+# Authors containing "Zedong Jia" will be auto-highlighted.
+# Set `featured: true` on papers to show them in the Selected Publications block.
+# `research_area` and `topic` drive the Research Interests section.
 
 - title: "TED: Abusing Tunnel Hosts and IPv6 Extension Headers for Pulsing DoS Attacks"
   authors: [Le Gai, Zedong Jia, Lin He, Daguo Cheng, Chentian Wei, Ying Liu]
@@ -8,8 +10,9 @@
   label: "USENIX Security'26"
   ccf: A
   thcpl: A
-  topic: Network Security
-  tags: [Network Security, Network Measurement]
+  research_area: Network Security & Privacy
+  topic: Tunnel Security
+  tags: [Tunnel Security, DoS]
   paper: ""
   code: https://github.com/THUNAME/TED
 
@@ -20,20 +23,22 @@
   label: "INFOCOM'26"
   ccf: A
   thcpl: A
-  topic: Network Measurement
-  tags: [Network Measurement, Service Discovery]
+  research_area: Network Measurement
+  topic: Network Reconnaissance
+  tags: [Network Reconnaissance, Service Discovery]
   paper: "https://ieeexplore.ieee.org/document/11571703"
   code: https://github.com/ZedongJia/SPADE
 
 - title: "Heterogeneous federated learning for imbalanced phishing email detection"
   authors: [Xiaoyang Yi, Linyu Li, Jian Zhang, Zedong Jia]
-  venue: Cybersecurity
+  venue: Cybersecurity 2026
   year: 2026
   label: "Cybersecurity'26"
   ccf: B
   thcpl: ""
-  topic: Network Security
-  tags: [Federated Learning, Phishing Email Detection]
+  research_area: Network Security & Privacy
+  topic: Phishing Email Detection
+  tags: [Phishing Email Detection, Federated Learning]
   paper: https://link.springer.com/article/10.1186/s42400-025-00420-2
   code: ""
 
@@ -44,8 +49,9 @@
   label: "ICC'26"
   ccf: C
   thcpl: B
-  topic: Network Measurement
-  tags: [Network Measurement, IPv6]
+  research_area: Network Measurement
+  topic: IPv6 Deployment
+  tags: [IPv6 Deployment]
   paper: "https://ieeexplore.ieee.org/document/11587645"
   code: ""
 
@@ -56,6 +62,7 @@
   label: "ISSRE'25"
   ccf: B
   thcpl: B
+  research_area: Reliable Systems
   topic: Microservice Failure Diagnosis
   tags: [Microservice System, Failure Diagnosis]
   paper: https://ieeexplore.ieee.org/document/11229531
@@ -68,6 +75,7 @@
   label: "ASE'24"
   ccf: A
   thcpl: A
+  research_area: Reliable Systems
   topic: Microservice Failure Diagnosis
   tags: [Microservice System, Failure Diagnosis]
   paper: https://dl.acm.org/doi/10.1145/3691620.3695489

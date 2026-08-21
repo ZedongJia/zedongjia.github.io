@@ -1,0 +1,7 @@
+# Add items in this form. The section stays hidden while the list is empty.
+# - name: Project name
+#   description: One-sentence summary
+#   url: https://project.example.com # optional
+#   code: https://github.com/user/repo # optional
+#   paper: https://doi.org/... # optional
+[]

@@ -1,8 +1,9 @@
 <template>
-  <span class="author-hover-wrapper" @mouseenter="show" @mouseleave="hide">
-    <strong v-if="isMe" class="author-highlight"><slot></slot></strong>
-    <span v-else class="author-link"><slot></slot></span>
-    <div v-if="visible" class="author-tooltip">
+  <span class="author-hover-wrapper" @mouseenter="show" @mouseleave="hide" @focusin="show" @focusout="handleFocusOut">
+    <a v-if="info.homepage" class="author-link" :class="{ 'author-highlight': isMe }" :href="info.homepage" target="_blank" rel="noopener noreferrer" :title="`Visit ${displayName}'s homepage`"><slot></slot></a>
+    <strong v-else-if="isMe" class="author-highlight"><slot></slot></strong>
+    <span v-else class="author-static" tabindex="0"><slot></slot></span>
+    <div v-if="visible" class="author-tooltip" role="tooltip" :aria-label="`${displayName} profile`">
       <div class="tooltip-header">
         <div class="tooltip-name">{{ displayName }}</div>
         <div v-if="info.title" class="tooltip-title">{{ info.title }}</div>
@@ -21,22 +22,12 @@
           <span class="tooltip-detail-value">{{ info.department }}</span>
         </div>
       </div>
-      <div v-if="info.orcid || info.homepage" class="tooltip-divider"></div>
-      <div class="tooltip-links">
-        <a v-if="info.orcid" class="tooltip-link" :href="info.orcid" target="_blank" rel="noopener">
-          <Icon name="orcid" /> ORCID
-        </a>
-        <a v-if="info.homepage" class="tooltip-link" :href="info.homepage" target="_blank" rel="noopener">
-          <Icon name="globe" /> Homepage
-        </a>
-      </div>
     </div>
   </span>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-import Icon from './Icon.vue'
 
 const props = defineProps({
   info: { type: Object, required: true },
@@ -55,13 +46,18 @@ function show() {
 function hide() {
   visible.value = false
 }
+
+function handleFocusOut(event) {
+  if (!event.currentTarget.contains(event.relatedTarget)) {
+    hide()
+  }
+}
 </script>
 
 <style scoped>
 .author-hover-wrapper {
   position: relative;
   display: inline-block;
-  cursor: pointer;
 }
 
 .author-highlight {
@@ -71,67 +67,83 @@ function hide() {
 }
 
 .author-link {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-accent);
+  font: inherit;
+  font-style: inherit;
+  line-height: inherit;
+  cursor: pointer;
   transition: color var(--transition-fast);
+  text-decoration: none;
 }
 
-.author-hover-wrapper:hover .author-link {
-  color: var(--color-accent);
+.author-hover-wrapper:hover .author-link,
+.author-link:focus-visible {
+  color: var(--color-accent-light);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
 }
+
+.author-link:focus-visible { outline: 2px solid var(--color-accent-border); outline-offset: 2px; border-radius: 2px; }
+
+.author-static:focus-visible { outline: 2px solid var(--color-accent-border); outline-offset: 2px; border-radius: 2px; }
 
 .author-tooltip {
   position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
+  top: calc(100% + 6px);
+  left: 0;
+  width: max-content;
+  max-width: min(300px, calc(100vw - 32px));
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-card-hover);
-  padding: var(--space-2) var(--space-3);
-  z-index: 100;
-  white-space: nowrap;
+  padding: var(--space-2);
+  z-index: 1000;
+  white-space: normal;
   font-style: normal;
-  /* Extend downward to overlap with the trigger text, eliminating any gap */
-  padding-bottom: 8px;
-  margin-bottom: -4px;
+  animation: tooltip-enter var(--transition-fast) both;
 }
 
 .tooltip-header {
-  margin-bottom: var(--space-2);
+  margin-bottom: var(--space-1);
 }
 
 .tooltip-name {
-  font-size: var(--text-base);
+  font-size: var(--text-sm);
   font-weight: 700;
   color: var(--color-text-primary);
   line-height: 1.3;
 }
 
 .tooltip-title {
-  font-size: var(--text-sm);
+  font-size: var(--text-xs);
   color: var(--color-accent);
   font-weight: 600;
-  margin-top: 2px;
+  margin-top: var(--space-micro);
 }
 
 .tooltip-details {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: var(--space-inline);
 }
 
 .tooltip-detail-row {
   display: flex;
   align-items: baseline;
   gap: var(--space-2);
-  font-size: var(--text-sm);
-  line-height: 1.5;
+  font-size: var(--text-xs);
+  line-height: 1.4;
 }
 
 .tooltip-detail-label {
   color: var(--color-text-muted);
   font-size: var(--text-xs);
-  min-width: 56px;
+  min-width: 48px;
   flex-shrink: 0;
 }
 
@@ -140,44 +152,14 @@ function hide() {
   font-weight: 500;
 }
 
-.tooltip-divider {
-  height: 1px;
-  background: var(--color-border);
-  margin: var(--space-2) 0;
-}
-
-.tooltip-links {
-  display: flex;
-  gap: var(--space-2);
-}
-
-.tooltip-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-size: var(--text-xs);
-  color: var(--color-text-secondary);
-  padding: 2px 6px;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
-  transition: all var(--transition-fast);
-  text-decoration: none;
-}
-
-.tooltip-link:hover {
-  color: var(--color-accent);
-  border-color: var(--color-accent-border);
-  background: var(--color-accent-bg);
-}
-
-.tooltip-link svg {
-  flex-shrink: 0;
+@keyframes tooltip-enter {
+  from { opacity: 0; transform: translateY(-3px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @media (max-width: 768px) {
   .author-tooltip {
-    left: 0;
-    transform: none;
+    max-width: min(280px, calc(100vw - 24px));
   }
 }
 </style>
