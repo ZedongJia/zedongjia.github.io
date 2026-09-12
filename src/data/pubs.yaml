@@ -13,7 +13,7 @@
   research_area: Network Security & Privacy
   topic: Tunnel Security
   tags: [Tunnel Security, DoS]
-  paper: ""
+  paper: "https://www.usenix.org/system/files/usenixsecurity26-gai.pdf"
   code: https://github.com/THUNAME/TED
 
 - title: "Divide, Predict, Conquer: Adaptive Internet-wide Service Discovery with Limited Seeds"
@@ -53,6 +53,19 @@
   topic: IPv6 Deployment
   tags: [IPv6 Deployment]
   paper: "https://ieeexplore.ieee.org/document/11587645"
+  code: ""
+
+- title: "SpecNet-Agent: Network-Aware Speculation Control for QoS in Agentic Generative AI Services"
+  authors: [Le Gai, Lin He, Chentian Wei, Zedong Jia, Daguo Cheng, Ying Liu]
+  venue: IEEE/ACM International Symposium on Quality of Service (IWQoS)
+  year: 2026
+  label: "IWQoS'26"
+  ccf: B
+  thcpl: B
+  research_area: Network Scheduling
+  topic: Network Scheduling
+  tags: [Network Scheduling]
+  paper: "https://ieeexplore.ieee.org/abstract/document/11661032"
   code: ""
 
 - title: "Too Many Cooks: Assessing the Need for Multi-Source Data in Microservice Failure Diagnosis"
